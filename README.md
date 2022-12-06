@@ -7,7 +7,7 @@ Integrantes:
 
 Rosario Maria Becca: No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
 
-Matias Muñoz Gader:
+Matias Muñoz Gader: Soy Licenciado en Marketing, no tengo experiencia previa en programación pero mi interesa mucho aprender constantemente cosas nuevas.
 
 Rocio Bustamante: Soy tecnico en polisomnografia y VNG, Aprendiendo JavaScript.
 
