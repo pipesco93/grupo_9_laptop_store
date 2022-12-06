@@ -5,15 +5,15 @@ E-commerce de ordenadores personales nuevos, de alto desempeño para programador
 
 Integrantes:
 
-Rosario Maria Becca: No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
+**Rosario Maria Becca:** No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
 
-Matias Muñoz Gader: Soy Licenciado en Marketing, no tengo experiencia previa en programación pero mi interesa mucho aprender constantemente cosas nuevas.
+**Matias Muñoz Gader:** Soy Licenciado en Marketing, no tengo experiencia previa en programación pero mi interesa mucho aprender constantemente cosas nuevas.
 
-Rocio Bustamante: Soy tecnico en polisomnografia y VNG, Aprendiendo JavaScript.
+**Rocio Bustamante:** Soy tecnico en polisomnografia y VNG, Aprendiendo JavaScript.
 
-Lorena Gotuzzo:
+**Lorena Gotuzzo:**
 
-Felipe Escobar: Ingeniero Mecánico,  conocimientos básicos de programación en Python como
+**Felipe Escobar:** Ingeniero Mecánico,  conocimientos básicos de programación en Python como
 
 
 
