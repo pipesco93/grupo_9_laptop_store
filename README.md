@@ -10,7 +10,6 @@ A modo de ejemplo, nuestros productos destacados y que priorizamos ofrecer son:
 . Lenovo Legion Series
 . Laptops con procesadores i5, i7 e i9 y equivalentes AMD de marcas reconocidas como HP, Lenovo, Asus, Dell, entre otras. 
 
-**Público Objetivo**
 “Laptop Store”, al ser una tienda online que ofrece específicamente computadoras personales portátiles de alto rendimiento para uso profesional o recreativo, cuenta con dos públicos objetivos con igual grado de importancia para la empresa.
 El denominador común tanto para usuarios “gamers” como para profesionales es que sean residentes de la República Argentina. 
 No hay diferenciación en cuanto sexo, por lo que el segmento objetivo está comprendido para personas física entre 18 y 55 años de edad con un nivel socio económico de medio a alto (ABC 1 y C2). 
@@ -52,10 +51,10 @@ Lorena Gotuzzo: Hola a tod@s. Soy Analista de Sistemas. Hice algunos cursos rela
 
 **Referentes del mercado**
 ----------------------
-[MSI](https://us.msi.com/)
-[Microcenter](https://www.microcenter.com/)
-[Computodo](https://www.computodo.com.ar/)
-[Cyber Power System](https://www.cyberpowersystem.co.uk/)
+[MSI](https://us.msi.com/) -
+[Microcenter](https://www.microcenter.com/) -
+[Computodo](https://www.computodo.com.ar/) -
+[Cyber Power System](https://www.cyberpowersystem.co.uk/) -
 [Lenovo](https://www.lenovo.com/)
 
 
