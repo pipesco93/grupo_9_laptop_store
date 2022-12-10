@@ -2,7 +2,7 @@
 Proyecto grupal DH grupo 9
 
 **Resumen Temática del Sitio**
-
+-----------------------------
 Laptop Store se creó pensando en todas las personas interesadas en adquirir computadoras portátiles de alto rendimiento. Nuestro objetivo principal es el poder ofrecer computadoras portátiles de marcas reconocidas, diseñas específicamente con componentes de gran desempeño para diversas tareas, sin dejar de lado que la búsqueda del producto en nuestra tienda online sea de forma sencilla e intuitiva para que la experiencia sea lo más amena posible.
 Buscamos ofrecer lo último en alto rendimiento tanto para uso personal o profesional, así como también para usuarios gamers.
 A modo de ejemplo, nuestros productos destacados y que priorizamos ofrecer son:
@@ -42,7 +42,7 @@ _ Desarrollarse profesionalmente en una empresa de tecnología
 _ Crear una app
 
 **Integrantes del equipo:**
-
+--------------------------
 **Rosario María Becca:** No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
 
 **Matías Muñoz Gader:** Soy Licenciado en Marketing, no tengo experiencia previa en programación, pero mi interesa mucho aprender constantemente cosas nuevas.
@@ -54,7 +54,7 @@ _ Crear una app
 **Lorena Gotuzzo:** Hola a tod@s. Soy Analista de Sistemas. Hice algunos cursos relacionados con tecnología (rede, programación) pero nunca llegué a tener la práctica necesaria para lograr un emprendimiento propio, así que me anoté en este curso para ordenar conocimientos y poder lanzarme a programar.
 
 **Referentes del mercado**
-
+--------------------------
 [MSI](https://us.msi.com/) -
 [Microcenter](https://www.microcenter.com/) -
 [Computodo](https://www.computodo.com.ar/) -
