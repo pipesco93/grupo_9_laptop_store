@@ -54,7 +54,7 @@ _ Crear una app
 **Lorena Gotuzzo:** Hola a tod@s. Soy Analista de Sistemas. Hice algunos cursos relacionados con tecnología (rede, programación) pero nunca llegué a tener la práctica necesaria para lograr un emprendimiento propio, así que me anoté en este curso para ordenar conocimientos y poder lanzarme a programar.
 
 **Referentes del mercado**
-----------------------
+
 [MSI](https://us.msi.com/) -
 [Microcenter](https://www.microcenter.com/) -
 [Computodo](https://www.computodo.com.ar/) -
