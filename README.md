@@ -43,11 +43,15 @@ _ Crear una app
 
 **Integrantes del equipo:**
 
-Rosario María Becca: No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
-Matías Muñoz Gader: Soy Licenciado en Marketing, no tengo experiencia previa en programación, pero mi interesa mucho aprender constantemente cosas nuevas.
-Rocío Bustamante: Soy técnico en polisomnografía y VNG, Aprendiendo JavaScript.
-Felipe Escobar: Ingeniero Mecánico, conocimientos básicos de programación en Python.
-Lorena Gotuzzo: Hola a tod@s. Soy Analista de Sistemas. Hice algunos cursos relacionados con tecnología (rede, programación) pero nunca llegué a tener la práctica necesaria para lograr un emprendimiento propio, así que me anoté en este curso para ordenar conocimientos y poder lanzarme a programar.
+**Rosario María Becca:** No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
+
+**Matías Muñoz Gader:** Soy Licenciado en Marketing, no tengo experiencia previa en programación, pero mi interesa mucho aprender constantemente cosas nuevas.
+
+**Rocío Bustamante:** Soy técnico en polisomnografía y VNG, Aprendiendo JavaScript.
+
+**Felipe Escobar:** Ingeniero Mecánico, conocimientos básicos de programación en Python.
+
+**Lorena Gotuzzo:** Hola a tod@s. Soy Analista de Sistemas. Hice algunos cursos relacionados con tecnología (rede, programación) pero nunca llegué a tener la práctica necesaria para lograr un emprendimiento propio, así que me anoté en este curso para ordenar conocimientos y poder lanzarme a programar.
 
 **Referentes del mercado**
 ----------------------
