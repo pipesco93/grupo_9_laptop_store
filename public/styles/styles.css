@@ -1,0 +1,48 @@
+.inicio-sesion {
+    padding: 15px;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+
+}
+
+h3 {
+    padding: 3px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: #6714AB;
+    color: #F01069;
+}
+
+h5 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    margin-bottom: 15px;
+    display: block;
+    color: white;
+}
+
+label {
+    display: block;
+    color: white;
+}
+
+a {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.pregunta {
+    font-size: 12px;
+    color: white;
+}
+
+div {
+    margin-top: 15px;
+}

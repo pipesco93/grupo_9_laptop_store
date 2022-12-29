@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    
+<section class="inicio-sesion">
+    <h3>Inicio de Sesión</h3>
+
+    <h5>Completá tus datos</h5>
+
+    <form action="/log-in" method="POST">
+        
+        <p>
+            <label for="nombre">Nombre de usuario:</label> 
+            <input type="text" name="nombre" id="nombre">
+        </p>
+        
+        <p>
+            <label for="clave">Contraseña:</label> 
+            <input type="password" name="password" id="clave">
+        </p>
+
+        
+        <a href="/restaurar-contraseña">¿Olvidaste tu contraseña?</a>
+        
+
+        <div>
+            <button type="submit">Iniciar Sesion</button>
+        </div>
+        
+        <p class="pregunta">¿Todavía no tenes una cuenta?</p>
+
+        <div>
+            <button type="submit">Registrate</button>
+        </div>
+
+    </form>
+</section>
 </body>
 </html>
