@@ -12,6 +12,11 @@ app.listen(3001, () => console.log('Servidor corriendo'));
 
 // Se crea la pagina principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'));
+    res.sendFile(path.join(__dirname, './views/index.html'));
+});
+
+// Se crea la pagina detalles del producto
+app.get('/prod-details', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/productDetail.html'));
 });
 

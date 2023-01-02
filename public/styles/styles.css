@@ -1,0 +1,217 @@
+/*-------------------- Global*------------------------------*/
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-------------------- Body------------------------------*/
+body {
+    
+}
+
+h1{
+    color: rgb(116, 116, 119);
+}
+
+/*-------------------- Header------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E050F;
+}
+
+header img {
+    width: 8%;
+    margin: 5px;
+    padding: 5px;
+}
+
+header h2 {
+    color: white;
+}
+
+/*-------------------- Main--------------------------------*/
+
+main { 
+    background-color: #ffffff;
+}
+
+.upper {
+    justify-content: space-between;
+    text-align: left;
+}
+
+.nombre-prod {
+    margin: 25px 25px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.precio-texto {
+    flex-grow: 0.5;
+    margin: 25px 25px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.mid {
+    text-align: center;
+    flex-grow: 0.5;
+    justify-content: space-around;
+}
+
+main img {
+    width: 80%;
+}
+
+.agregar{
+    display: flex;
+    font-size: 1rem;
+    margin: 10px 10px 0 10px;
+    justify-content: space-around;
+    padding: 5% 5% 2% 5%;
+}
+
+.agregar button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 40%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.cantidad {
+    width: 15%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.metodo-envio {
+    font-size: 0.8rem;
+}
+
+.zip {
+    width: 100px;
+}
+
+.specs h6 {
+    margin-bottom: 30px;
+}
+
+.specs-titulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 10px;
+}
+
+ul{
+    text-align: left;
+    list-style-type: disc;
+    margin: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+
+@media (min-width: 768px) {
+   .upper {
+    display: flex;
+   }
+   .mid {
+    display: flex;
+   }
+
+   .prod-information{
+    width: 50%;
+   }
+
+   .agregar {
+    justify-content: left;
+   }
+
+   .agregar button {
+    width: 25%;
+}
+
+   .envio {
+    text-align: left;
+    margin: 0px 10px 10px 10px;
+    padding: 1% 5% 2% 5%;
+}
+
+.specs-titulo {
+    padding: 10px;
+}
+
+}
+
+
+/*-------------------- Footer------------------------------*/
+footer {
+    background-color: #B0ABB6;
+    text-align: center;
+    width: 100%;
+}
+
+footer section {
+    margin: 15px 5px 15px 5px;
+    padding: 5px;
+}
+
+footer section h3 {
+    margin: 8px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #170B3B;
+}
+
+footer section h4 {
+    margin: 10px;
+    font-size: 0.7rem;
+}
+
+footer section a {
+    text-decoration: none;
+    color: #341948a1;
+}
+
+footer section i {
+    font-size: 1.5rem;
+    color: #170B3B;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.servicio-cliente {
+    margin-top: 0px;
+}
+
+@media (min-width: 768px) {
+    footer{
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    footer section {
+        margin-bottom: 50px;
+    }
+
+    footer section h4 {
+        margin: 10px;
+        font-size: 0.7rem;
+        margin-left: 15px;
+    }
+
+    .social {
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: 50%;
+    }
+
+    .servicio-cliente {
+        margin-top: 15px;
+    }
+}
