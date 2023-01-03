@@ -1,0 +1,11 @@
+h1 {
+    background-color: aqua;
+    color: blueviolet;
+    margin: 10px;
+}
+
+div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

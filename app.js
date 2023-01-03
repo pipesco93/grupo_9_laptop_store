@@ -15,3 +15,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/home.html'));
 });
 
+// Se crea la pagina principal
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/productCart.html'));
+});
+
