@@ -23,11 +23,43 @@
 <body>
     <header>
         <!--Barra superrior logo, copy y busqueda -->
-        <img class="logo" src="/images/logo.png"  class="logo">
-        <h2>Laptop Store</h2>
-        <h2 class="copy-header"> Atención al cliente</h2>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="/">
+                    <img class="logo-img" src="/images/logo.png"  class="logo">
+                    <h2 class="logo-text">Laptop Store</h2>
+                </a>
+            </div>
+
+            <div class="menu-productos">
+                <a href="#"><h2>Productos</h2></a>
+            </div>
+
+            <div class="dropdown-productos">
+                <a href="#"><i class="fa-solid fa-bars"></i> Menu</a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" name="busca" placeholder="Buscar">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+
+            <div class="user-menu">
+                <div class="crear-cuenta">
+                    <a href="#"><h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4></a>
+                </div>
+                <div class="log-in">
+                    <a href=""><h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4></a>
+                </div>
+                <div class="cart-logo">
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                
+            </div>
+        </nav>
     </header>
 
+<!-------------- MAIN ----------------------------------------------->
     <main>
         <section class="upper">
             <h2 class="nombre-prod">NOMBRE DEL PRODUCTO</h2>
@@ -69,6 +101,7 @@
         </section>
     </main>
 
+<!-------------- FOOTER ----------------------------------------------->
     <footer>
         <section class="servicio-cliente">
             <h3>Servicio al cliente</h3>
