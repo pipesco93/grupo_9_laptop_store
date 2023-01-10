@@ -17,4 +17,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
+});
+
 
