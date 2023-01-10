@@ -124,6 +124,19 @@ h1{
     font-weight: 300;
 }
 
+@media (max-width: 450px) {
+
+    .user-menu i {
+        font-size: 1rem;
+        margin: 0px 5px 0px 0px;
+    }
+
+    .user-menu h4 {
+        font-weight: 300;
+        font-size: 0.6rem;
+    }
+
+}   
 
 @media (max-width: 767px) {
     .search-bar{
@@ -145,10 +158,10 @@ h1{
 }
 
 
-/*-------------------- Main--------------------------------*/
+/*-------------------- Main Prod Details--------------------------------*/
 
 main { 
-    background-color: #ffffff;
+    background-color: #f8f8f8;
 }
 
 .upper {
@@ -175,7 +188,7 @@ main {
     justify-content: space-around;
 }
 
-main img {
+.big-img {
     width: 80%;
 }
 
@@ -259,6 +272,92 @@ ul{
 
 }
 
+/*-------------------- Main Prod Home--------------------------------*/
+.main-carousel {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.main-image {
+    width: 100%;
+}
+
+.main-carousel i{
+    position: absolute;
+
+}
+
+.fa-ellipsis {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    font-size: 2rem;
+}
+
+.fa-chevron-right {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    font-size: 1.5rem;
+}
+.prod-display {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+
+.destacado h2 {
+    margin: 30px;
+    text-align: center;
+    color: #241948cb;
+    font-weight: 700;
+}
+
+.card {
+    width: 70%;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.card-img {
+    width: 65%;
+    text-align: center;
+}
+
+.separator {
+    border-top: solid 5px #c6c0d274;
+}
+
+.separator h3, .separator h4 {
+    color: #554d67;
+    margin: 5px;
+    padding: 5px;
+}
+
+.separator a {
+    text-decoration: none;
+    margin: 5px;
+    margin-bottom: 5px;
+    color: #a4a3a3;
+}
+
+@media (min-width: 768px) {
+    .prod-display {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card {
+        margin: 25px;
+    }
+}
+
+
 
 /*-------------------- Footer------------------------------*/
 footer {
@@ -327,3 +426,4 @@ footer section i {
         margin-top: 15px;
     }
 }
+
