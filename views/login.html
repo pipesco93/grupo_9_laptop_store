@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+        <!--Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
+        <!--Iconos -->
+        <script src="https://kit.fontawesome.com/2d42150f05.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <title>Laptop Store</title>
+    </head>
+<body>
+    <header>
+        <!--Barra superrior logo, copy y busqueda -->
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="/">
+                    <img class="logo-img" src="/images/logo.png"  class="logo">
+                    <h2 class="logo-text">Laptop Store</h2>
+                </a>
+            </div>
+
+            <div class="menu-productos">
+                <a href="#"><h2>Productos</h2></a>
+            </div>
+
+            <div class="dropdown-productos">
+                <a href="#"><i class="fa-solid fa-bars"></i> Menu</a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" name="busca" placeholder="Buscar">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+
+            <div class="user-menu">
+                <div class="crear-cuenta">
+                    <a href="#"><h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4></a>
+                </div>
+                <div class="log-in">
+                    <a href="/login"><h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4></a>
+                </div>
+                <div class="cart-logo">
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <section class="inicio-sesion">
+        <h3>Inicio de Sesión</h3>
+
+        <h5>Completá tus datos</h5>
+
+        <form action="/log-in" method="POST">
+            
+            <p class="form-section">
+                <label for="nombre">Nombre de usuario:</label> 
+                <input type="text" name="nombre" id="nombre">
+            </p>
+            
+            <p class="contrasena">
+                <label for="clave">Contraseña:</label> 
+                <input type="password" name="password" id="clave">
+            </p>
+
+            <a href="/restaurar-contraseña">¿Olvidaste tu contraseña?</a>
+            
+            <div class="boton-inicio-sesion">
+                <button type="submit">Iniciar Sesion</button>
+            </div>
+            
+            <h4 class="pregunta">¿Todavía no tenes una cuenta?</h4>
+
+            <div class="boton-registro-login">
+                <button  type="submit">Registrate</button>
+            </div>
+
+        </form>
+    </section>
 </body>
 </html>

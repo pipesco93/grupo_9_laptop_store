@@ -7,16 +7,23 @@ const app = express();
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
-// Listen en el pueto 3001 localhost:3001
-app.listen(3001, () => console.log('Servidor corriendo'));
+// Listen en el puerto 3001 localhost:3001
+app.listen(3001, () => {
+    console.log('Servidor corriendo')
+});
 
-// Se crea la pagina principal
+// Se crea el log in
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/index.html'));
 });
 
-// Se crea la pagina detalles del producto
 app.get('/prod-details', (req, res) => {
     res.sendFile(path.join(__dirname, './views/productDetail.html'));
 });
+
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
+});
+
 
