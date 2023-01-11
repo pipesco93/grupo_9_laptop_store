@@ -24,6 +24,10 @@ app.get('/prod-details', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
+// Se crea la pagina principal
+});
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/register.html'));
 });
 
 

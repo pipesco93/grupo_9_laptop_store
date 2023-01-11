@@ -16,7 +16,7 @@
     
         <title>Laptop Store</title>
     </head>
-<body>
+<body class="body-login">
     <header>
         <!--Barra superrior logo, copy y busqueda -->
         <nav class="nav-bar">
@@ -42,7 +42,7 @@
 
             <div class="user-menu">
                 <div class="crear-cuenta">
-                    <a href="#"><h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4></a>
+                    <a href="/register"><h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4></a>
                 </div>
                 <div class="log-in">
                     <a href="/login"><h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4></a>
@@ -64,24 +64,24 @@
             
             <p class="form-section">
                 <label for="nombre">Nombre de usuario:</label> 
-                <input type="text" name="nombre" id="nombre">
+                <input class="input-register" type="text" name="nombre" id="nombre">
             </p>
             
             <p class="contrasena">
                 <label for="clave">Contraseña:</label> 
-                <input type="password" name="password" id="clave">
+                <input class="input-register" type="password" name="password" id="clave">
             </p>
 
             <a href="/restaurar-contraseña">¿Olvidaste tu contraseña?</a>
             
-            <div class="boton-inicio-sesion">
-                <button type="submit">Iniciar Sesion</button>
+            <div class="login-button">
+                <button class="boton-login" type="submit">Iniciar Sesion</button>
             </div>
             
             <h4 class="pregunta">¿Todavía no tenes una cuenta?</h4>
 
-            <div class="boton-registro-login">
-                <button  type="submit">Registrate</button>
+            <div>
+                <button class="boton-login-registro" type="submit">Registrate</button>
             </div>
 
         </form>

@@ -1,3 +1,77 @@
+/*-------------------- Register------------------------------*/
+
+.body-register, .body-login {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.formContainer {
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    display: block;
+}
+
+.register-input[type=text],
+.register-input[type=password] {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: whitesmoke;
+}
+
+
+label {
+    font-size: 15px;
+}
+
+.register-input[type=text]:focus,
+.register-input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.formContainer h4 {
+   font-size: 28px;
+   margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(10, 119, 13);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.cancel {
+    margin-top: 20px;
+    padding: 14px 20px;
+    background-color: #ff3d2f;
+}
 /*-------------------- Global*------------------------------*/
 * {
     margin:0px;
@@ -7,6 +81,9 @@
 }
 
 /*-------------------- Body------------------------------*/
+body {
+    background: linear-gradient(135deg, #71b7e655, #9c59b64f);
+}
 
 h1{
     color: rgb(116, 116, 119);
@@ -160,9 +237,6 @@ h1{
 
 /*-------------------- Main Prod Details--------------------------------*/
 
-main { 
-    background-color: #f8f8f8;
-}
 
 .upper {
     justify-content: space-between;
@@ -303,7 +377,6 @@ ul{
 }
 .prod-display {
     text-align: center;
-    background-color: #ffffff;
 }
 
 
@@ -316,7 +389,7 @@ ul{
 
 .card {
     width: 70%;
-    background-color: #ffffff;
+    background-color: #ffffff97;
     margin: auto;
     margin-top: 35px;
     margin-bottom: 35px;
@@ -429,46 +502,41 @@ footer section i {
 
 
 /*-------------------- Log in ------------------------------*/
-
 .inicio-sesion {
     padding: 15px;
     width: 80%;
     margin: auto;
     margin-top: 10%;
-    max-width: 550px;
+    margin-bottom: 100%;
+    max-width: 400px;
     text-align: center;
-    background-color: #B0ABB6;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    display: block;
 
-}
-
-.inicio-sesion h3 {
-    padding: 3px;
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    color: #341948eb;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.inicio-sesion h5 {
-    text-align: center;
-    color: #341948eb;
-    margin: 5px;
-    font-weight: 600;
 }
 
 .form-section {
     margin-bottom: 15px;
     display: block;
-    color: #341948eb;
     font-weight: 600;
 }
 
-.inicio-sesion label {
-    display: block;
-    color: #341948eb;
-    font-weight: 600;
+.contrasena {
+    margin-bottom: 2px;
+}
+
+.input-register {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: whitesmoke;
 }
 
 .inicio-sesion a {
@@ -477,33 +545,55 @@ footer section i {
     margin-bottom: 15px;
 }
 
-.pregunta {
-    font-size: 12px;
-    color: #341948eb;
-    font-weight: 600;
-    margin-top: 25px;
-    margin-bottom: 0px;
-}
-
 .boton-inicio-sesion {
     margin-top: 15px;
 }
 
-.boton-registro-login {
-    margin-top: 0px;
+.boton-login {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #452349f7;
+        color: white;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 60%;
+        height: 50%;
+        opacity: 0.9;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 45px;
 }
 
-.contrasena {
-    margin-bottom: 2px;
-    margin-top: 10px;
+.boton-login-registro{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #452349f7;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    height: 50%;
+    opacity: 0.9;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
-.inicio-sesion button {
-    width: 120px;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: 550;
-    background-color: #4c2669bf;
-    color: #ffffff
+.inicio-sesion h5 {
+    margin: 25px;
+}
+
+.inicio-sesion h3 {
+    margin: 15px;
+    font-size: 2rem;
+}
+
+.inicio-sesion a {
+    color: white;
+}
+
+.login-button {
+    margin-top: 25px;
 }
