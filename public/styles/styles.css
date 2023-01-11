@@ -646,7 +646,7 @@ footer section i {
     justify-content: space-between;
     align-items: center;
     margin: 20px;
-    lex-wrap: wrap;
+    flex-wrap: wrap;
 
 }
 .btn{
@@ -670,7 +670,6 @@ footer section i {
 }
 
 .summary {
-    display: flex;
     width: 40%;
     border: solid 3px rgba(172, 172, 172, 0.676);
     border-radius: 10px;
@@ -678,4 +677,58 @@ footer section i {
     padding: 10px;
     box-shadow: 5px 5px 2px 1px rgba(168, 168, 171, 0.2);
     align-items: center;
+}
+
+.pagar {
+    text-align: center;
+    position: relative;
+    bottom: -100px;
+}
+
+.resumen-precio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumen-precio h3{
+    margin: 10px;
+}
+
+@media (max-width: 460px) {
+    .main-cart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary{
+        width: 95%;
+    }
+
+    .prod {
+        width: 95%;
+    }
+
+    .prod img {
+        width: 80px;
+    }
+
+    .cart-products {
+        width: 100%;
+    }
+
+    .counter {
+        flex-wrap: nowrap;
+        margin: 2px;
+    }
+
+    .prod ul {
+        flex-grow: 0;
+
+    }
+
+    .cart-products h3 {
+        position: relative;
+        left: 10px;
+    }
 }
