@@ -81,8 +81,10 @@ button:hover {
 }
 
 /*-------------------- Body------------------------------*/
+
 body {
     background: linear-gradient(135deg, #71b7e655, #9c59b64f);
+   
 }
 
 h1{
@@ -437,6 +439,7 @@ footer {
     background-color: #B0ABB6;
     text-align: center;
     width: 100%;
+    margin-top: 200px;
 }
 
 footer section {
@@ -596,4 +599,83 @@ footer section i {
 
 .login-button {
     margin-top: 25px;
+}
+
+/*-------------------- Cart -------------------------------------*/
+
+.main-cart {
+    height: 100%;
+    display: flex;
+}
+.cart-products {
+    width: 60%;
+}
+
+.cart-products h3{
+    position: relative;
+    left: 100px;
+}
+
+.prod {
+    display: flex;
+    width: 100%;
+    border: solid 3px rgba(172, 172, 172, 0.676);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(168, 168, 171, 0.2);
+    align-items: center;
+}
+
+.prod img {
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.prod ul {
+    flex-grow: 0.3;
+    color: #0E050F;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.counter {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    lex-wrap: wrap;
+
+}
+.btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(181, 179, 179, 0.826);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 900;
+    color: #202020;
+    cursor: pointer;
+    
+}
+.count{
+    font-size: 15px;
+    font-weight: 900;
+    color: #202020;
+}
+
+.summary {
+    display: flex;
+    width: 40%;
+    border: solid 3px rgba(172, 172, 172, 0.676);
+    border-radius: 10px;
+    margin: 40px;
+    padding: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(168, 168, 171, 0.2);
+    align-items: center;
 }
