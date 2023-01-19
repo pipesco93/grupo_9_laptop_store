@@ -1,3 +1,77 @@
+/*-------------------- Register------------------------------*/
+
+.body-register, .body-login {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.formContainer {
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    display: block;
+}
+
+.register-input[type=text],
+.register-input[type=password] {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: whitesmoke;
+}
+
+
+label {
+    font-size: 15px;
+}
+
+.register-input[type=text]:focus,
+.register-input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.formContainer h4 {
+   font-size: 28px;
+   margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(10, 119, 13);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.cancel {
+    margin-top: 20px;
+    padding: 14px 20px;
+    background-color: #ff3d2f;
+}
 /*-------------------- Global*------------------------------*/
 * {
     margin:0px;
@@ -7,6 +81,11 @@
 }
 
 /*-------------------- Body------------------------------*/
+
+body {
+    background: linear-gradient(135deg, #71b7e655, #9c59b64f);
+   
+}
 
 h1{
     color: rgb(116, 116, 119);
@@ -160,9 +239,6 @@ h1{
 
 /*-------------------- Main Prod Details--------------------------------*/
 
-main { 
-    background-color: #f8f8f8;
-}
 
 .upper {
     justify-content: space-between;
@@ -303,7 +379,6 @@ ul{
 }
 .prod-display {
     text-align: center;
-    background-color: #ffffff;
 }
 
 
@@ -316,7 +391,7 @@ ul{
 
 .card {
     width: 70%;
-    background-color: #ffffff;
+    background-color: #ffffff97;
     margin: auto;
     margin-top: 35px;
     margin-bottom: 35px;
@@ -364,6 +439,7 @@ footer {
     background-color: #B0ABB6;
     text-align: center;
     width: 100%;
+    margin-top: 200px;
 }
 
 footer section {
@@ -427,3 +503,232 @@ footer section i {
     }
 }
 
+
+/*-------------------- Log in ------------------------------*/
+.inicio-sesion {
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    display: block;
+
+}
+
+.form-section {
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 600;
+}
+
+.contrasena {
+    margin-bottom: 2px;
+}
+
+.input-register {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: whitesmoke;
+}
+
+.inicio-sesion a {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.boton-inicio-sesion {
+    margin-top: 15px;
+}
+
+.boton-login {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #452349f7;
+        color: white;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 60%;
+        height: 50%;
+        opacity: 0.9;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 45px;
+}
+
+.boton-login-registro{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #452349f7;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    height: 50%;
+    opacity: 0.9;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.inicio-sesion h5 {
+    margin: 25px;
+}
+
+.inicio-sesion h3 {
+    margin: 15px;
+    font-size: 2rem;
+}
+
+.inicio-sesion a {
+    color: white;
+}
+
+.login-button {
+    margin-top: 25px;
+}
+
+/*-------------------- Cart -------------------------------------*/
+
+.main-cart {
+    height: 100%;
+    display: flex;
+}
+.cart-products {
+    width: 60%;
+}
+
+.cart-products h3{
+    position: relative;
+    left: 100px;
+}
+
+.prod {
+    display: flex;
+    width: 100%;
+    border: solid 3px rgba(172, 172, 172, 0.676);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(168, 168, 171, 0.2);
+    align-items: center;
+}
+
+.prod img {
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.prod ul {
+    flex-grow: 0.3;
+    color: #0E050F;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.counter {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+
+}
+.btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(181, 179, 179, 0.826);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 900;
+    color: #202020;
+    cursor: pointer;
+    
+}
+.count{
+    font-size: 15px;
+    font-weight: 900;
+    color: #202020;
+}
+
+.summary {
+    width: 40%;
+    border: solid 3px rgba(172, 172, 172, 0.676);
+    border-radius: 10px;
+    margin: 10px 40px;
+    padding: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(168, 168, 171, 0.2);
+    align-items: center;
+}
+
+.pagar {
+    text-align: center;
+    position: relative;
+    bottom: -100px;
+}
+
+.resumen-precio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumen-precio h3{
+    margin: 10px;
+}
+
+@media (max-width: 460px) {
+    .main-cart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary{
+        width: 95%;
+    }
+
+    .prod {
+        width: 95%;
+    }
+
+    .prod img {
+        width: 80px;
+    }
+
+    .cart-products {
+        width: 100%;
+    }
+
+    .counter {
+        flex-wrap: nowrap;
+        margin: 2px;
+    }
+
+    .prod ul {
+        flex-grow: 0;
+
+    }
+
+    .cart-products h3 {
+        position: relative;
+        left: 10px;
+    }
+}

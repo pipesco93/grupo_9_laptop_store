@@ -42,21 +42,73 @@
 
             <div class="user-menu">
                 <div class="crear-cuenta">
-                    <a href="#"><h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4></a>
+                    <a href="/register"><h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4></a>
                 </div>
                 <div class="log-in">
-                    <a href=""><h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4></a>
+                    <a href="/login"><h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4></a>
                 </div>
                 <div class="cart-logo">
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
-                
             </div>
         </nav>
     </header>
     
 <!-------------- MAIN ----------------------------------------------->
-    <main>
+    <main class="main-cart">
+        <section class="cart-products">
+            <div class="prod">
+                <img src="/images/laptopimage.png" alt="laptop">
+                <ul>
+                    <li>spec 1</li>
+                    <li>spec 2</li>
+                    <li>spec 3</li>
+                </ul>
+                <div class="counter">
+                    <div class="btn">+</div>
+                    <div class="count">2</div>
+                    <div class="btn">-</div>
+                </div>
+                <h3>$ 23.000</h3>
+            </div>
+
+            <div class="prod">
+                <img src="/images/laptopimage.png" alt="laptop">
+                <ul>
+                    <li>spec 1</li>
+                    <li>spec 2</li>
+                    <li>spec 3</li>
+                </ul>
+                <div class="counter">
+                    <div class="btn">+</div>
+                    <div class="count">2</div>
+                    <div class="btn">-</div>
+                </div>
+
+                <h3>$ 23.000</h3>
+            </div>
+
+        </section>
+
+        <section class="summary">
+            <div class="resumen-precio">
+                <div>
+                    <h3>Subotal __________</h3>
+                    <h3>Impuesto _________</h3>
+                    <h3>Total ____________</h3>
+                </div>
+                <div>
+                    <h3>$ XXX</h3>
+                    <h3>$ XXX</h3>
+                    <h3>$ XXX</h3>
+                </div>
+                
+            </div>
+            <div> 
+                <button type="submit" class="pagar">Pagar</button>
+            </div>
+
+        </section>
 
     </main>
 
