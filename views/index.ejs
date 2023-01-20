@@ -1,61 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
-    <!--Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <!--Iconos -->
-    <script src="https://kit.fontawesome.com/2d42150f05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <title>Laptop Store</title>
-</head>
+<%- include('partials/head.ejs') %>
 
 <body>
-    <header>
-        <!--Barra superrior logo, copy y busqueda -->
-        <nav class="nav-bar">
-            <div class="logo">
-                <a href="/">
-                    <img class="logo-img" src="/images/logo.png"  class="logo">
-                    <h2 class="logo-text">Laptop Store</h2>
-                </a>
-            </div>
 
-            <div class="menu-productos">
-                <a href="#"><h2>Productos</h2></a>
-            </div>
+<%- include('partials/header.ejs') %>
 
-            <div class="dropdown-productos">
-                <a href="#"><i class="fa-solid fa-bars"></i> Menu</a>
-            </div>
-
-            <div class="search-bar">
-                <input type="text" name="busca" placeholder="Buscar">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </div>
-
-            <div class="user-menu">
-                <div class="crear-cuenta">
-                    <a href="/register"><h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4></a>
-                </div>
-                <div class="log-in">
-                    <a href="/login"><h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4></a>
-                </div>
-                <div class="cart-logo">
-                    <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-                
-            </div>
-        </nav>
-    </header>
 <!-------------- MAIN ----------------------------------------------->
     <main>
         <div class="main-carousel">
@@ -100,36 +51,8 @@
     </main>
 
 <!-------------- FOOTER ----------------------------------------------->
-    <footer>
-        <section class="servicio-cliente">
-            <h3>Servicio al cliente</h3>
-            <h4><a href="#">FAQ</a></h4>
-            <h4><a href="#">Terminos y condiciones</a></h4>
-        </section>
 
-        <section class="compañia">
-            <h3>Compañia</h3>
-            <h4><a href="#">Sobre nosotros</a></h4>
-        </section>
+<%- include('partials/footer.ejs') %>
 
-        <section class="compra-protgida">
-            <h3>Compra protegida</h3>
-            <h4><a href="#">Botón de arrepentimiento</a></h4>
-            <h4><a href="#">Defensa al consumidor</a></h4>
-        </section>
-
-        <section class="contacto">
-            <h3>CONTACTO</h3>
-            <h4><a href="#">Ventas</a></h4>
-            <h4><a href="#">Servicio técnico</a></h4>
-        </section>
-
-        <section class="social">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-        </section>
-    </footer>
 </body>
 </html>
