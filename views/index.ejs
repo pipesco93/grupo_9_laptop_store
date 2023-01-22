@@ -22,30 +22,18 @@
         </div>
 
         <section class="prod-display">
-            <div class="card">
-                <img class="card-img" src="/images/laptop.webp" alt="laptop">
-                <div class="separator">
-                    <h3>NOMBRE DEL PRODUCTO</h3>
-                    <h4>$XXXX</h4>
-                    <a href="#"><i class="fa-solid fa-eye"></i> Detalles</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="/images/laptop.webp" alt="laptop">
-                <div class="separator">
-                    <h3>NOMBRE DEL PRODUCTO</h3>
-                    <h4>$XXXX</h4>
-                    <a href="#"><i class="fa-solid fa-eye"></i> Detalles</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="/images/laptop.webp" alt="laptop">
-                <div class="separator">
-                    <h3>NOMBRE DEL PRODUCTO</h3>
-                    <h4>$XXXX</h4>
-                    <a href="#"><i class="fa-solid fa-eye"></i> Detalles</a>
-                </div>
-            </div>
+            <% for(let i=0; i< allProducts.length; i++) {%>
+                <% if (allProducts[i].destacado) {%>
+                    <div class="card">
+                        <img class="card-img" src="<%= allProducts[i].img %>" alt="laptop">
+                        <div class="separator">
+                            <h3><%= allProducts[i].marca + " " +  allProducts[i].referencia %></h3>
+                            <h4>$<%= allProducts[i].precio %></h4>
+                            <h5><a href="/products/<%= allProducts[i].id %>"><i class="fa-solid fa-eye"></i> Detalles</a></h5>
+                        </div>
+                    </div>
+                <%}%>
+            <%}%>
 
         </section>
 

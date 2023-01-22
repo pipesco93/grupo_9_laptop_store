@@ -309,6 +309,13 @@ h1{
     margin: 10px;
 }
 
+.prod-spec {
+    text-indent: 30px;
+    text-align: justify;
+    margin: 25px;
+    padding: 5px;
+}
+
 ul{
     text-align: left;
     list-style-type: disc;
@@ -416,10 +423,16 @@ ul{
 
 .separator a {
     text-decoration: none;
-    margin: 5px;
-    margin-bottom: 5px;
+    margin: 10px;
+    margin-bottom: 15px;
     color: #a4a3a3;
 }
+.separator h5 {
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 
 @media (min-width: 768px) {
     .prod-display {
