@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    
+    <title>Producto</title>
+    
+</head>
+
+<body class="body-productEdit">
+    <form>
+        <section class="formContainer">
+            <h4>Carga de Producto</h4>
+            <hr>
+            <label for="codigo"><b>Código de producto</b></label>
+            <input class="productEdit-input" type="text" placeholder="Ej. 0123" name="codigo">
+            
+            <label for="product"><b>Nombre del producto</b></label>
+            <input class="productEdit-input" type="text" placeholder="Ingrese nombre del producto" name="product" required>
+            
+            <label for="description"><b>Descripción</b></label>
+            <textarea class="productEdit-input" type="text" placeholder="Breve Descripción del producto" name="description" required></textarea>
+
+            <label for="price"><b>Precio</b></label>
+            <input  class="productEdit-input" type="number" placeholder="$" name="price" required>
+
+            <label for="image"><b>Imágen</b></label>
+            <input class="productEdit-input" type="file" name="image" required>
+
+            <label for="dimentions"><b>Dimensiones</b></label>
+            <input class="productEdit-input" type="text" placeholder="Ej. A x L x A en cm" name="dimentions" required>
+
+            <label for="procesador">Procesador</label>
+            <select name="procesador" id="procesador">
+                <option value="clase">Intel i5</option>
+                <option value="clase">Intel i7</option>
+                <option value="clase">AMD Ryzen</option>
+            </select>
+
+            <label for="pantalla">Pantalla</label>
+            <select name="pantalla" id="pantalla">
+                <option value="clase">13"</option>
+                <option value="clase">14"</option>
+                <option value="clase">15.6"</option>
+            </select>
+
+            <label for="category">Categoría</label>
+            <select name="category" id="category">
+                <option value="laptop">Laptop</option>
+                <option value="laptopGamer">Laptop Gamer</option>
+                <option value="componentes">Componentes</option>
+                <option value="accesorios">Accesorios</option>
+                
+            </select>
+
+
+                <button type="button" class="cancel">Cancelar</button>
+                <button type="submit" class="signup">Agregar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

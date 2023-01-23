@@ -8,10 +8,14 @@ const cart = (req, res) => {
     res.render(path.resolve(__dirname, '../views/productCart'));
 };
 
+const prodEdit = (req, res) => {
+    res.render(path.resolve(__dirname, '../views/productEdit'));
+};
 
 const controlador = {
     prodDetails,
     cart,
+    prodEdit,
 }
 
 module.exports = controlador;
