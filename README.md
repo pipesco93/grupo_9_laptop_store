@@ -81,5 +81,7 @@ __________
 
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
+Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
+
 
 
