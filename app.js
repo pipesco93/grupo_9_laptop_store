@@ -1,17 +1,31 @@
 // Se crean las variables necesarias
 const express = require('express');
-const path = require('path');
 const app = express();
+const morgan = require('morgan');
 
-//Se da el permiso para la carpeta public
-const publicPath = path.resolve(__dirname, "./public");
-app.use(express.static(publicPath));
+app.use(morgan('dev'));
 
-// Listen en el pueto 3001 localhost:3001
-app.listen(3001, () => console.log('Servidor corriendo'));
+const port = process.env.PORT || 3001;
 
-// Se crea la pagina principal
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'));
+
+
+//Set ejs
+app.set('view engine','ejs');
+app.use(express.static('public'));
+
+// Se requiere ysesa el archivo main de la carpeta router, que es dondese encuentran todas las direcciones del sitio
+const routerMain = require('./routes/main.js')
+app.use(routerMain);
+
+const routerUsers = require('./routes/users.js')
+app.use(routerUsers);
+
+const routerProducts = require('./routes/products.js')
+app.use(routerProducts);
+
+
+// Listen en el puerto 3001 localhost:3001
+app.listen(port, () => {
+    console.log(`Servidor corriendo ${port}`)
 });
-
+//prueba
