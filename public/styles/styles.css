@@ -616,10 +616,37 @@ footer section i {
 }
 
 /*-------------------- Products -------------------------------------*/
+.list-display {
+    display: flex;
+}
+
 .prod-display-products {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+}
+
+.product-list {
+    text-align: left;
+    margin: 30px;
+    margin-left: 15px;
+    color: #241948cb;
+    font-weight: 700;
+}
+
+.prod-sub-menu {
+    display: flex;
+    text-align: left;
+    margin: 20px;
+    margin-bottom: 10px;
+
+}
+
+
+.prod-sub-menu a, h3{
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #241948cb;
 }
 
 .card-products {

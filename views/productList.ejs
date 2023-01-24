@@ -11,22 +11,34 @@
 <!------------------------------ MAIN ----------------------------------------------->
     <main>
 
-        <div class="destacado">
+        <div class="product-list">
             <h2>Productos</h2>
         </div>
 
-        <section class="prod-display-products">
-            <% for(let i=0; i< allProducts.length; i++) {%>
-                <div class="card-products">
-                    <img class="card-img-products" src="<%= allProducts[i].img %>" alt="laptop">
-                    <div class="separator">
-                        <h3><%= allProducts[i].marca + " " + allProducts[i].referencia %></h3>
-                        <h4>$<%= allProducts[i].precio %></h4>
-                        <h5><a href="/products/<%= allProducts[i].id %>" %>"><i class="fa-solid fa-eye"></i> Detalles</a></h5>
+        <div class="prod-sub-menu">
+            <a href="/">Home/</a>
+            <h3>Productos</h3>
+        </div>
+        <hr class="solid">
+
+        <div class="list-display">
+            <section class="filter-menu">
+                <h3>marca</h3>
+            </section>
+            
+            <section class="prod-display-products">
+                <% for(let i=0; i< allProducts.length; i++) {%>
+                    <div class="card-products">
+                        <img class="card-img-products" src="<%= allProducts[i].img %>" alt="laptop">
+                        <div class="separator">
+                            <h3><%= allProducts[i].marca + " " + allProducts[i].referencia %></h3>
+                            <h4>$<%= allProducts[i].precio %></h4>
+                            <h5><a href="/products/<%= allProducts[i].id %>" %>"><i class="fa-solid fa-eye"></i> Detalles</a></h5>
+                        </div>
                     </div>
-                </div>
-            <%}%>
-        </section>
+                <%}%>
+            </section>
+        </div>
     </main>
 
 <!-------------- FOOTER ----------------------------------------------->
