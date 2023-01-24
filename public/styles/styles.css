@@ -1,4 +1,5 @@
 /*-------------------- Register------------------------------*/
+/*-------------------- Register------------------------------*/
 
 .body-register, .body-login {
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
@@ -33,6 +34,7 @@
 label {
     font-size: 15px;
 }
+
 
 .register-input[type=text]:focus,
 .register-input[type=password]:focus {
