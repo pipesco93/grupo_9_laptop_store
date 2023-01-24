@@ -301,6 +301,32 @@ h1{
     width: 100px;
 }
 
+.prd-detail-list {
+    border-radius: 5px;
+    background-color: #c7b8e961;
+    padding: 13px 20px;
+    margin-top: 23px;
+}
+
+.prd-detail-list li {
+    padding-bottom: 10px;
+    border-bottom: 3px rgb(143 142 142 / 67%) solid;
+}
+
+.title {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 900;
+    padding-top: 10px;
+ }
+
+.prd-detail-list p {
+    padding-top: 10px;
+    color: #555;
+    font-size: 14px;
+    line-height: 25px;
+}
+
 .specs h6 {
     margin-bottom: 30px;
 }
