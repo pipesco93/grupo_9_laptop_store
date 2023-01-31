@@ -1,11 +1,16 @@
-const productList = require('../database/stock.js');
+// const productList = require('../database/stock.js');
+const fs = require('fs');
 const path = require('path');
+
+
+const productsFilePath = path.join(__dirname, '../database/productos.json');
+const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 
 const products = (req, res) => {
     res.render(path.join(__dirname, '../views/productList'),{'allProducts':productList});
 };
-
-
 
 const prodDetails = (req,res) => {
     const {id} = req.params;

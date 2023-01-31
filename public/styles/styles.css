@@ -688,7 +688,9 @@ footer section i {
 }
 
 .card-img-products {
-    width: 75%;
+    width: 200px;
+    height: 170px;
+    margin: 15px;
     text-align: center;
 }
 
