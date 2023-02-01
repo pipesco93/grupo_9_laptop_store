@@ -55,11 +55,33 @@ _ Crear una app
 
 **Referentes del mercado**
 --------------------------
+Seleccionamos una serie de sitios web como referentes del mercado al cual estamos ingresando con la marca Laptop Store.
+
 [MSI](https://us.msi.com/) -
+
+Nos parece un modo ordenado de mostrar las categorías de productos con los que cuenta la marca y consideramos que es intuitiva para el usuario al crear una sección también para los nuevos lanzamientos, tipos de productos, soporte, entre otros.
+__________
+
 [Microcenter](https://www.microcenter.com/) -
+
+Nos llamó la atención la forma en la que una serie de productos o combos de productos se muestran en forma de banner sobre la zona izquierda de la página de inicio incluyendo imágen, precio y nombre. Porque puede llevar al usario de forma más directa a ciertos productos o promociones.
+__________
+
 [Computodo](https://www.computodo.com.ar/) -
+
+Nos gusta el diseño combinando colores simples con una forma diferente, en cuanto a diseño, de dividir por marcas o componentes. Además consideramos muy positiva la sección que tiene el sitio llamada "rendimiento", porque ayuda a usuarios que no tienen tanta noción de la materia a elegir o armar una computadora dependiendo de el rendimiento esperado o con que software la va a utilizar principalmente.
+__________
+
 [Cyber Power System](https://www.cyberpowersystem.co.uk/) -
+
+Observamos que tiene un buen diseño para la descripción de los productos, donde se muestran las características principales sin necesidad de ingresar a cada producto. Lo que puede ser una buena opción para que el usario compare entre productos u opciones de forma más rápida y moverse mejor dentro del sitio.
+__________
+
 [Lenovo](https://www.lenovo.com/)
+
+Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
+
+Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
 Chau
 
