@@ -31,11 +31,62 @@ const prodEdit = (req, res) => {
     res.render(path.resolve(__dirname, '../views/productEdit'));
 };
 
+const prodCreate = (req, res) => {
+    res.render(path.resolve(__dirname, '../views/productCreate'));
+};
+
+const confirmCreate = (req, res) => {
+    const {
+        referencia,
+        spec,
+        precio,
+        procesador,
+        pantalla,
+        memoria,
+        almacenamiento,
+        destacado,
+        marca,
+    } = req.body
+
+    const newId = productList[productList.length - 1].id + 1;
+
+    const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
+    let newImege;
+
+    if (image.length > 0){
+        newImege = `images/${image}`
+    }
+
+    const obj = {
+        id: newId,
+        marca,
+        referencia,
+        precio,
+        spec,
+        img: newImege,
+        destacado,
+        pantalla,
+        procesador,
+        memoria,
+        almacenamiento
+    };
+
+    //console.log(obj);
+    productList.push(obj);
+    const newProdJson = JSON.stringify(productList);
+    fs.writeFileSync("./database/productos.json", newProdJson)
+	console.log(newProdJson)
+
+    res.redirect('/products');
+};
+
 const controlador = {
     prodDetails,
     cart,
     products,
     prodEdit,
+    prodCreate,
+    confirmCreate,
 }
 
 module.exports = controlador;
