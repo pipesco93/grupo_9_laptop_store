@@ -23,7 +23,7 @@
 
         <section class="prod-display">
             <% for(let i=0; i< allProducts.length; i++) {%>
-                <% if (allProducts[i].destacado == true) {%>
+                <% if (allProducts[i].destacado == "true") {%>
                     <div class="card">
                         <img class="card-img" src="<%= allProducts[i].img %>" alt="laptop">
                         <div class="separator">
