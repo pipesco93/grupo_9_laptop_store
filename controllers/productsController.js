@@ -78,6 +78,7 @@ const confirmCreate = (req, res) => {
 
     //console.log(obj);
     productList.push(obj);
+    //Agregando null ' ' y el cb err hace que el JSOn quede organizado 
     const newProdJson = JSON.stringify(productList,null, ' ', (err)=>{
         if(err){
             return false
