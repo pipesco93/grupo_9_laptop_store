@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 
     filename: (req, file, cb) => {
         const newFile = `prod-${Date.now()}-img${path.extname(file.originalname)}`//date now milisegundos desde 1970, un numero muy grande,
-        // path.extname me trae la extension del archivo original 
+        // path.extname me trae la extension del archivo original
         cb(null,newFile);
     }
 });
@@ -23,9 +23,10 @@ const upload = multer({storage})
 
 routerProducts.get('/products', productsController.products);
 routerProducts.get('/products/:id', productsController.prodDetails);
-routerProducts.get('/cart', productsController.cart);
+routerProducts.get('/products/cart', productsController.cart);
 routerProducts.get('/product-edit', productsController.prodEdit);
 routerProducts.get('/product-create', productsController.prodCreate);
 routerProducts.post('/confirm-create', upload.single('image') ,productsController.confirmCreate);
+routerProducts.delete('/product-create', productsController.prodCreate);
 
 module.exports = routerProducts;

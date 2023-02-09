@@ -36,6 +36,7 @@ const prodCreate = (req, res) => {
 };
 
 const confirmCreate = (req, res) => {
+    //Se requiere la informacion obtenida en el formulario
     const {
         referencia,
         spec,
@@ -48,15 +49,19 @@ const confirmCreate = (req, res) => {
         marca,
     } = req.body
 
+    //Se crea el nuevo id teniendo como base el ultimo id de la array de objetos productList
     const newId = productList[productList.length - 1].id + 1;
 
+    // Se lee la informacion del archivo imagen (nombre de la imagen) cargada en el formulario 
+    // y se genera el nombre o ruta para guadrar l aimagen
     const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
     let newImege;
 
     if (image.length > 0){
-        newImege = `images/${image}`
+        newImege = `../images/${image}`
     }
 
+    //Se crea el objeto que se va a agregar al archivo JSON
     const obj = {
         id: newId,
         marca,
@@ -73,13 +78,23 @@ const confirmCreate = (req, res) => {
 
     //console.log(obj);
     productList.push(obj);
-    const newProdJson = JSON.stringify(productList);
+    const newProdJson = JSON.stringify(productList,null, ' ', (err)=>{
+        if(err){
+            return false
+        }
+    });
     fs.writeFileSync("./database/productos.json", newProdJson)
-	console.log(newProdJson)
+	//console.log(newProdJson)
 
     res.redirect('/products');
 };
 
+const productDelete = (req, res) => {
+    
+}
+
+
+//SE exportan las funciones dentro del objeto controller
 const controlador = {
     prodDetails,
     cart,
