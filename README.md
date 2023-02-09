@@ -51,7 +51,7 @@ _ Crear una app
 
 **Felipe Escobar:** Ingeniero Mecánico, conocimientos básicos de programación en Python.
 
-**Lorena Gotuzzo:** Hola a tod@s. Soy Analista de Sistemas. Hice algunos cursos relacionados con tecnología (rede, programación) pero nunca llegué a tener la práctica necesaria para lograr un emprendimiento propio, así que me anoté en este curso para ordenar conocimientos y poder lanzarme a programar.
+**Lorena Gotuzzo:** Hola a tod@s. Soy Analista de Sistemas. Hice algunos cursos relacionados con tecnología (redes, programación) pero nunca llegué a tener la práctica necesaria para lograr un emprendimiento propio, así que me anoté en este curso para ordenar conocimientos y poder lanzarme a programar.
 
 **Referentes del mercado**
 --------------------------
@@ -84,6 +84,7 @@ Es un referente por la gran variedad de productos que ofrece y la forma en la qu
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
 Chau
+Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
 
 

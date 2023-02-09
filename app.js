@@ -1,14 +1,15 @@
 // Se crean las variables necesarias
 const express = require('express');
-const path = require('path');
 const app = express();
+const methodOverride = require ('method-override')
 const morgan = require('morgan');
+
+app.use(morgan('dev'));
+app.use(methodOverride('_method'))
 
 const port = process.env.PORT || 3001;
 
-//Se da el permiso para la carpeta public
-//const publicPath = path.resolve(__dirname, "./public");
-//app.use(express.static(publicPath));
+
 
 //Set ejs
 app.set('view engine','ejs');

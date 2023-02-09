@@ -7,17 +7,17 @@
 
 <%- include('partials/header.ejs') %>
 
-<!-------------- MAIN ----------------------------------------------->
+<!---------------------- MAIN ----------------------------------------------->
     <main>
         <section class="upper">
-            <h2 class="nombre-prod">NOMBRE DEL PRODUCTO</h2>
-            <h2 class="precio-texto">PRECIO: $XXXX</h2>
+            <h2 class="nombre-prod"><%= product.marca + " " + product.referencia %></h2>
+            <h2 class="precio-texto">PRECIO: $<%= product.precio %></h2>
         </section>
 
         <section class="mid">
             <div class="imagenes">
-                <img class="big-img" src="/images/laptop.webp" alt="laptop">
-                
+                <img class="big-img" src="<%= product.img %>" alt="laptop">
+
             </div>
 
             <div class="prod-information">
@@ -39,12 +39,28 @@
 
                 <div class="specs">
                     <h3 class="specs-titulo">Especificaciones</h3>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, fugit nobis ut, quo aperiam ipsam animi laboriosam iste quas non beatae culpa qui eius sunt dolorem</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dignissimos doloribus ipsam ratione amet sunt quod</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quo architecto consectetur, perspiciatis ipsa.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus architecto eveniet, corporis omnis animi autem a sapiente recusandae ipsa voluptatem impedit aspernatur officia molestiae error at eos labore illum placeat.</li>
-                     </ul>
+                    <p class="prod-spec">
+                        <%= product.spec %>
+                    </p>
+
+                    <ul class="prd-detail-list" data-tooltip-style="icon">
+                        <li>
+                            <div class="title">Processor</div>
+                            <p><%= product.procesador %></p>
+                        </li>
+                        <li>
+                            <div class="title">Pantalla</div>
+                            <p><%= product.pantalla %></p>
+                        </li>
+                        <li>
+                            <div class="title">Memoria</div>
+                            <p><%= product.memoria %></p>
+                        </li>
+                        <li>
+                            <div class="title">Almacenamiento</div>
+                            <p><%= product.almacenamiento %></p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>

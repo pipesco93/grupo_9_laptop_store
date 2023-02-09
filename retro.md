@@ -13,3 +13,4 @@ La división del trabajo a realizar resultó buena, por lo que consideramos segu
 trabajo al comenzar un nuevo Sprint). Sí puede ser de ayuda el comenzar a utilizar de forma más habitual la plataforma
 de Trello para estar más ordenados con fechas y ayuda que pueda necesitar otro miembro con alguna actividad.
 
+
