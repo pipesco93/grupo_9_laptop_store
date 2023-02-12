@@ -7,12 +7,12 @@
 
 <!---------------------- MAIN ----------------------------------------------->
 <body class="body-productEdit">
-    <form method="post" action="/product-edit/<%= productEdit.id%>?_method=PUT" enctype="multipart/form-data">
+    <form method="post" action="/product-edit/<%= productEdit.id%>?_method=PUT">
         <section class="formContainer">
             <h4>Carga de Producto</h4>
             <hr>
             <label for="codigo"><b>Código de producto</b></label>
-            <input class="register-input" type="text" name="codigo" readonly="true" value="<%= productEdit.id%>">
+            <input class="register-input" type="text" name="id" readonly="true" value="<%= productEdit.id%>">
 
             <label for="referencia"><b>Referencia</b></label>
             <input class="register-input" type="text" name="referencia" value="<%= productEdit.referencia%>">
@@ -26,7 +26,7 @@
             <label for="price"><b>Precio</b></label>
             <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" required>
 
-            <img src="<%= productEdit.img%>" alt=""><br>
+            <img class="img-edit" src="<%= productEdit.img%>" alt=""><br>
             <input type="file" name="img" id="">
 
             <label for="procesador">Procesador</label>
@@ -45,9 +45,6 @@
 
                 <button type="button" class="cancel">Cancelar</button>
                 <button type="submit" class="signup">Agregar</button>
-
-            </div>
-        </div>
     </form>
 
 </body>

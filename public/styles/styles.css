@@ -268,7 +268,7 @@ h1{
 }
 
 .big-img {
-    width: 80%;
+    width: 300px;
 }
 
 .agregar{
@@ -841,4 +841,11 @@ footer section i {
         position: relative;
         left: 10px;
     }
+}
+
+
+/*-------------------- Cart -----------------------------------------*/
+.img-edit {
+    width: 200px;
+    margin: 15px;
 }

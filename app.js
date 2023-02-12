@@ -6,6 +6,7 @@ const morgan = require('morgan');
 
 app.use(morgan('dev'));
 app.use(methodOverride('_method'))
+app.use(express.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 3001;
 

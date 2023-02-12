@@ -34,19 +34,20 @@ const productEdit = (req, res) => {
     
     res.render(path.join(__dirname, '../views/productEdit'), {productEdit})
     
-    }
+};
     
 const editConfirm =  (req, res) => {
+
     productList.forEach(elem => {
-        if(elem.id == req.body.id){
+        const {id} = req.params;
+        if(elem.id == id){
             elem.referencia = req.body.referencia;
             elem.marca = req.body.product;
             elem.spec = req.body.description;
             elem.precio = req.body.price;
             elem.procesador = req.body.procesador;
             elem.pantalla = req.body.pantalla;
-            console.log(elem)
-        }
+        };
 
        // const image = req.file ? req.file.filename : '';
         //let editImage 
@@ -54,6 +55,13 @@ const editConfirm =  (req, res) => {
          //   editImage = `images/${image}`
       //  }
     })
+    const newProdListJson = JSON.stringify(productList,null, ' ', (err)=>{
+        if(err){
+            return false
+        }
+    });
+
+    fs.writeFileSync("./database/productos.json", newProdListJson)
 
     res.redirect('/products');
 };
