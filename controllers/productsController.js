@@ -27,15 +27,68 @@ const cart = (req, res) => {
     res.render(path.resolve(__dirname, '../views/productCart'));
 };
 
-const prodEdit = (req, res) => {
-    res.render(path.resolve(__dirname, '../views/productEdit'));
+const productEdit = (req, res) => {
+    const { id } = req.params;
+    
+    const productEdit = productList.find(elem => elem.id == id);
+    
+    res.render(path.join(__dirname, '../views/productEdit'), {productEdit})
+    
+};
+    
+const editConfirm =  (req, res) => {
+
+    productList.forEach(elem => {
+        const {id} = req.params;
+        if(elem.id == id){
+            elem.referencia = req.body.referencia;
+            elem.marca = req.body.product;
+            elem.spec = req.body.description;
+            elem.precio = req.body.price;
+            elem.procesador = req.body.procesador;
+            elem.pantalla = req.body.pantalla;
+        };
+
+       // const image = req.file ? req.file.filename : '';
+        //let editImage 
+       // if(image.length > 0){
+         //   editImage = `images/${image}`
+      //  }
+    })
+    const newProdListJson = JSON.stringify(productList,null, ' ', (err)=>{
+        if(err){
+            return false
+        }
+    });
+
+    fs.writeFileSync("./database/productos.json", newProdListJson)
+
+    res.redirect('/products');
+};
+
+const prodDelete = (req, res) => {
+    const idDelete = req.body.id;
+    const prodDeletedList = productList.filter(e => e.id != idDelete)
+
+    const newProdList = JSON.stringify(prodDeletedList,null, ' ', (err)=>{
+        if(err){
+            return false
+        }
+    });
+
+
+    fs.writeFileSync("./database/productos.json", newProdList)
+
+    res.redirect('/');
 };
 
 const controlador = {
     prodDetails,
     cart,
     products,
-    prodEdit,
+    productEdit,
+    editConfirm,
+    prodDelete,
 }
 
 module.exports = controlador;

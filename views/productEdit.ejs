@@ -7,56 +7,44 @@
 
 <!---------------------- MAIN ----------------------------------------------->
 <body class="body-productEdit">
-    <form>
+    <form method="post" action="/product-edit/<%= productEdit.id%>?_method=PUT">
         <section class="formContainer">
             <h4>Carga de Producto</h4>
             <hr>
             <label for="codigo"><b>Código de producto</b></label>
-            <input class="register-input" type="text" placeholder="Ej. 0123" name="codigo">
+            <input class="register-input" type="text" name="id" readonly="true" value="<%= productEdit.id%>">
+
+            <label for="referencia"><b>Referencia</b></label>
+            <input class="register-input" type="text" name="referencia" value="<%= productEdit.referencia%>">
             
             <label for="product"><b>Nombre del producto</b></label>
-            <input class="register-input" type="text" placeholder="Ingrese nombre del producto" name="product" required>
+            <input class="register-input" type="text"  name="product" value="<%= productEdit.marca%>" required >
             
             <label for="description"><b>Descripción</b></label>
-            <textarea class="register-input" type="text" placeholder="Breve Descripción del producto" name="description" required></textarea>
+            <textarea class="register-input" type="text"  name="description"  required> <%= productEdit.spec%></textarea>
 
             <label for="price"><b>Precio</b></label>
-            <input  class="register-input" type="number" placeholder="$" name="price" required>
+            <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" required>
 
-            <label for="image"><b>Imágen</b></label>
-            <input class="register-input" type="file" name="image" required>
-
-            <label for="dimentions"><b>Dimensiones</b></label>
-            <input class="register-input" type="text" placeholder="Ej. A x L x A en cm" name="dimentions" required>
+            <img class="img-edit" src="<%= productEdit.img%>" alt=""><br>
+            <input type="file" name="img" id="">
 
             <label for="procesador">Procesador</label>
-            <select name="procesador" id="procesador">
-                <option value="clase">Intel i5</option>
-                <option value="clase">Intel i7</option>
-                <option value="clase">AMD Ryzen</option>
+            <select name="procesador" id="procesador" value="<%= productEdit.procesador%>">
+                <option value="Intel i5">Intel i5</option>
+                <option value="Intel i7">Intel i7</option>
+                <option value="AMD Ryzen">AMD Ryzen</option>
             </select>
 
             <label for="pantalla">Pantalla</label>
-            <select name="pantalla" id="pantalla">
-                <option value="clase">13"</option>
-                <option value="clase">14"</option>
-                <option value="clase">15.6"</option>
+            <select name="pantalla" id="pantalla" value="<%= productEdit.pantalla%>">
+                <option value="13''">13"</option>
+                <option value="14''">14"</option>
+                <option value="15.6''">15.6"</option>
             </select>
-
-            <label for="category">Categoría</label>
-            <select name="category" id="category">
-                <option value="laptop">Laptop</option>
-                <option value="laptopGamer">Laptop Gamer</option>
-                <option value="componentes">Componentes</option>
-                <option value="accesorios">Accesorios</option>
-                
-            </select>
-
 
                 <button type="button" class="cancel">Cancelar</button>
                 <button type="submit" class="signup">Agregar</button>
-            </div>
-        </div>
     </form>
 
 </body>

@@ -1,9 +1,12 @@
 // Se crean las variables necesarias
 const express = require('express');
 const app = express();
+const methodOverride = require ('method-override')
 const morgan = require('morgan');
 
 app.use(morgan('dev'));
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 3001;
 

@@ -268,7 +268,7 @@ h1{
 }
 
 .big-img {
-    width: 80%;
+    width: 300px;
 }
 
 .agregar{
@@ -382,6 +382,11 @@ ul{
     padding: 10px;
 }
 
+}
+
+.delete-button {
+    width: 100px;
+    background-color: red;
 }
 
 /*-------------------- Main Prod Home--------------------------------*/
@@ -841,4 +846,11 @@ footer section i {
         position: relative;
         left: 10px;
     }
+}
+
+
+/*-------------------- Cart -----------------------------------------*/
+.img-edit {
+    width: 200px;
+    margin: 15px;
 }
