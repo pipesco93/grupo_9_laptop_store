@@ -2,13 +2,13 @@
  {
   "id": 1,
   "marca": "Alienware",
-  "referencia": "XT24 Editado",
-  "precio": "111",
-  "spec": "Este producto fue editado como prueba del formulario de edicion de productos",
+  "referencia": "m15 R7",
+  "precio": 100,
+  "spec": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature le source.",
   "img": "https://www.asus.com/media/Odin/Websites/global/ProductLine/20210913111409/P_setting_xxx_0_90_end_185.png?webp",
   "destacado": "true",
-  "pantalla": "15.6''",
-  "procesador": "AMD Ryzen",
+  "pantalla": "15.6\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
+  "procesador": "12th Generation Intel® Core™ i7-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
   "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
   "almacenamiento": "1 TB SSD M.2 2280 PCIe Gen4 TLC"
  },
@@ -362,5 +362,31 @@
   "procesador": "12th Generation Intel® Core™ i7-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
   "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
   "almacenamiento": "1 TB SSD M.2 2280 PCIe Gen4 TLC"
- }
+ },
+ {
+  "id": 29,
+  "marca": "MSI",
+  "referencia": "HAG Gamer",
+  "precio": 100,
+  "spec": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature le source.",
+  "img": "https://http2.mlstatic.com/D_NQ_NP_640492-MLA47861783711_102021-V.webp",
+  "destacado": false,
+  "pantalla": "15.6\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
+  "procesador": "12th Generation Intel® Core™ i7-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
+  "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
+  "almacenamiento": "1 TB SSD M.2 2280 PCIe Gen4 TLC"
+ },
+ {
+  "id": 30,
+  "marca": "Dell",
+  "referencia": "XPS Pro A56",
+  "precio": 100,
+  "spec": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature le source.",
+  "img": "https://http2.mlstatic.com/D_NQ_NP_640492-MLA47861783711_102021-V.webp",
+  "destacado": false,
+  "pantalla": "15.6\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
+  "procesador": "12th Generation Intel® Core™ i7-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
+  "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
+  "almacenamiento": "1 TB SSD M.2 2280 PCIe Gen4 TLC"
+ },
 ]
