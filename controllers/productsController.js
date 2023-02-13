@@ -66,12 +66,29 @@ const editConfirm =  (req, res) => {
     res.redirect('/products');
 };
 
+const prodDelete = (req, res) => {
+    const idDelete = req.body.id;
+    const prodDeletedList = productList.filter(e => e.id != idDelete)
+
+    const newProdList = JSON.stringify(prodDeletedList,null, ' ', (err)=>{
+        if(err){
+            return false
+        }
+    });
+
+
+    fs.writeFileSync("./database/productos.json", newProdList)
+
+    res.redirect('/');
+};
+
 const controlador = {
     prodDetails,
     cart,
     products,
     productEdit,
     editConfirm,
+    prodDelete,
 }
 
 module.exports = controlador;

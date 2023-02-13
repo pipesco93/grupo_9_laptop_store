@@ -25,5 +25,6 @@ routerProducts.get('/products/:id', productsController.prodDetails);
 routerProducts.get('/cart', productsController.cart);
 routerProducts.get('/product-edit/:id' , productsController.productEdit);
 routerProducts.put('/product-edit/:id' , productsController.editConfirm);
+routerProducts.delete('/product-delete/:id' , productsController.prodDelete);
 
 module.exports = routerProducts;

@@ -384,6 +384,11 @@ ul{
 
 }
 
+.delete-button {
+    width: 100px;
+    background-color: red;
+}
+
 /*-------------------- Main Prod Home--------------------------------*/
 .main-carousel {
     text-align: center;
