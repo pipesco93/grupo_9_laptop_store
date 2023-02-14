@@ -15,6 +15,7 @@
                 <!-- <i class="fa-solid fa-chevron-left"></i>
                 <i class="fa-solid fa-chevron-right"></i>
                 <i class="fa-solid fa-ellipsis"></i> -->
+            
         </div>
 
         <div class="destacado">
@@ -25,7 +26,12 @@
             <% for(let i=0; i< allProducts.length; i++) {%>
                 <% if (allProducts[i].destacado == "true") {%>
                     <div class="card">
-                        <img class="card-img" src="<%= allProducts[i].img %>" alt="laptop">
+                      
+                        <%if(allProducts[i].img.includes('http')){%>
+                            <img class="card-img" src="<%=allProducts[i].img %>" alt="laptop">
+                        <%}else {%>
+                            <img class="card-img" src="/images/products/<%=allProducts[i].img %>" alt="laptop">
+                        <%}%>
                         <div class="separator">
                             <h3><%= allProducts[i].marca + " " +  allProducts[i].referencia %></h3>
                             <h4>$<%= allProducts[i].precio %></h4>
