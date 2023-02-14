@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+
+<!---------------------- MAIN ----------------------------------------------->
+<body class="body-productEdit">
+    <form method="POST" action="/confirm-create" enctype="multipart/form-data">
+        <section class="formContainer">
+            <h4>Carga de Producto</h4>
+            <hr>
+            
+            <label for="product"><b>Nombre del producto</b></label>
+            <input class="register-input" type="text" placeholder="Referencia" name="referencia" required>
+            
+            <label for="description"><b>Descripción</b></label>
+            <textarea class="register-input" type="text" placeholder="Breve Descripción del producto" name="spec" required></textarea>
+
+            <label for="price"><b>Precio</b></label>
+            <input  class="register-input" type="number" placeholder="$" name="precio" required>
+             <br>
+             <br>
+            <div>
+                <label for="image"><b>Imágen</b></label>
+                <input class="register-input" type="file" name="image" required>
+            </div>
+            <br>
+             <div>
+                <label for="dimentions"><b>Marca</b></label>
+                <input class="register-input" type="text" placeholder="Marca" name="marca" required>
+             </div>
+
+             <div>
+                <label for="procesador">Procesador</label>
+                <select name="procesador" id="procesador">
+                    <option value="12th Generation Intel® Core™ i5-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)">Intel i5</option>
+                    <option value="12th Generation Intel® Core™ i7-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)">Intel i7</option>
+                    <option value="12th Generation AMD-Rynzen 7 Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)">AMD Ryzen 7</option>
+                </select>
+             </div>
+
+             <div>
+                <label for="pantalla">Pantalla</label>
+                <select name="pantalla" id="pantalla">
+                    <option value='13" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel'>13"</option>
+                    <option value='14" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel'>14"</option>
+                    <option value='15,6" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel'>15.6"</option>
+                </select>
+             </div>
+
+             <div>
+                <label for="category">Memoria</label>
+                <select name="memoria" id="memoria">
+                    <option value="16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)">16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)</option>
+                    <option value="12 GB DDR5-4800MHz (SODIMM) (3 x 4 GB)">12 GB DDR5-4800MHz (SODIMM) (3 x 4 GB)</option>
+                    <option value="8 GB DDR5-4800MHz (SODIMM) (1 x 8 GB)">8 GB DDR5-4800MHz (SODIMM) (1 x 8 GB)</option>
+                    <option value="4 GB DDR5-4800MHz (SODIMM) (2 x 2 GB)">4 GB DDR5-4800MHz (SODIMM) (2 x 2 GB)</option>
+                </select>
+             </div>
+
+             <div>
+                <label for="category">Almacenamiento</label>
+                <select name="almacenamiento" id="almacenamiento">
+                    <option value="2TB">2 TB SSD M.2 2280 PCIe Gen4 TLC</option>
+                    <option value="12GB">1 TB SSD M.2 2280 PCIe Gen4 TLC</option>
+                    <option value="500GB">500 GB SSD M.2 2280 PCIe Gen4 TLC</option>
+                    <option value="256GB">256 GB SSD M.2 2280 PCIe Gen4 TLC</option>
+                </select>
+             </div>
+
+            <div>
+                <label for="destacado">Destacado</label>
+                <input type="radio" name="destacado" id="destacado" value="true">
+            </div>
+            
+
+
+                <button type="button" class="cancel">Cancelar</button>
+                <button type="submit" class="signup">Agregar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -12,6 +12,7 @@
     padding: 30px;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
     border-radius: 4px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -24,17 +25,15 @@
     width: 100%;
     font-size: 14px;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    margin: 0px 0 22px 0;
     display: inline-block;
     border: none;
     background: whitesmoke;
 }
 
-
 label {
     font-size: 15px;
 }
-
 
 .register-input[type=text]:focus,
 .register-input[type=password]:focus {
@@ -73,6 +72,10 @@ button:hover {
     margin-top: 20px;
     padding: 14px 20px;
     background-color: #ff3d2f;
+}
+
+.formContainer div {
+    margin-top: 20px;
 }
 /*-------------------- Global*------------------------------*/
 * {
@@ -146,6 +149,7 @@ h1{
 
 .menu-productos h2 {
     font-size: 1rem;
+    text-align: center;
 }
 
 .menu-productos i {
@@ -268,7 +272,7 @@ h1{
 }
 
 .big-img {
-    width: 80%;
+    width: 300px;
 }
 
 .agregar{
@@ -384,6 +388,11 @@ ul{
 
 }
 
+.delete-button {
+    width: 100px;
+    background-color: red;
+}
+
 /*-------------------- Main Prod Home--------------------------------*/
 .main-carousel {
     text-align: center;
@@ -426,7 +435,7 @@ ul{
 }
 
 .card {
-    width: 70%;
+    width: 350px;
     background-color: #ffffff97;
     margin: auto;
     margin-top: 35px;
@@ -436,7 +445,9 @@ ul{
 
 .card-img {
     width: 65%;
+    height: 150px;
     text-align: center;
+    margin: 15px;
 }
 
 .separator {
@@ -465,6 +476,7 @@ ul{
 @media (min-width: 768px) {
     .prod-display {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
     }
@@ -841,4 +853,11 @@ footer section i {
         position: relative;
         left: 10px;
     }
+}
+
+
+/*-------------------- Cart -----------------------------------------*/
+.img-edit {
+    width: 200px;
+    margin: 15px;
 }
