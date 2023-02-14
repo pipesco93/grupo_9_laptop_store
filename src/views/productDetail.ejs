@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+
+<%- include('partials/header.ejs') %>
+
+<!---------------------- MAIN ----------------------------------------------->
+    <main>
+        <section class="upper">
+            <h2 class="nombre-prod"><%= product.marca + " " + product.referencia %></h2>
+            <h2 class="precio-texto">PRECIO: $<%= product.precio %></h2>
+        </section>
+
+        <section class="mid">
+            <div class="imagenes">
+                <img class="big-img" src="<%= product.img %>" alt="laptop">
+
+            </div>
+
+            <div class="prod-information">
+                <div class="agregar">
+                    <select class="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <button> <i class="fa-solid fa-cart-plus"></i> Agregar</button>
+                </div>
+
+                <div class="envio">
+                    <h3 class="metodo-envio">Métodos de envío <i class="fa-solid fa-truck"></i></h3>
+                    <input class="zip" type="text" id="zip-code">
+                    <h6>no sé mi código postal</h6>
+                </div>
+
+                <div class="specs">
+                    <h3 class="specs-titulo">Especificaciones</h3>
+                    <p class="prod-spec">
+                        <%= product.spec %>
+                    </p>
+
+                    <ul class="prd-detail-list" data-tooltip-style="icon">
+                        <li>
+                            <div class="title">Processor</div>
+                            <p><%= product.procesador %></p>
+                        </li>
+                        <li>
+                            <div class="title">Pantalla</div>
+                            <p><%= product.pantalla %></p>
+                        </li>
+                        <li>
+                            <div class="title">Memoria</div>
+                            <p><%= product.memoria %></p>
+                        </li>
+                        <li>
+                            <div class="title">Almacenamiento</div>
+                            <p><%= product.almacenamiento %></p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form method="post" action="/product-delete/<%= product.id %>?_method=DELETE" >
+                        <input class="delete-input" type="hidden" name="id" readonly="true" value="<%= product.id %>">
+                        <button type="submit" class="delete-button">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-------------- FOOTER ----------------------------------------------->
+
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>
