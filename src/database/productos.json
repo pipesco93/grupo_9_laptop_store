@@ -364,19 +364,6 @@
   "almacenamiento": "1 TB SSD M.2 2280 PCIe Gen4 TLC"
  },
  {
-  "id": 30,
-  "marca": "Dell",
-  "referencia": "CRX",
-  "precio": "123",
-  "spec": "NUEVO",
-  "img": "product-1676336176504_img.jpeg",
-  "destacado": "true",
-  "pantalla": "13\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
-  "procesador": "12th Generation Intel® Core™ i5-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
-  "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
-  "almacenamiento": "2TB"
- },
- {
   "id": 31,
   "marca": "Dell",
   "referencia": "xps 14",
@@ -387,5 +374,18 @@
   "procesador": "12th Generation Intel® Core™ i5-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
   "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
   "almacenamiento": "2TB"
+ },
+ {
+  "id": 32,
+  "marca": "Dell",
+  "referencia": "XPS 15 Laptop",
+  "precio": "222",
+  "spec": "Get immersed in content with bright, color rich panels with high resolution, with more viewing space to keep you productive. Integrated Eyesafe® display technology helps to reduce harmful blue light while maintaining vivid color. Optional OLED display makes colors pop.\r\nThe stunning 4-sided InfinityEdge display enables a large 16:10 screen and 92.9% screen to body ratio.",
+  "img": "product-1676339293160_img.webp",
+  "destacado": "true",
+  "pantalla": "13\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
+  "procesador": "12th Generation AMD-Rynzen 7 Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
+  "memoria": "8 GB DDR5-4800MHz (SODIMM) (1 x 8 GB)",
+  "almacenamiento": "500GB"
  }
 ]
