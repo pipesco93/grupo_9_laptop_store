@@ -364,27 +364,14 @@
   "almacenamiento": "1 TB SSD M.2 2280 PCIe Gen4 TLC"
  },
  {
-  "id": 30,
-  "marca": "Dell",
-  "referencia": "CRX",
-  "precio": "123",
-  "spec": "NUEVO",
-  "img": "product-1676336176504_img.jpeg",
-  "destacado": "true",
-  "pantalla": "13\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
-  "procesador": "12th Generation Intel® Core™ i5-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
-  "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
-  "almacenamiento": "2TB"
- },
- {
   "id": 31,
   "marca": "Dell",
-  "referencia": "xps 14",
+  "referencia": "XPS 14",
   "precio": "123",
-  "spec": "nuevo",
+  "spec": "Crafted with CNC-machined aluminum and glass to provide a simple, yet complete sensorial experience - all in a thin, lightweight laptop available in two colors, Platinum",
   "img": "product-1676338633385_img.jpeg",
-  "pantalla": "13\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
-  "procesador": "12th Generation Intel® Core™ i5-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
+  "pantalla": "13''",
+  "procesador": "Intel i7",
   "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
   "almacenamiento": "2TB"
  }
