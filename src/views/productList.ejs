@@ -29,7 +29,12 @@
             <section class="prod-display-products">
                 <% for(let i=0; i< allProducts.length; i++) {%>
                     <div class="card-products">
-                        <img class="card-img-products" src="<%= allProducts[i].img %>" alt="laptop">
+                        <%if(allProducts[i].img.includes('http')){%>
+                            <img class="card-img-products" src="<%=allProducts[i].img %>" alt="laptop">
+                        <%}else {%>
+                            <img class="card-img-products" src="/images/products/<%=allProducts[i].img %>" alt="laptop">
+                        <%}%>
+
                         <div class="separator">
                             <h3><%= allProducts[i].marca + " " + allProducts[i].referencia %></h3>
                             <h4>$<%= allProducts[i].precio %></h4>

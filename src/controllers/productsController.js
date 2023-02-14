@@ -40,7 +40,7 @@ const productEdit = (req, res) => {
     
 };
 
-//---------------------------------- Cinfirmar edit ---------------------------------------------
+//---------------------------------- Confirmar edit ---------------------------------------------
 const editConfirm =  (req, res) => {
 
     productList.forEach(elem => {
@@ -101,7 +101,7 @@ const confirmCreate = (req, res) => {
     let newImege;
 
     if (image.length > 0){
-        newImege = `../images/products/${image}`
+        newImege = image;
     }
 
     //Se crea el objeto que se va a agregar al archivo JSON

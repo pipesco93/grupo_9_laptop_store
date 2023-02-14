@@ -16,7 +16,11 @@
 
         <section class="mid">
             <div class="imagenes">
-                <img class="big-img" src="<%= product.img %>" alt="laptop">
+                <%if(product.img.includes('http')){%>
+                    <img class="card-img-products" src="<%=product.img %>" alt="laptop">
+                <%}else {%>
+                    <img class="card-img-products" src="/images/products/<%=product.img %>" alt="laptop">
+                <%}%>
 
             </div>
 
