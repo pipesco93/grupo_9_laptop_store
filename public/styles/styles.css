@@ -356,6 +356,22 @@ ul{
     text-align: justify;
 }
 
+.edit-button {
+    width: 100px;
+    background-color: rgb(10, 119, 13);;
+    
+}
+
+.edit-button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.delete-edit {
+    display: flex;
+    justify-content: space-around;
+}
+
 @media (min-width: 768px) {
    .upper {
     display: flex;
