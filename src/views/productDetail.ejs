@@ -66,11 +66,13 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="delete-edit">
+                    <button type="submit" class="edit-button"><a href="/product-edit/<%= product.id %>">Edit</a></button>
                     <form method="post" action="/product-delete/<%= product.id %>?_method=DELETE" >
                         <input class="delete-input" type="hidden" name="id" readonly="true" value="<%= product.id %>">
                         <button type="submit" class="delete-button">Eliminar</button>
                     </form>
+
                 </div>
             </div>
         </section>
