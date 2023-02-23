@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+    
+</head>
+
+<body class="body-register">
+    <%- include('partials/header.ejs') %>
+    <form>
+        <section class="formContainer">
+            <h4>Registro</h4>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input class="register-input" type="text" placeholder="Ingrese Email" name="email" required>
+            
+            <label for="password"><b>Contraseña</b></label>
+            <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password" required>
+
+            <label for="nombre"><b>Nombre</b></label>
+            <input  class="register-input" type="text" name="nombre" required>
+
+            <label for="apellido"><b>Apellido</b></label>
+            <input class="register-input" type="text" name="apellido" required>
+
+            <label for="direccion"><b>Dirección</b></label>
+            <input class="register-input" type="text" placeholder="Ej: Av. Qwerty 1010" name="direccion" required>
+
+            <label for="pais"></label>
+            <select name="pais" id="pais">
+                <option value="argentina">Argentina</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                <label for="avatar">Imagen personal</label>
+                <input class="register-input" type="file" name="avatar">
+            </div>
+
+                <button type="button" class="cancel">Cancelar</button>
+                <button type="submit" class="signup">Crear Cuenta</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
