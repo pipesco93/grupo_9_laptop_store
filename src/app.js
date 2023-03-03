@@ -4,16 +4,22 @@ const app = express();
 const methodOverride = require ('method-override')
 const morgan = require('morgan');
 const path = require('path');
+const session = require('express-session');
 
 app.use(morgan('dev'));
 app.use(methodOverride('_method'))
 
-//pra que pueda leer put y delete
+//Session
+app.use(session({
+    secret: 'Secreto',
+    resave: false,
+    saveUninitialized: false,
+}))
+
+//Para que pueda leer put y delete
 app.use(express.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 3001;
-
-
 
 //Set ejs
 app.set('view engine','ejs');

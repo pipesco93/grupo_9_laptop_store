@@ -1,18 +1,5 @@
 [
  {
-  "id": 1,
-  "marca": "Alienware",
-  "referencia": "m15 R7 Editado",
-  "precio": "100",
-  "spec": " Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature le source.",
-  "img": "https://www.asus.com/media/Odin/Websites/global/ProductLine/20210913111409/P_setting_xxx_0_90_end_185.png?webp",
-  "destacado": "true",
-  "pantalla": "13''",
-  "procesador": "Intel i5",
-  "memoria": "16 GB DDR5-4800MHz (SODIMM) (2 x 8 GB)",
-  "almacenamiento": "1 TB SSD M.2 2280 PCIe Gen4 TLC"
- },
- {
   "id": 3,
   "marca": "Lenovo",
   "referencia": "Legion 5",
