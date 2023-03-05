@@ -3,6 +3,26 @@ const routerUsers = express.Router();
 const userController = require('../controllers/usersController.js');
 const { body } = require('express-validator');
 
+// Configuraciones de multer
+const path = require('path');
+const multer = require('multer');
+
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../../public/images/users/'))
+
+    },
+    filename: (req, file, cb) => {
+        const newUserImg = `user-${Date.now()}_img${path.extname(file.originalname)}`
+        cb(null, newUserImg)
+    }
+})
+
+// Instancio multer
+const upload = multer({storage});
+
+
 // Validaciones
 
 const validateLogin = [
@@ -16,9 +36,6 @@ const validateRegister = [
     body('firstName').notEmpty().withMessage('Enter a name'),
     body('lastName').notEmpty().withMessage('Enter a sirname'),
     body('adress').notEmpty().withMessage('Enter an adress'),
-    body('pais').notEmpty().withMessage('Enter a country'),
-    body('avatar').notEmpty().withMessage('Enter an image'),
-
 ];
 
 
@@ -26,6 +43,6 @@ routerUsers.get('/register', userController.register);
 routerUsers.get('/login', userController.login);
 
 routerUsers.post('/log-in', validateLogin, userController.postLogin);
-routerUsers.post('/register', validateRegister, userController.postRegister);
+routerUsers.post('/confirm-register',upload.single('avatar'), validateRegister, userController.postRegister);
 
 module.exports = routerUsers;

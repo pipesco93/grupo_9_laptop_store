@@ -7,7 +7,7 @@
 
 <body class="body-register">
     <%- include('partials/header.ejs') %>
-    <form>
+    <form method="POST" action="/confirm-register" enctype="multipart/form-data">
         <section class="formContainer">
             <h4>Registro</h4>
             <hr>
@@ -18,10 +18,10 @@
             <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password" required>
 
             <label for="nombre"><b>Nombre</b></label>
-            <input  class="register-input" type="text" name="first-name" required>
+            <input  class="register-input" type="text" name="firstName" required>
 
             <label for="apellido"><b>Apellido</b></label>
-            <input class="register-input" type="text" name="last-name" required>
+            <input class="register-input" type="text" name="lastName" required>
 
             <label for="direccion"><b>Dirección</b></label>
             <input class="register-input" type="text" placeholder="Ej: Av. Qwerty 1010" name="adress" required>
