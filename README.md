@@ -43,7 +43,7 @@ _ Crear una app
 
 **Integrantes del equipo:**
 --------------------------
-**Rosario María Becca:** No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
+**Rosario María Beccar:** No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
 
 **Matías Muñoz Gader:** Soy Licenciado en Marketing, no tengo experiencia previa en programación, pero mi interesa mucho aprender constantemente cosas nuevas.
 
@@ -81,9 +81,10 @@ __________
 
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
+
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
-Chau
+
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
 
