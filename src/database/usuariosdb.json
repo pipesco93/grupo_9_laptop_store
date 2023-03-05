@@ -1028,5 +1028,15 @@
   "adress": "Calle 3",
   "pais": "argentina",
   "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 104,
+  "email": "valeria@outlook.com",
+  "password": "$2a$10$DClQoVXUm0RwVy0D.2QZh.SfSuzE8PfW6k2rMPXm0tvAWbIxiWRGe",
+  "firstName": "Valeria",
+  "lastName": "Rios",
+  "adress": "Calle 45",
+  "pais": "argentina",
+  "avatar": "user-1678058358291_img.avif"
  }
 ]

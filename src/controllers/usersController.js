@@ -64,7 +64,7 @@ const postRegister = (req,res) => {
     } = req.body;
 
     const errors = validationResult(req);
-    // console.log(errors)
+    // npm run devconsole.log(errors)
 
     if (errors.isEmpty()) {
         

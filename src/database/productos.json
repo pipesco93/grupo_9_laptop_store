@@ -28,13 +28,13 @@
  {
   "id": 5,
   "marca": "Dell",
-  "referencia": "Inspiron 5",
-  "precio": 900,
-  "spec": "Contrary to popular belief, Lorem Ipsum is not simply it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+  "referencia": "Inspiron 5  Editado",
+  "precio": "900",
+  "spec": " Contrary to popular belief, Lorem Ipsum is not simply it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
   "img": "https://m.media-amazon.com/images/I/719li4yfO7L._AC_SX679_.jpg",
   "destacado": false,
-  "pantalla": "15.6\", FHD 1920x1080, 165Hz, Non-Touch, 3ms, Advanced Optimus, ComfortView Plus, NVIDIA G-SYNC",
-  "procesador": "12th Gen Intel® Core™ i7-12700H (24 MB cache, 14 cores, 20 threads, up to 4.70 GHz Turbo)",
+  "pantalla": "13''",
+  "procesador": "Intel i5",
   "memoria": "16GB (2x8GB) DDR5 4800MHz",
   "almacenamiento": "512 GB, M.2 2280, PCIe NVMe, SSD, Class 40"
  },

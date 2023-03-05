@@ -77,7 +77,7 @@ const prodCreate = (req, res) => {
     res.render(path.resolve(__dirname, '../views/productCreate'));
 };
 
-//---------------------------------- Confirmar creacin de productos ---------------------------------------------
+//---------------------------------- Confirmar creacion de productos ---------------------------------------------
 const confirmCreate = (req, res) => {
     //Se requiere la informacion obtenida en el formulario
     const {
