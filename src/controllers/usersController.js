@@ -28,7 +28,7 @@ const postLogin = (req, res) => {
 
     const errors  = validationResult(req);
     if (errors.isEmpty()){
-        const userLogin = modelUser.findByField('email', email);
+        const userLogin = userList.find((e) => e['email'] == email);
         if(userLogin){
             const passwd = bcrypt.compareSync(password, userLogin.password);
             if(passwd){
@@ -120,6 +120,9 @@ const postRegister = (req,res) => {
             // Redirect a home
             res.redirect("/")
         }
+    }else {
+        res.render(path.join(__dirname, '../views/register',{'errors':errors.array(), 'prev': req.body}));
+        console.log(errors.array)
     }
 }
 

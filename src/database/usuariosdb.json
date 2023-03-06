@@ -1038,5 +1038,25 @@
   "adress": "Calle 45",
   "pais": "argentina",
   "avatar": "user-1678058358291_img.avif"
+ },
+ {
+  "id": 105,
+  "email": "andres@yahoo.com",
+  "password": "$2a$10$yt6KGO/LPmLSXnLiEpf6tOfN5w9gvhBAk6wbpCfOve4lOk4MI7urC",
+  "firstName": "Andres",
+  "lastName": "García",
+  "adress": "Calle 458",
+  "pais": "argentina",
+  "avatar": "user-1678060492584_img.jpeg"
+ },
+ {
+  "id": 106,
+  "email": "test@gmail.com",
+  "password": "$2a$10$7Nwabpn.vlwlL5LCLilCDuqR02d0ojdDcpvggpU.BKbxs5CMaSbMm",
+  "firstName": "Test",
+  "lastName": "Prueba",
+  "adress": "Calle test",
+  "pais": "argentina",
+  "avatar": "user-1678066838887_img.jpeg"
  }
 ]
