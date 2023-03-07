@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs');
 
 const User = {
 
     filename : path.join(__dirname, '../database/usuariosdb.json'),
-    
+
     getAlluser : () => {
         return JSON.parse(fs.readFileSync(User.filename, 'utf-8'))
     },
@@ -21,14 +22,15 @@ const User = {
 
     create : (data) => {
         const users = User.getAlluser();
+
         const newUser = {
-            id : user.newId(),
+            id : User.newId(),
             ...data
         }
 
         users.push(newUser);
 
-        fs.writeFile(user.filename, JSON.stringify(users, null, ' '), (error) => {
+        fs.writeFile(User.filename, JSON.stringify(users, null, ' '), (error) => {
             if(error){
                 return false
             }
@@ -43,10 +45,10 @@ const User = {
 
     findByField : (field, text) => {
         return User.getAlluser().find((e) => e[field] == text);
-    }, 
+    },
 
 }
 
 
 
-module.exports = User; 
+module.exports = User;

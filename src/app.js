@@ -14,7 +14,7 @@ app.use(session({
     secret: 'Secreto',
     resave: false,
     saveUninitialized: false,
-}))
+}));
 
 //Para que pueda leer put y delete
 app.use(express.urlencoded({ extended: false }));
@@ -23,6 +23,7 @@ const port = process.env.PORT || 3001;
 
 //Set ejs
 app.set('view engine','ejs');
+app.set("views",__dirname + "/views");
 app.use(express.static(path.join(__dirname,'../public')));
 console.log(path.join(__dirname,'../public'));
 

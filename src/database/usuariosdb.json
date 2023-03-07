@@ -1058,5 +1058,44 @@
   "adress": "Calle test",
   "pais": "argentina",
   "avatar": "user-1678066838887_img.jpeg"
+ },
+ {
+  "id": 107,
+  "email": "test2@gmail.com",
+  "password": "$2a$10$5Tg/mft/2YQsIbrzNQj8X.eMZ.hw8TIMmrac5qHqjZGnUdDGHGZAO",
+  "firstName": "Test 2",
+  "lastName": "dos",
+  "adress": "calle 3",
+  "pais": "argentina",
+  "avatar": "user-1678145607103_img.jpeg"
+ },
+ {
+  "id": 108,
+  "email": "test3@gmail.com",
+  "password": "$2a$10$M/BcNySRDbjqvEhyrLan/umZB5ebFyo.JrwDrfIKtJ/f7e3sMQHOa",
+  "firstName": "test3",
+  "lastName": "tres",
+  "adress": "Calle 13224",
+  "pais": "argentina"
+ },
+ {
+  "id": 109,
+  "email": "test5@gmail.com",
+  "password": "$2a$10$.j.u9cLY5E7nEOTJ8.glc.ZpWpFZa3D0b6zU.TN70VY9WvjbIesr2",
+  "firstName": "test5",
+  "lastName": "test5",
+  "adress": "calle 55555",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 110,
+  "email": "test6@gmail.com",
+  "password": "$2a$10$RGrPVez.hMI44QAN6NA.T.smkmbTINgWRT3rndKo71nv4HuAZMKwS",
+  "firstName": "test",
+  "lastName": "test",
+  "adress": "calle 6",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
  }
 ]
