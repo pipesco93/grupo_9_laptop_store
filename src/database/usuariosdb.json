@@ -119,5 +119,15 @@
   "pais": "argentina",
   "isAdmin": "true",
   "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 12,
+  "email": "ana@gmail.com",
+  "password": "$2a$10$6GATqZSBJy.xnaYbdpt/vucmzm.XKNQvyJIWmUTT9hWyoT1y1qkq6",
+  "firstName": "Ana",
+  "lastName": "Restrepo",
+  "adress": "Calle 455",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
  }
 ]

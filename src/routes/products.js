@@ -3,6 +3,7 @@ const routerProducts = express.Router();
 const productsController = require('../controllers/productsController')
 const path = require('path');
 const multer = require('multer');
+const isAdmin = require('../middlewares/isAdmin')
 
 // Configuraciones de multer
 const storage = multer.diskStorage({
@@ -22,7 +23,7 @@ const upload = multer({storage});
 routerProducts.get('/products', productsController.products);
 routerProducts.get('/products/:id', productsController.prodDetails);
 routerProducts.get('/cart', productsController.cart);
-routerProducts.get('/product-create', productsController.prodCreate);
+routerProducts.get('/product-create', isAdmin ,productsController.prodCreate);
 routerProducts.post('/confirm-create', upload.single('image') ,productsController.confirmCreate);
 routerProducts.get('/product-edit/:id' , productsController.productEdit);
 routerProducts.put('/product-edit/:id' , productsController.editConfirm);
