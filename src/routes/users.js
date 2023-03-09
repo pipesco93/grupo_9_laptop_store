@@ -26,21 +26,22 @@ const upload = multer({storage});
 // Validaciones
 
 const validateLogin = [
-    body('email').isEmail().withMessage('Invalid mail'),
-    body('password').notEmpty().withMessage('Enter a password')
+    body('email').isEmail().withMessage('Email invalido'),
+    body('password').notEmpty().withMessage('Debes entrar tu contraseña')
 ];
 
 const validateRegister = [
-    body('email').isEmail().withMessage('Invalid mail'),
-    body('password').notEmpty().withMessage('Enter a password'),
-    body('firstName').notEmpty().withMessage('Enter a name'),
-    body('lastName').notEmpty().withMessage('Enter a sirname'),
-    body('adress').notEmpty().withMessage('Enter an adress'),
+    body('email').isEmail().withMessage('El email no es valido'),
+    body('password').notEmpty().withMessage('Debes ingresar una contraseña'),
+    body('firstName').notEmpty().withMessage('Debes ingresar un nombre'),
+    body('lastName').notEmpty().withMessage('Debes ingesar un apellido'),
+    body('adress').notEmpty().withMessage('Debes ingresar una dirección'),
 ];
 
 
 routerUsers.get('/register', userController.register);
 routerUsers.get('/login', userController.login);
+routerUsers.get('/logout', userController.logOut);
 
 routerUsers.post('/log-in', validateLogin, userController.postLogin);
 routerUsers.post('/confirm-register',upload.single('avatar'), validateRegister, userController.postRegister);

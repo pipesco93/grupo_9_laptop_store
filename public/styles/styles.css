@@ -20,6 +20,12 @@
     display: block;
 }
 
+.register-alert {
+    color: red;
+    font-size: 12px;
+    margin: 10px;
+}
+
 .register-input[type=text],
 .register-input[type=password] {
     width: 100%;
@@ -677,6 +683,7 @@ footer section i {
 .inicio-sesion h3 {
     margin: 15px;
     font-size: 2rem;
+    color: #ffffff;
 }
 
 .inicio-sesion a {

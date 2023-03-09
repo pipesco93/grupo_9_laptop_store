@@ -12,25 +12,25 @@
         <section class="formContainer">
             <% if(locals.errors){
                 errors.forEach((err) => {%>
-                    <p><%= err.msg %></p>
+                    <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
                 <%})%>
             <%}%>
             <h4>Registro</h4>
             <hr>
             <label for="email"><b>Email</b></label>
-            <input class="register-input" type="text" placeholder="Ingrese Email" name="email">
+            <input class="register-input" type="text" placeholder="Ingrese Email" name="email" value="<%= locals.prev && prev.email ? prev.email : '' %>">
             
             <label for="password"><b>Contraseña</b></label>
             <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password">
 
             <label for="nombre"><b>Nombre</b></label>
-            <input  class="register-input" type="text" name="firstName">
+            <input  class="register-input" type="text" name="firstName" value="<%= locals.prev && prev.firstName ? prev.firstName : '' %>">
 
             <label for="apellido"><b>Apellido</b></label>
-            <input class="register-input" type="text" name="lastName">
+            <input class="register-input" type="text" name="lastName" value="<%= locals.prev && prev.lastName ? prev.lastName : '' %>">
 
             <label for="direccion"><b>Dirección</b></label>
-            <input class="register-input" type="text" placeholder="Ej: Av. Qwerty 1010" name="adress">
+            <input class="register-input" type="text" placeholder="Ej: Av. Qwerty 1010" name="adress" value="<%= locals.prev && prev.adress ? prev.adress : '' %>">
 
             <label for="pais"></label>
             <select name="pais" id="pais">
@@ -41,6 +41,11 @@
             <div>
                 <label for="avatar">Imagen personal</label>
                 <input class="register-input" type="file" name="avatar">
+            </div>
+
+            <div>
+                <label for="isAdmin">Soy Vendedor</label>
+                <input type="radio" name="isAdmin" id="isAdmin" value="true">
             </div>
 
                 <button type="button" class="cancel">Cancelar</button>
