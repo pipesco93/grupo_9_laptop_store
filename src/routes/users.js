@@ -3,40 +3,28 @@ const routerUsers = express.Router();
 const userController = require('../controllers/usersController.js');
 const { body } = require('express-validator');
 
+// Requeris las validaciones de usuario
+const {validateLogin, validateRegister} = require('../middlewares/userValidations')
+
 // Configuraciones de multer
-const path = require('path');
+//const path = require('path');
+
 const multer = require('multer');
+const {storage} = require('../middlewares/imageMulter')
 
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, path.join(__dirname, '../../public/images/users/'))
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/images/users/'))
-
-    },
-    filename: (req, file, cb) => {
-        const newUserImg = `user-${Date.now()}_img${path.extname(file.originalname)}`
-        cb(null, newUserImg)
-    }
-})
+//     },
+//     filename: (req, file, cb) => {
+//         const newUserImg = `user-${Date.now()}_img${path.extname(file.originalname)}`
+//         cb(null, newUserImg)
+//     }
+// })
 
 // Instancio multer
 const upload = multer({storage});
-
-
-// Validaciones
-
-const validateLogin = [
-    body('email').isEmail().withMessage('Email invalido'),
-    body('password').notEmpty().withMessage('Debes entrar tu contraseña')
-];
-
-const validateRegister = [
-    body('email').isEmail().withMessage('El email no es valido'),
-    body('password').notEmpty().withMessage('Debes ingresar una contraseña'),
-    body('firstName').notEmpty().withMessage('Debes ingresar un nombre'),
-    body('lastName').notEmpty().withMessage('Debes ingesar un apellido'),
-    body('adress').notEmpty().withMessage('Debes ingresar una dirección'),
-];
 
 
 routerUsers.get('/register', userController.register);

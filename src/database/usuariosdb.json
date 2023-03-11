@@ -129,5 +129,67 @@
   "adress": "Calle 455",
   "pais": "argentina",
   "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 13,
+  "email": "mario@gmail.com",
+  "password": "$2a$10$wmfPhJ2QBvmPakbVdHC0duGOLH6PhPFrKfxVEROn1IVDLhNQuoTTy",
+  "firstName": "Mario",
+  "lastName": "felipe",
+  "adress": "felipe",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 14,
+  "email": "juan@outlook.com",
+  "password": "$2a$10$6NrfNIZBFXqDnhHeWvZSMOXXUj7yKIZsrG1Yyld7SAmSJbRYGM2MS",
+  "firstName": "Juan",
+  "lastName": "García",
+  "adress": "Carrera 27 A # 72 A 10",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "user-1678550703205_img.jpeg"
+ },
+ {
+  "id": 15,
+  "email": "lina@yahoo.com",
+  "password": "$2a$10$yAyGV2QrlSXVbMLVBEYFMutVzDLQgvuWzBP95IoK8fb7rN3dbavwC",
+  "firstName": "Lina",
+  "lastName": "Arias",
+  "adress": "Calle 23 # 234 ",
+  "pais": "argentina",
+  "avatar": "user-1678553185756_img.png"
+ },
+ {
+  "id": 16,
+  "email": "angela@gmail.com",
+  "password": "$2a$10$PM7DGOfEetrmVyYjFnxbdu5MafFxBByEMLvoKVGKBCucnbtMsXF0.",
+  "firstName": "Angela",
+  "lastName": "Perez",
+  "adress": "calle 24 # 123",
+  "pais": "argentina",
+  "avatar": "user-1678553236971_img.jpeg"
+ },
+ {
+  "id": 17,
+  "email": "german@hotmil.com",
+  "password": "$2a$10$OfgGC3r2APUZy73K7jEpLOExpHTUJpaQ7Dk5n5yh2Ulw10XVIWCjS",
+  "firstName": "German",
+  "lastName": "Jaramillo",
+  "adress": "Calle 45 # 12-3",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "user-1678559315579_img.jpeg"
+ },
+ {
+  "id": 18,
+  "email": "eu@gmail.com",
+  "password": "$2a$10$.Z1yAfVG5nEsBlSGorJyrOHDFN4qdDKvZ2ocgq6oqjmClvs.4BleW",
+  "firstName": "Eugenia",
+  "lastName": "Salazar",
+  "adress": "Calle 4578 # 13971",
+  "pais": "argentina",
+  "avatar": "user-1678561953536_img.jpeg"
  }
 ]

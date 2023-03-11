@@ -66,6 +66,9 @@
                         </li>
                     </ul>
                 </div>
+                <% if (locals.user) {%>
+                    <p><%= locals.user.firstName%></p>
+                <%}%>
                 <div class="delete-edit">
                     <button type="submit" class="edit-button"><a href="/product-edit/<%= product.id %>">Edit</a></button>
                     <form method="post" action="/product-delete/<%= product.id %>?_method=DELETE" >
