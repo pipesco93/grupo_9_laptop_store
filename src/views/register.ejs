@@ -8,7 +8,7 @@
 <body class="body-register">
     <%- include('partials/header.ejs') %>
     <form method="POST" action="/confirm-register" enctype="multipart/form-data">
-        
+
         <section class="formContainer">
             <% if(locals.errors){
                 errors.forEach((err) => {%>
@@ -19,7 +19,7 @@
             <hr>
             <label for="email"><b>Email</b></label>
             <input class="register-input" type="text" placeholder="Ingrese Email" name="email" value="<%= locals.prev && prev.email ? prev.email : '' %>">
-            
+
             <label for="password"><b>Contraseña</b></label>
             <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password">
 
@@ -45,9 +45,13 @@
 
             <div>
                 <label for="isAdmin">Soy Vendedor</label>
-                <input type="radio" name="isAdmin" id="isAdmin" value="true">
+                <!-- <input type="hidden" name="isAdmin" id="isAdmin" value="false">
+                <input type="checkbox" name="isAdmin" id="isAdmin" value="true"> -->
+                <select name="isAdmin" id="isAdmin">
+                    <option value="true">Si</option>
+                    <option value="false">No</option>
+                </select>
             </div>
-
                 <button type="button" class="cancel">Cancelar</button>
                 <button type="submit" class="signup">Crear Cuenta</button>
             </div>

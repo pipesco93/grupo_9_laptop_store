@@ -16,7 +16,11 @@
 
         <section class="mid">
             <div class="imagenes">
-                <img class="big-img" src="<%= user.avatar %>" alt="user">
+                <%if(user.avatar.includes('http')){%>
+                    <img class="big-img" src="<%= user.avatar %>" alt="user">
+                <%}else {%>
+                    <img class="big-img" src="/images/users/<%= user.avatar %>" alt="user">
+                <%}%>
 
             </div>
 
@@ -44,10 +48,10 @@
                     </ul>
                 </div>
                 <div>
-                    <form method="post" action="/product-delete/<%= user.id %>?_method=DELETE" >
+                    <!-- <form method="post" action="/product-delete/<%= user.id %>?_method=DELETE" >
                         <input class="delete-input" type="hidden" name="id" readonly="true" value="<%= user.id %>">
                         <button type="submit" class="delete-button">Eliminar</button>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </section>

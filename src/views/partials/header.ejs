@@ -14,7 +14,7 @@
             </a>
         </div>
         <% if (locals.user) {%>
-            <% if (locals.user.isAdmin) {%>
+            <% if (locals.user.isAdmin == "true") {%>
                 <div class="menu-productos">
                     <a href="/product-create">
                         <h2>Vender</h2>

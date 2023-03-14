@@ -17,7 +17,6 @@ const prodDetails = (req,res) => {
     const {id} = req.params;
     const product = productList.find(elem => elem.id == parseInt(id));
     if(product){
-        //res.send(user);
         res.render(path.join(__dirname,'../views/productDetail'),{product})
     }else{
         res.send("Not found");

@@ -2,7 +2,7 @@ const express = require('express');
 const routerUsers = express.Router();
 const userController = require('../controllers/usersController.js');
 const { body } = require('express-validator');
-
+const loadUser = require('../middlewares/loadUser')
 
 // Requeris las validaciones de usuario
 const { validateLogin, validateRegister } = require('../middlewares/userValidations')
@@ -31,7 +31,7 @@ const upload = multer({ storage });
 routerUsers.get('/register', userController.register);
 routerUsers.get('/login', userController.login);
 routerUsers.get('/logout', userController.logOut);
-routerUsers.get('/users/:id', userController.userDetail);
+routerUsers.get('/users/:id',loadUser ,userController.userDetail);
 
 routerUsers.post('/log-in', validateLogin, userController.postLogin);
 routerUsers.post('/confirm-register', upload.single('avatar'), validateRegister, userController.postRegister);

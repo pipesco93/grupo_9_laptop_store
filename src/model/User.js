@@ -36,7 +36,7 @@ const User = {
             }
         });
 
-        return newUser;
+        return newUser.id;
     },
 
     findByPk : (id) => {

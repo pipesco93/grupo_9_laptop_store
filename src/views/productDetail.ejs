@@ -79,7 +79,7 @@
                         </div>
 
                         <% if (locals.user) {%>
-                            <% if (locals.user.isAdmin) {%>
+                            <% if (locals.user.isAdmin == "true") {%>
                                 <div class="delete-edit">
                                     <button type="submit" class="edit-button"><a
                                             href="/product-edit/<%= product.id %>">Edit</a></button>

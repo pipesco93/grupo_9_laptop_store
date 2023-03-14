@@ -91,13 +91,10 @@ const postRegister = (req, res) => {
         avatar: newImege
     }
 
-    modelUser.create(obj);
-    // Redirect a home
+    const newId = modelUser.create(obj);
     const users = modelUser.getAlluser();
-    //res.send(users)
     const id = users[users.length-1].id+1;
-    // res.send(id)
-    res.redirect("/products/"+id)
+    res.redirect("/users/"+newId)
 };
 
 const logOut = (req, res) => {
@@ -110,27 +107,13 @@ const logOut = (req, res) => {
 const userDetail = (req,res) => {
     const {id} = req.params;
 
-    const user = userList.find(e => e.id == parseInt(id));
+    const user = modelUser.getAlluser().find(e => e.id == parseInt(id));
     if(user){
         res.render(path.join(__dirname,'../views/users'),{user})
     }else{
         res.send("Not found");
     }
-    }
-
-
-//Poner boton de log out
-
-//const logOut = (req, res) => {
-//req,session.destroy();
-//req.redirect('/login');
-//}
-
-// const userDetail = (req, res) =>{
-//     const {id} = req.params
-//     const userDetail = modelUser.findByField('id', id);
-
-// }
+}
 
 
 
