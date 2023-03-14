@@ -11,7 +11,7 @@ const { validateLogin, validateRegister } = require('../middlewares/userValidati
 const path = require('path');
 
 const multer = require('multer');
-// const { storage } = require('../middlewares/imageMulter')
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
