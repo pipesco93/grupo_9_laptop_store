@@ -191,5 +191,15 @@
   "adress": "Calle 4578 # 13971",
   "pais": "argentina",
   "avatar": "user-1678561953536_img.jpeg"
+ },
+ {
+  "id": 19,
+  "email": "mariob@yahoo.com",
+  "password": "$2a$10$477bsUZ4XY/PGSd777pYHOXL1MpQNvI5DJUwvrPhFj5t5ZidDMKiK",
+  "firstName": "Mario",
+  "lastName": "Bros",
+  "adress": "castillo 1",
+  "pais": "argentina",
+  "avatar": "user-1678753304137_img.jpeg"
  }
 ]

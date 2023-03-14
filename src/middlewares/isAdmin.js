@@ -1,7 +1,7 @@
 module.exports = function(req, res, next) {
-    if (req.session.userLogged.isAdmin){
-        next();
+    if (!req.session.userLogged.isAdmin){
+        return res.send("error")
     }else{
-       return res.send("error")
+        next();
     }
 };

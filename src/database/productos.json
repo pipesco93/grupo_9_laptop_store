@@ -387,5 +387,17 @@
   "procesador": "12th Generation AMD-Rynzen 7 Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
   "memoria": "4 GB DDR5-4800MHz (SODIMM) (2 x 2 GB)",
   "almacenamiento": "2TB"
+ },
+ {
+  "id": 35,
+  "marca": "Asus",
+  "referencia": "TK12",
+  "precio": "123",
+  "spec": "Nuevo Pc gamer",
+  "img": "product-1678755817077_img.webp",
+  "pantalla": "14\" FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 165Hz, LED Backlight, Narrow Bezel",
+  "procesador": "12th Generation Intel® Core™ i7-12700H Processor (E-cores up to 3.50 GHz P-cores up to 4.70 GHz)",
+  "memoria": "8 GB DDR5-4800MHz (SODIMM) (1 x 8 GB)",
+  "almacenamiento": "500GB"
  }
 ]

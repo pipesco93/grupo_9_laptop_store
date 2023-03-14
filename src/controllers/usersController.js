@@ -6,8 +6,8 @@ const bcrypt = require('bcryptjs');
 const modelUser = require('../model/User');
 
 
-const productsFilePath = path.join(__dirname, '../database/productos.json');
-const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const productsFilePath = path.join(__dirname, '../database/productos.json');
+// const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Se requiere la base de datos de usuarions y se conbienrte en un objeto js
 //const usersFilePath = path.join(__dirname, '../database/usuariosdb.json');
@@ -65,7 +65,7 @@ const postRegister = (req, res) => {
 
     if (!errors.isEmpty()) {
         //console.log(errors);
-        return res.render('register', {'errors': errors.array(), 'prev': req.body});
+        return res.render('register', { 'errors': errors.array(), 'prev': req.body });
     }
 
     const userExist = modelUser.findByField('email', email);
@@ -94,7 +94,7 @@ const postRegister = (req, res) => {
     modelUser.create(obj);
     // Redirect a home
     res.redirect("/")
-    res.render("/users/" + userExist.id, {"user":userExist})
+    res.render("/users/" + userExist.id, { "user": userExist })
 };
 
 const logOut = (req, res) => {
