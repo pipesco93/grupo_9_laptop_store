@@ -93,27 +93,17 @@ const postRegister = (req, res) => {
 
     modelUser.create(obj);
     // Redirect a home
-    res.redirect("/")
-    res.render("/users/" + userExist.id, { "user": userExist })
+    const users = modelUser.getAlluser();
+    //res.send(users)
+    const id = users[users.length-1].id+1;
+    // res.send(id)
+    res.redirect("/products/"+id)
 };
 
 const logOut = (req, res) => {
     req.session.destroy();
     res.redirect('/');
 }
-
-//Poner boton de log out
-
-//const logOut = (req, res) => {
-//req,session.destroy();
-//req.redirect('/login');
-//}
-
-// const userDetail = (req, res) =>{
-//     const {id} = req.params
-//     const userDetail = modelUser.findByField('id', id);
-
-// }
 
 
 

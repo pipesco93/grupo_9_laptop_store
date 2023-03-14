@@ -201,5 +201,75 @@
   "adress": "castillo 1",
   "pais": "argentina",
   "avatar": "user-1678753304137_img.jpeg"
+ },
+ {
+  "id": 20,
+  "email": "lalalal@lalala.com",
+  "password": "$2a$10$ToOz3EHUTaq1ahBVx7FAHeuT/bdZZx5F4RJOrbKY5rq0zlDqDbM0K",
+  "firstName": "lalala",
+  "lastName": "lalala",
+  "adress": "lalala",
+  "pais": "argentina",
+  "avatar": "user-1678760675255_img.jpeg"
+ },
+ {
+  "id": 21,
+  "email": "lelele@lelelel.com",
+  "password": "$2a$10$Mb1EV2QpPXaUdz1pFts75Oxd91.Xu6T37VeO9lLgkINRKfTpp0l/O",
+  "firstName": "wfsaf",
+  "lastName": "adsaf",
+  "adress": "wqrwafsa",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 22,
+  "email": "lsdjlasf@gmail.com",
+  "password": "$2a$10$9hf5qHNpMX.sxmlyFtlXTuexz25BXRmA08VYqyMwMy.fmTVm/p6Ju",
+  "firstName": "wrqr",
+  "lastName": "qwrqete",
+  "adress": "afeg",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 23,
+  "email": "zsffaaf@gmail.com",
+  "password": "$2a$10$8.QLlKfmJOOAofn2log1NOCbQD2Q2lvC.LC2tXVbsgTI.61v2JB3u",
+  "firstName": "aeegdagadg",
+  "lastName": "agaegeg",
+  "adress": "qegeaqga",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 24,
+  "email": "FAFSAGADF@AFA.com",
+  "password": "$2a$10$JdLtgBb7cfqSqTGsVDBZs.wLG7CuiNyr9spfolt7wzSuKYHOhJiee",
+  "firstName": "wfdgdagad",
+  "lastName": "afasgfasgf",
+  "adress": "wfasfas",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 25,
+  "email": "aslfaflj@slfeqf.com",
+  "password": "$2a$10$AbQfu/nnx5OvPBKcZp2W4Oau3VtwHC5EW1Fiwd5pTbo37fqsHjZhG",
+  "firstName": "afaf",
+  "lastName": "afasf",
+  "adress": "afasf",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 26,
+  "email": "lujo@opo.com",
+  "password": "$2a$10$7OJpg6uamVjbWBlbzaMn8uy3GUk5nMKgfsfP.n7QyUEV3CKrjWmtm",
+  "firstName": "hio",
+  "lastName": "ukuk",
+  "adress": "ukiuk",
+  "pais": "argentina",
+  "avatar": "generic-user-img.png"
  }
 ]
