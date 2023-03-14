@@ -17,7 +17,6 @@ const prodDetails = (req,res) => {
     const {id} = req.params;
     const product = productList.find(elem => elem.id == parseInt(id));
     if(product){
-        //res.send(user);
         res.render(path.join(__dirname,'../views/productDetail'),{product})
     }else{
         res.send("Not found");
@@ -77,7 +76,7 @@ const prodCreate = (req, res) => {
     res.render(path.resolve(__dirname, '../views/productCreate'));
 };
 
-//---------------------------------- Confirmar creacin de productos ---------------------------------------------
+//---------------------------------- Confirmar creacion de productos ---------------------------------------------
 const confirmCreate = (req, res) => {
     //Se requiere la informacion obtenida en el formulario
     const {

@@ -20,6 +20,12 @@
     display: block;
 }
 
+.register-alert {
+    color: red;
+    font-size: 12px;
+    margin: 10px;
+}
+
 .register-input[type=text],
 .register-input[type=password] {
     width: 100%;
@@ -322,7 +328,23 @@ h1{
     line-height: 20px;
     font-weight: 900;
     padding-top: 10px;
- }
+}
+
+.delete-edit {
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit-button {
+    width: 100px;
+    background-color: rgb(10, 119, 13);;
+    
+}
+
+.edit-button a {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .prd-detail-list p {
     padding-top: 10px;
@@ -661,6 +683,7 @@ footer section i {
 .inicio-sesion h3 {
     margin: 15px;
     font-size: 2rem;
+    color: #ffffff;
 }
 
 .inicio-sesion a {
