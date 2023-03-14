@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+
+<%- include('partials/header.ejs') %>
+
+<!---------------------- MAIN ----------------------------------------------->
+    <main>
+        <section class="upper">
+            <h2 class="nombre-prod"><%= user.firstName + " " + user.lastName %></h2>
+    
+        </section>
+
+        <section class="mid">
+            <div class="imagenes">
+                <img class="big-img" src="<%= user.avatar %>" alt="user">
+
+            </div>
+
+                    <ul class="prd-detail-list" data-tooltip-style="icon">
+                        <li>
+                            <div class="title">Email</div>
+                            <p><%= user.email %></p>
+                        </li>
+                        <li>
+                            <div class="title">Nombre</div>
+                            <p><%= user.firstName %></p>
+                        </li>
+                        <li>
+                            <div class="title">Apellido</div>
+                            <p><%= user.lastName %></p>
+                        </li>
+                        <li>
+                            <div class="title">Dirección</div>
+                            <p><%= user.adress %></p>
+                        </li>
+                        <li>
+                            <div class="title">País</div>
+                            <p><%= user.pais %></p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form method="post" action="/product-delete/<%= user.id %>?_method=DELETE" >
+                        <input class="delete-input" type="hidden" name="id" readonly="true" value="<%= user.id %>">
+                        <button type="submit" class="delete-button">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-------------- FOOTER ----------------------------------------------->
+
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>

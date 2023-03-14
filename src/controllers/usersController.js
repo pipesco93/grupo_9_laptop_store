@@ -10,8 +10,8 @@ const productsFilePath = path.join(__dirname, '../database/productos.json');
 const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Se requiere la base de datos de usuarions y se conbienrte en un objeto js
-//const usersFilePath = path.join(__dirname, '../database/usuariosdb.json');
-//const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../database/usuariosdb.json');
+const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 //---------------------------------Vista formulario register---------------------------------------------
@@ -102,6 +102,20 @@ const logOut = (req, res) => {
     res.redirect('/');
 }
 
+//----------------------------------- Vista Usuario ------------------------------------
+
+const userDetail = (req,res) => {
+    const {id} = req.params;
+
+    const user = userList.find(e => e.id == parseInt(id));
+    if(user){
+        res.render(path.join(__dirname,'../views/users'),{user})
+    }else{
+        res.send("Not found");
+    }
+    }
+
+
 //Poner boton de log out
 
 //const logOut = (req, res) => {
@@ -122,7 +136,8 @@ const controlador = {
     login,
     postLogin,
     postRegister,
-    logOut
+    logOut,
+    userDetail
 
 }
 
