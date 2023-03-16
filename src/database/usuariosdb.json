@@ -240,5 +240,104 @@
   "pais": "argentina",
   "isAdmin": "false",
   "avatar": "user-1678828348520_img.jpeg"
+ },
+ {
+  "id": 23,
+  "email": "lalalal@lalala.com",
+  "password": "$2a$10$3eb3g6hrIhsC1yK9MVsNdOrdr/P53eI9WF2rZ9wjJ8r8QB/N.otze",
+  "firstName": "lalalal",
+  "lastName": "lalalla",
+  "adress": "calle 2",
+  "pais": "argentina",
+  "isAdmin": "false",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 24,
+  "email": "lolo@gmail.com",
+  "password": "$2a$10$EMq9cr6Ua6HPh7j1xk4b1ObzlkAlsPxQ/8Ck1XIM2kDmQv2Z5RcIW",
+  "firstName": "lolo",
+  "lastName": "lolo",
+  "adress": "lolo",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 25,
+  "email": "pepito@gmail.com",
+  "password": "$2a$10$G3u9nre6Gafl.Cl2EABHROmMiUFY9Sbt9lpPUQoK2Biy.MNJNFkZy",
+  "firstName": "pepito",
+  "lastName": "pepito",
+  "adress": "123",
+  "pais": "argentina",
+  "isAdmin": "false",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 26,
+  "email": "paco@gmail.com",
+  "password": "$2a$10$basquHAFZEf2G1y5jlm7N..gOJz9fPZfos5E93KI30hcTpjEf2jwq",
+  "firstName": "paco",
+  "lastName": "paco",
+  "adress": "paco",
+  "pais": "argentina",
+  "isAdmin": "false",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 27,
+  "email": "nuevo12@gmail.com",
+  "password": "$2a$10$PxH3JexTyCIgdaTkLPCBAOGlop841i87inIOUOq.tlZt5fzqgeoiW",
+  "firstName": "q",
+  "lastName": "q",
+  "adress": "q",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 28,
+  "email": "a@gmail.com",
+  "password": "$2a$10$ilCa.reMW3De4BMzcoaGfuG8sX7km3o30/ocUBU1qcNGW2Yee5BM.",
+  "firstName": "a",
+  "lastName": "a",
+  "adress": "a",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 29,
+  "email": "b@gmail.com",
+  "password": "$2a$10$/AbT4arI4iq1UWuYgAzk5.mAZfuKzECTM6RUMANiL2mlsFmvTyI7K",
+  "firstName": "q",
+  "lastName": "q",
+  "adress": "q",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 30,
+  "email": "d@gmail.com",
+  "password": "$2a$10$HPs.Idq66iQEPrG12oj.SetDYeWK1It6wCec.EXgA90cBcv7frYS2",
+  "firstName": "w",
+  "lastName": "w",
+  "adress": "w",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 31,
+  "email": "v@gmail.com",
+  "password": "$2a$10$QKrHlEqp1dXetbbaWq18oOzQbBfIrpp46I8REcucxvxk5xwbqEiUW",
+  "firstName": "s",
+  "lastName": "s",
+  "adress": "s",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
  }
 ]

@@ -5,9 +5,12 @@ const methodOverride = require ('method-override')
 const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
+const userLogged = require('../src/middlewares/loadUser')
 
 app.use(morgan('dev'));
 app.use(methodOverride('_method'))
+
+app.use(userLogged);
 
 //Session
 app.use(session({

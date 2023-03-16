@@ -40,6 +40,7 @@ const postLogin = (req, res) => {
     if (userLogin) {
         const passwd = bcrypt.compareSync(password, userLogin.password);
         if (passwd) {
+            console.log(userLogin);
             req.session.userLogged = userLogin;
             // Redirect a home
             res.locals.user = userLogin
@@ -69,6 +70,7 @@ const postRegister = (req, res) => {
     }
 
     const userExist = modelUser.findByField('email', email);
+
     if (userExist) {
         // Redirect a register
         //return res.render(path.join(__dirname, '../views/register.ejs'))
@@ -90,11 +92,15 @@ const postRegister = (req, res) => {
         password: bcrypt.hashSync(password, 10),
         avatar: newImege
     }
-
+    console.log(obj);
     const newId = modelUser.create(obj);
-    const users = modelUser.getAlluser();
-    const id = users[users.length-1].id+1;
-    res.redirect("/users/"+newId)
+
+    const userLogin = modelUser.findByField('email', obj.email);
+    req.session.userLogged = obj;
+    res.locals.user = obj;
+    // const users = modelUser.getAlluser();
+    //const id = users[users.length-1].id+1;
+    res.redirect("/users/" + newId)
 };
 
 const logOut = (req, res) => {

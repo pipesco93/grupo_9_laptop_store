@@ -26,9 +26,9 @@ routerProducts.get('/products',loadUser ,productsController.products);
 routerProducts.get('/products/:id',loadUser,productsController.prodDetails);
 routerProducts.get('/cart',loadUser, productsController.cart);
 routerProducts.get('/product-create',loadUser, isAdmin ,productsController.prodCreate);
-routerProducts.post('/confirm-create', upload.single('image') ,productsController.confirmCreate);
+routerProducts.post('/confirm-create',loadUser, upload.single('image') ,productsController.confirmCreate);
 routerProducts.get('/product-edit/:id',loadUser, productsController.productEdit);
-routerProducts.put('/product-edit/:id' , productsController.editConfirm);
-routerProducts.delete('/product-delete/:id' , productsController.prodDelete);
+routerProducts.put('/product-edit/:id',loadUser , productsController.editConfirm);
+routerProducts.delete('/product-delete/:id',loadUser , productsController.prodDelete);
 
 module.exports = routerProducts;

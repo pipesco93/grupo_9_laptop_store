@@ -28,12 +28,12 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 
-routerUsers.get('/register', userController.register);
+routerUsers.get('/register',loadUser, userController.register);
 routerUsers.get('/login', userController.login);
 routerUsers.get('/logout', userController.logOut);
 routerUsers.get('/users/:id',loadUser ,userController.userDetail);
 
-routerUsers.post('/log-in', validateLogin, userController.postLogin);
+routerUsers.post('/log-in',validateLogin, userController.postLogin);
 routerUsers.post('/confirm-register', upload.single('avatar'), validateRegister, userController.postRegister);
 
 module.exports = routerUsers;
