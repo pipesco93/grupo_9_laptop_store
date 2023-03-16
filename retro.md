@@ -13,4 +13,13 @@ La división del trabajo a realizar resultó buena, por lo que consideramos segu
 trabajo al comenzar un nuevo Sprint). Sí puede ser de ayuda el comenzar a utilizar de forma más habitual la plataforma
 de Trello para estar más ordenados con fechas y ayuda que pueda necesitar otro miembro con alguna actividad.
 
+Sprint 5
+-------------------
+
+En el transcurso de las semanas en las que tuvo lugar el Sprint 5, seguimos atravesando diferentes situaciones que resolvimos tanto de forma grupal como individual.
+
+Podemos destacar una práctica que nos resultó de utilidad para ir avanzando de mejor manera e ir aprendiendo al mismo tiempo, la cual creemos que deberíamos seguir realizando por los buenos resultados que obtuvimos.
+La misma consistió en organizarnos para poder tener reuniones utilizando Google Meet. En las mismas fuimos planteando dudas, posibles escenarios para resolverlas, haciendo parte de las consignas en forma grupal, explicando dudas que podría tener algún integrante y ayudándonos entre nosotros para seguir avanzando.
+
+Lo que consideramos que todavía no estamos utilizando tanto para la organización durante los sprints, es la plataforma Trello. Por lo que sería algo a comenzar a hacer de forma más habitual para probar si nos resulta, en cierto punto, más fácil la coordinación dentro de las tareas a realizar por el grupo e ir ayudando con lo que todavía no se finalizó previamente a las reuniones que realizamos.
 
