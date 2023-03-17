@@ -121,8 +121,6 @@ const userDetail = (req,res) => {
     }
 }
 
-
-
 const controlador = {
     register,
     login,
