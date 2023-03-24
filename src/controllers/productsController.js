@@ -23,7 +23,6 @@ const prodDetails = (req,res) => {
     }
 }
 
-
 //---------------------------------- Vista carrito ---------------------------------------------
 const cart = (req, res) => {
     res.render(path.resolve(__dirname, '../views/productCart.ejs'));
