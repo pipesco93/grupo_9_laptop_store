@@ -38,6 +38,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
         },
     },
+    
     {
     tableName: 'laptop_store',
     //Si el nombre de la tabla no coincide con el del modelo
