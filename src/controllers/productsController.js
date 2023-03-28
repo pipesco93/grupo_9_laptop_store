@@ -6,24 +6,34 @@ const path = require('path');
 const db = require('../database/models');
 
 
-const productsFilePath = path.join(__dirname, '../databasesJson/productos.json');
+const productsFilePath = path.join(__dirname, '../dbJson/productos.json');
 const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 //---------------------------------- Vista Listado de productos ---------------------------------------------
 const products = (req, res) => {
-    res.render(path.join(__dirname, '../views/productList'),{'allProducts':productList});
+    db.Productos.findAll()
+        .then((allProducts) => {
+            res.render(path.join(__dirname, '../views/productList'),{'allProducts':allProducts});
+            //res.json(datito);
+        })
+        .catch((error) => {
+            //res.send(error)
+            console.log(error);
+        });
+    
 };
 
 //---------------------------------- Vista Detalls de productos ---------------------------------------------
 const prodDetails = (req,res) => {
     const {id} = req.params;
-    const product = productList.find(elem => elem.id == parseInt(id));
-    if(product){
-        res.render(path.join(__dirname,'../views/productDetail'),{product})
-    }else{
-        res.send("Not found");
-    }
+    db.Productos.findByPk(id)
+    .then((product) => {
+        res.render(path.join(__dirname, '../views/productDetail'),{product});
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 }
 
 //---------------------------------- Vista carrito ---------------------------------------------
@@ -56,7 +66,7 @@ const editConfirm =  (req, res) => {
         };
 
        // const image = req.file ? req.file.filename : '';
-        //let editImage 
+        //let editImage
        // if(image.length > 0){
          //   editImage = `images/${image}`
       //  }
@@ -154,7 +164,7 @@ const prodDelete = (req, res) => {
 
 
 const pruebaDb  =  (req,res) => {
-    db.Procesador.findAll()
+    db.IsAdmin.findAll()
         .then((datito) => {
             res.json(datito);
         })

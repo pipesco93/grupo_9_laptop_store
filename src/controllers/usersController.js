@@ -7,7 +7,7 @@ const modelUser = require('../model/User');
 
 
 // Se requiere la base de datos de usuarions y se conbienrte en un objeto js
-const usersFilePath = path.join(__dirname, '../databasesJson/usuariosdb.json');
+const usersFilePath = path.join(__dirname, '../dbJson/usuariosdb.json');
 const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 

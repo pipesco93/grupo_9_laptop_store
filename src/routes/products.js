@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 // const {userStorage, productStorage} = require('../middlewares/imageMulter')
 const upload = multer({storage});
 
-routerProducts.get('/products',loadUser ,productsController.products);
+routerProducts.get('/products',loadUser,productsController.products);
 routerProducts.get('/products/:id',loadUser,productsController.prodDetails);
 routerProducts.get('/cart',loadUser, productsController.cart);
 routerProducts.get('/product-create',loadUser, isAdmin ,productsController.prodCreate);
