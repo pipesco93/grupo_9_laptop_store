@@ -31,4 +31,5 @@ routerProducts.get('/product-edit/:id',loadUser, productsController.productEdit)
 routerProducts.put('/product-edit/:id',loadUser , productsController.editConfirm);
 routerProducts.delete('/product-delete/:id',loadUser , productsController.prodDelete);
 
+routerProducts.get('/db',productsController.pruebaDb);
 module.exports = routerProducts;

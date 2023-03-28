@@ -2,8 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 
+// Se requiere la base de datos de productos 
+const db = require('../database/models');
 
-const productsFilePath = path.join(__dirname, '../databases/productos.json');
+
+const productsFilePath = path.join(__dirname, '../databasesJson/productos.json');
 const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
@@ -31,11 +34,11 @@ const cart = (req, res) => {
 //---------------------------------- Vista Editar productos ---------------------------------------------
 const productEdit = (req, res) => {
     const { id } = req.params;
-    
+
     const productEdit = productList.find(elem => elem.id == id);
-    
+
     res.render(path.join(__dirname, '../views/productEdit'), {productEdit})
-    
+
 };
 
 //---------------------------------- Confirmar edit ---------------------------------------------
@@ -64,7 +67,7 @@ const editConfirm =  (req, res) => {
         }
     });
 
-    fs.writeFileSync(path.join(__dirname,"../database/productos.json"), newProdListJson);
+    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdListJson);
 
     res.redirect('/products');
 };
@@ -125,7 +128,7 @@ const confirmCreate = (req, res) => {
             return false
         }
     });
-    fs.writeFileSync(path.join(__dirname,"../database/productos.json"), newProdJson)
+    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdJson)
 	//console.log(newProdJson)
 
     res.redirect('/products');
@@ -144,11 +147,21 @@ const prodDelete = (req, res) => {
     });
 
 
-    fs.writeFileSync(path.join(__dirname,"../database/productos.json"), newProdList)
+    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdList)
 
     res.redirect('/');
 };
 
+
+const pruebaDb  =  (req,res) => {
+    db.Procesador.findAll()
+        .then((datito) => {
+            res.json(datito);
+        })
+        .catch((error) => {
+            res.send(error)
+        })
+};
 
 
 //SE exportan las funciones dentro del objeto controller
@@ -161,6 +174,7 @@ const controlador = {
     prodCreate,
     confirmCreate,
     prodDelete,
+    pruebaDb
 }
 
 module.exports = controlador;

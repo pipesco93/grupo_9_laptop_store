@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 
 const User = {
 
-    filename : path.join(__dirname, '../database/usuariosdb.json'),
+    filename : path.join(__dirname, '../databaseJson/usuariosdb.json'),
 
     getAlluser : () => {
         return JSON.parse(fs.readFileSync(User.filename, 'utf-8'))
