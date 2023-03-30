@@ -37,7 +37,7 @@ const postLogin = (req, res) => {
     if (userLogin) {
         const passwd = bcrypt.compareSync(password, userLogin.password);
         if (passwd) {
-            console.log(userLogin);
+           // console.log(userLogin);
             req.session.userLogged = userLogin;
             // Redirect a home
             res.locals.user = userLogin
@@ -89,7 +89,7 @@ const postRegister = (req, res) => {
         password: bcrypt.hashSync(password, 10),
         avatar: newImege
     }
-    console.log(obj);
+   // console.log(obj);
     const newId = modelUser.create(obj);
 
     const userLogin = modelUser.findByField('email', obj.email);

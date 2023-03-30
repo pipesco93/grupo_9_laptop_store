@@ -53,9 +53,10 @@ const productEdit = (req, res) => {
 
 //---------------------------------- Confirmar edit ---------------------------------------------
 const editConfirm =  (req, res) => {
-
+    
     productList.forEach(elem => {
         const {id} = req.params;
+
         if(elem.id == id){
             elem.referencia = req.body.referencia;
             elem.marca = req.body.product;
@@ -65,12 +66,8 @@ const editConfirm =  (req, res) => {
             elem.pantalla = req.body.pantalla;
         };
 
-       // const image = req.file ? req.file.filename : '';
-        //let editImage
-       // if(image.length > 0){
-         //   editImage = `images/${image}`
-      //  }
     })
+
     const newProdListJson = JSON.stringify(productList,null, ' ', (err)=>{
         if(err){
             return false
@@ -91,7 +88,7 @@ const prodCreate = (req, res) => {
 //---------------------------------- Confirmar creacion de productos ---------------------------------------------
 const confirmCreate = (req, res) => {
     //Se requiere la informacion obtenida en el formulario
-    const {
+    let {
         referencia,
         spec,
         precio,
@@ -103,9 +100,6 @@ const confirmCreate = (req, res) => {
         marca,
     } = req.body
 
-    //Se crea el nuevo id teniendo como base el ultimo id de la array de objetos productList
-    const newId = productList[productList.length - 1].id + 1;
-
     // Se lee la informacion del archivo imagen (nombre de la imagen) cargada en el formulario
     // y se genera el nombre o ruta para guadrar l aimagen
     const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
@@ -115,32 +109,19 @@ const confirmCreate = (req, res) => {
         newImege = image;
     }
 
-    //Se crea el objeto que se va a agregar al archivo JSON
-    const obj = {
-        id: newId,
+    const objdb = {
         marca,
         referencia,
-        precio,
+        precio: parseInt(precio),
         spec,
         img: newImege,
         destacado,
-        pantalla,
-        procesador,
-        memoria,
-        almacenamiento
+        pantalla: parseInt(pantalla),
+        procesador: parseInt(procesador),
+        memoria: parseInt(memoria),
+        almacenamiento: parseInt(memoria)
     };
-
-    //console.log(obj);
-    productList.push(obj);
-    //Agregando null ' ' y el cb err hace que el JSOn quede organizado 
-    const newProdJson = JSON.stringify(productList,null, ' ', (err)=>{
-        if(err){
-            return false
-        }
-    });
-    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdJson)
-	//console.log(newProdJson)
-
+    db.Productos.create(objdb)
     res.redirect('/products');
 };
 
@@ -164,7 +145,7 @@ const prodDelete = (req, res) => {
 
 
 const pruebaDb  =  (req,res) => {
-    db.IsAdmin.findAll()
+    db.Productos.findAll()
         .then((datito) => {
             res.json(datito);
         })
