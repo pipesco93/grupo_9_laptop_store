@@ -40,5 +40,12 @@ module.exports = (sequelize, dataTypes) => {
     //Si no tengo timestamps
     });
 
+    Usuarios.associate = function(models){
+        Usuarios.belongsTo(models.IsAdmin,{
+            as: 'isAdmin',
+            foreignKey: 'is_admin'
+        })
+    }
+
     return Usuarios;
 }

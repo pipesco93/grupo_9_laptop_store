@@ -18,5 +18,12 @@ module.exports = (sequelize, dataTypes) => {
     //Si no tengo timestamps
     });
 
+    Pantalla.associate = function(models){
+        Pantalla.hasMany(models.Productos,{
+            as: 'productos',
+            foreignKey: 'pantalla'
+        })
+    }
+
     return Pantalla;
 }

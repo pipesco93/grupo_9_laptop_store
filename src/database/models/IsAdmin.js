@@ -18,5 +18,12 @@ module.exports = (sequelize, dataTypes) => {
     //Si no tengo timestamps
     });
 
+    IsAdmin.associate = function(models){
+        IsAdmin.hasMany(models.Usuarios,{
+            as: 'usuarios',
+            foreignKey: 'is_admin'
+        })
+    }
+
     return IsAdmin;
 }

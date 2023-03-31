@@ -46,5 +46,34 @@ module.exports = (sequelize, dataTypes) => {
     //Si no tengo timestamps
     });
 
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Almacenamiento,{
+            as: 'almacenamiento',
+            foreignKey: 'almacenamiento'
+        })
+    }
+
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Memoria,{
+            as: 'memoria',
+            foreignKey: 'memoria'
+        })
+    }
+
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Pantalla,{
+            as: 'pantalla',
+            foreignKey: 'pantalla'
+        })
+    }
+
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Procesador,{
+            as: 'procesador',
+            foreignKey: 'procesador'
+        })
+    }
+
+
     return Productos;
 }
