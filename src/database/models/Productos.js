@@ -48,28 +48,28 @@ module.exports = (sequelize, dataTypes) => {
 
     Productos.associate = function(models){
         Productos.belongsTo(models.Almacenamiento,{
-            as: 'almacenamiento',
+            as: 'almacen',
             foreignKey: 'almacenamiento'
         })
     }
 
     Productos.associate = function(models){
         Productos.belongsTo(models.Memoria,{
-            as: 'memoria',
+            as: 'mem',
             foreignKey: 'memoria'
         })
     }
 
     Productos.associate = function(models){
         Productos.belongsTo(models.Pantalla,{
-            as: 'pantalla',
+            as: 'pant',
             foreignKey: 'pantalla'
         })
     }
 
     Productos.associate = function(models){
         Productos.belongsTo(models.Procesador,{
-            as: 'procesador',
+            as: 'proces',
             foreignKey: 'procesador'
         })
     }
