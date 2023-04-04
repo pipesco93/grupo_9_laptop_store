@@ -146,8 +146,11 @@ const prodDelete = (req, res) => {
 
 const pruebaDb  =  (req,res) => {
     db.Productos.findAll({
-        include: ['proces']
+        include: ['proces', 'pant', 'mem', 'almacen'],
+        attributes: []
+        
     })
+    
         .then((datito) => {
             res.json(datito);
         })
