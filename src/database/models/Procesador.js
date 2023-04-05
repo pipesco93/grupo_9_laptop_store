@@ -18,5 +18,12 @@ module.exports = (sequelize, dataTypes) => {
     //Si no tengo timestamps
     });
 
+    Procesador.associate = function(models){
+        Procesador.hasMany(models.Productos,{
+            as: 'productos',
+            foreignKey: 'procesador'
+        })
+    }
+
     return Procesador;
 }

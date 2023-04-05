@@ -46,5 +46,49 @@ module.exports = (sequelize, dataTypes) => {
     //Si no tengo timestamps
     });
 
+    Productos.associate = function(models){
+        Productos.belongsTo(models.Almacenamiento,{
+            as: 'almacen',
+            foreignKey: 'almacenamiento'
+        });
+
+        Productos.belongsTo(models.Memoria,{
+            as: 'mem',
+            foreignKey: 'memoria'
+        });
+
+        Productos.belongsTo(models.Procesador,{
+            as: 'proces',
+            foreignKey: 'procesador'
+        });
+
+        Productos.belongsTo(models.Pantalla,{
+            as: 'pant',
+            foreignKey: 'pantalla'
+        })
+
+    }
+
+    // Productos.associate = function(models){
+    //     Productos.belongsTo(models.Memoria,{
+    //         as: 'mem',
+    //         foreignKey: 'memoria'
+    //     })
+    // }
+
+    // Productos.associate = function(models){
+    //     Productos.belongsTo(models.Procesador,{
+    //         as: 'proces',
+    //         foreignKey: 'procesador'
+    //     })
+    // }
+
+    // Productos.associate = function(models){
+    //     Productos.belongsTo(models.Pantalla,{
+    //         as: 'pant',
+    //         foreignKey: 'pantalla'
+    //     })
+    // }
+
     return Productos;
 }

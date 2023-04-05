@@ -19,5 +19,12 @@ module.exports = (sequelize, dataTypes) => {
     //Si no tengo timestamps
     });
 
+    Almacenamiento.associate = function(models){
+        Almacenamiento.hasMany(models.Productos,{
+            as: 'productos',
+            foreignKey: 'almacenamiento'
+        })
+    }
+
     return Almacenamiento;
 }
