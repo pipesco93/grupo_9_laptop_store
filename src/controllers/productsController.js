@@ -6,8 +6,8 @@ const path = require('path');
 const db = require('../database/models');
 
 
-const productsFilePath = path.join(__dirname, '../dbJson/productos.json');
-const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const productsFilePath = path.join(__dirname, '../dbJson/productos.json');
+// const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 //---------------------------------- Vista Listado de productos ---------------------------------------------
@@ -21,13 +21,12 @@ const products = (req, res) => {
             //res.send(error)
             console.log(error);
         });
-    
 };
 
 //---------------------------------- Vista Detalls de productos ---------------------------------------------
 const prodDetails = (req,res) => {
     const {id} = req.params;
-    db.Productos.findByPk(id)
+    db.Productos.findByPk(id, {include: ['proces', 'pant', 'mem', 'almacen']})
     .then((product) => {
         res.render(path.join(__dirname, '../views/productDetail'),{product});
     })
@@ -45,37 +44,31 @@ const cart = (req, res) => {
 const productEdit = (req, res) => {
     const { id } = req.params;
 
-    const productEdit = productList.find(elem => elem.id == id);
-
-    res.render(path.join(__dirname, '../views/productEdit'), {productEdit})
-
+    db.Productos.findByPk(id, {include: ['proces', 'pant', 'mem', 'almacen']})
+    .then((productEdit) => {
+        res.render(path.join(__dirname, '../views/productEdit'), {productEdit});
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 };
 
 //---------------------------------- Confirmar edit ---------------------------------------------
 const editConfirm =  (req, res) => {
-    
-    productList.forEach(elem => {
         const {id} = req.params;
-
-        if(elem.id == id){
-            elem.referencia = req.body.referencia;
-            elem.marca = req.body.product;
-            elem.spec = req.body.description;
-            elem.precio = req.body.price;
-            elem.procesador = req.body.procesador;
-            elem.pantalla = req.body.pantalla;
-        };
-
-    })
-
-    const newProdListJson = JSON.stringify(productList,null, ' ', (err)=>{
-        if(err){
-            return false
-        }
-    });
-
-    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdListJson);
-
+        db.Productos.update(
+            {
+                referencia: req.body.referencia,
+                marca: req.body.product,
+                spec: req.body.description,
+                precio: req.body.price,
+                procesador: parseInt(req.body.procesador),
+                pantalla: parseInt(req.body.pantalla),
+            },
+            {
+                where: {id: id}
+            }
+        )
     res.redirect('/products');
 };
 
@@ -129,29 +122,35 @@ const confirmCreate = (req, res) => {
 //---------------------------------- Eliminar productos ---------------------------------------------
 const prodDelete = (req, res) => {
     const idDelete = req.body.id;
-    const prodDeletedList = productList.filter(e => e.id != idDelete)
-
-    const newProdList = JSON.stringify(prodDeletedList,null, ' ', (err)=>{
-        if(err){
-            return false
-        }
-    });
-
-
-    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdList)
-
+    db.Productos.destroy({
+        where: {id: idDelete}
+    })
     res.redirect('/');
 };
 
 
+
+//prueba de base de datos
 const pruebaDb  =  (req,res) => {
     db.Productos.findAll({
-        include: ['proces', 'pant', 'mem', 'almacen'],
-        attributes: []
-        
+        include: ['proces', 'pant', 'mem', 'almacen']
     })
-    
         .then((datito) => {
+            const json = datito.map((e) => {
+                return {
+                    id: e.id,
+                    marca: e.marca,
+                    referencia: e.referencia,
+                    destacado: e.destacado,
+                    precio: e.precio,
+                    spec: e.spec,
+                    img: e.img,
+                    procesador: e.proces.procesador,
+                    pantalla: e.pant.pantalla,
+                    memoria: e.mem.memoria,
+                    almacenamiento: e.almacen.almacenamiento
+                }
+            })
             res.json(datito);
         })
         .catch((error) => {
