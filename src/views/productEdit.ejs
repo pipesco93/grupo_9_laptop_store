@@ -26,14 +26,13 @@
             <label for="price"><b>Precio</b></label>
             <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" required>
 
-            <img class="img-edit" src="<%= productEdit.img%>" alt=""><br>
-            <input type="file" name="img" id="">
+            <img class="img-edit" src="/images/products/<%= productEdit.img%>" alt=""><br>
 
             <label for="procesador">Procesador</label>
             <select name="procesador" id="procesador" value="<%= productEdit.procesador%>">
                 <option value="1">Intel i5</option>
                 <option value="2">Intel i7</option>
-                <option value="2">AMD Ryzen</option>
+                <option value="3">AMD Ryzen</option>
             </select>
 
             <label for="pantalla">Pantalla</label>
@@ -46,7 +45,7 @@
                 <!-- <button type="button" class="cancel">Cancelar</button> -->
                 <button type="submit" class="signup">Agregar</button>
     </form>
-    
+
 
 </body>
 

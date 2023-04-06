@@ -4,6 +4,7 @@ const path = require('path');
 
 // Se requiere la base de datos de productos 
 const db = require('../database/models');
+const { log } = require('console');
 
 
 // const productsFilePath = path.join(__dirname, '../dbJson/productos.json');
@@ -46,6 +47,9 @@ const productEdit = (req, res) => {
 
     db.Productos.findByPk(id, {include: ['proces', 'pant', 'mem', 'almacen']})
     .then((productEdit) => {
+        //console.log(productEdit.dataValues)
+        //res.json(productEdit)
+        
         res.render(path.join(__dirname, '../views/productEdit'), {productEdit});
     })
     .catch((error) => {
@@ -61,7 +65,7 @@ const editConfirm =  (req, res) => {
                 referencia: req.body.referencia,
                 marca: req.body.product,
                 spec: req.body.description,
-                precio: req.body.price,
+                precio: parseInt(req.body.price),
                 procesador: parseInt(req.body.procesador),
                 pantalla: parseInt(req.body.pantalla),
             },
