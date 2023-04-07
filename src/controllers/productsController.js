@@ -136,25 +136,10 @@ const prodDelete = (req, res) => {
 
 //prueba de base de datos
 const pruebaDb  =  (req,res) => {
-    db.Productos.findAll({
-        include: ['proces', 'pant', 'mem', 'almacen']
+    db.Usuarios.findOne({ where: { email: 'test5@gmail.com' } },{
+        include: ['isAd']
     })
         .then((datito) => {
-            const json = datito.map((e) => {
-                return {
-                    id: e.id,
-                    marca: e.marca,
-                    referencia: e.referencia,
-                    destacado: e.destacado,
-                    precio: e.precio,
-                    spec: e.spec,
-                    img: e.img,
-                    procesador: e.proces.procesador,
-                    pantalla: e.pant.pantalla,
-                    memoria: e.mem.memoria,
-                    almacenamiento: e.almacen.almacenamiento
-                }
-            })
             res.json(datito);
         })
         .catch((error) => {

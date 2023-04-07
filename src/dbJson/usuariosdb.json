@@ -339,5 +339,38 @@
   "pais": "argentina",
   "isAdmin": "true",
   "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 32,
+  "email": "test15@gmail.com",
+  "password": "$2a$10$MFcLLGvvwVm0F7zLqwGoe./9G2GfbzcBaoE5pLNGvnMrGCTZhtw7C",
+  "firstName": "Elvis",
+  "lastName": "Presley",
+  "adress": "Calle 345",
+  "pais": "argentina",
+  "isAdmin": "false",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 33,
+  "email": "test13@gmail.com",
+  "password": "$2a$10$NZmxPVWw.nuI1NV7tVOPCO2Wab0H3GT7nDoVcSh0Rd38SxU6Ln0C2",
+  "firstName": "Will",
+  "lastName": "Smith",
+  "adress": "Cale 234",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
+ },
+ {
+  "id": 34,
+  "email": "test123@gmail.com",
+  "password": "$2a$10$J6Ey354klHaxnOD4LRuLaOYxs0202WxvGYPwu8xfl/7ZP2jUHliEG",
+  "firstName": "t",
+  "lastName": "t",
+  "adress": "t",
+  "pais": "argentina",
+  "isAdmin": "true",
+  "avatar": "generic-user-img.png"
  }
 ]
