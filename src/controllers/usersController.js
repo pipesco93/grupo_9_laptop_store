@@ -1,17 +1,8 @@
 // Se requieren los modulos necesarios
-const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
-const modelUser = require('../model/User');
-const { log } = require('console');
-
-
-// Se requiere la base de datos de usuarions y se conbienrte en un objeto js
-const usersFilePath = path.join(__dirname, '../dbJson/usuariosdb.json');
-const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 
 //---------------------------------Vista formulario register---------------------------------------------
 const register = (req, res) => {
@@ -34,23 +25,25 @@ const postLogin = (req, res) => {
     if (!errors.isEmpty()) {
         return res.render('login', { 'errors': errors.array(), 'prev': req.body });
     }
-    const userLogin = modelUser.findByField('email', email);
-    //console.log(userLogin)
-    if (userLogin) {
-        const passwd = bcrypt.compareSync(password, userLogin.password);
-        if (passwd) {
-           // console.log(userLogin);
-            req.session.userLogged = userLogin;
-            // Redirect a home
-            res.locals.user = userLogin
-            return res.redirect('/');
-        } else {
-            // Redirect a login
-            return res.send('Contraseña incorrecta');
+
+    db.Usuarios.findOne({ where: { email: email } })
+    .then((usuarioLogIn => {
+        if (usuarioLogIn) {
+            const passwd = bcrypt.compareSync(password, usuarioLogIn.password);
+            if (passwd) {
+               // console.log(userLogin);
+                req.session.userLogged = usuarioLogIn;
+                // Redirect a home
+                res.locals.user = usuarioLogIn
+                return res.redirect('/');
+            } else {
+                // Redirect a login
+                return res.send('Contraseña incorrecta');
+            }
         }
-    }
-    // Redirect a login
-    res.send('Error, no se encuentra el email');
+        // Redirect a login
+        res.send('Error, no se encuentra el email');
+    }))
 
 };
 
@@ -99,20 +92,17 @@ const postRegister = (req, res) => {
                 is_admin: parseInt(req.body.isAdmin),
                 avatar: newImege
             })
-            res.redirect("/")
+
+            db.Usuarios.findAll	()
+            .then((registedUser) => {
+                req.session.userLogged = registedUser;
+                res.locals.user = registedUser;
+                res.redirect(`/`)
+            })
         })
         .catch((error) => {
             console.log(error)
         })
-//     }
-//    // console.log(obj);
-//     const newId = modelUser.create(obj);
-//     const userLogin = modelUser.findByField('email', obj.email);
-//     req.session.userLogged = obj;
-//     res.locals.user = obj;
-//     // const users = modelUser.getAlluser();
-//     //const id = users[users.length-1].id+1;
-//     res.redirect("/users/" + newId)
 };
 
 const logOut = (req, res) => {
@@ -133,12 +123,6 @@ const userDetail = (req,res) => {
     .catch((error) => {
         console.log(error);
     });
-    // const user = modelUser.getAlluser().find(e => e.id == parseInt(id));
-    // if(user){
-    //     res.render(path.join(__dirname,'../views/users'),{user})
-    // }else{
-    //     res.send("Not found");
-    // }
 }
 
 const controlador = {

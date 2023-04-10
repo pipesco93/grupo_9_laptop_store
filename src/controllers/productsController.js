@@ -1,15 +1,8 @@
 // const productList = require('../database/stock.js');
-const fs = require('fs');
 const path = require('path');
 
-// Se requiere la base de datos de productos 
+// Se requiere la base de datos de productos
 const db = require('../database/models');
-const { log } = require('console');
-
-
-// const productsFilePath = path.join(__dirname, '../dbJson/productos.json');
-// const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 
 //---------------------------------- Vista Listado de productos ---------------------------------------------
 const products = (req, res) => {
