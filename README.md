@@ -1,8 +1,14 @@
-# Sprint 5
-Para este sprint se crean todas las vistas de usuarios:
-. login --> tienen las validaciones y verifica que el correo si exista
-. register --> tiene las validaciones y verifica que el email no exista en la base de datos, tambien se usa multer para guardar la imagen y se encripta la contraseña
-. userDetail --> despues de hacer el register soy redireccionado a esta pagina, tambien puedo acceder cuando doy click en mi nombe en el header
+# Sprint 6
+Para este sprint se crean todas las bases de datos:
+. Productos --> tiene toda la información relacionada con el producto y se relaciona con las siguientes tablas:
+    . Memoria --> tien las oprciones de memoria para el computador.
+    . Procesador --> tien las oprciones de procesador para el computador.
+    . Almacenamiento --> tien las oprciones de almacenamiento para el computador.
+    . Pantalla --> tien las oprciones de pantalla para el computador.
+
+. Usuarios --> Toda la información relacionada con los usuarios registrados, se relaciona con la
+    base de datos is_admin. en el archivo data.sql ya hay productos y usuarios cargados, la contraseña para todos los usuarios es 1234
+    . is_admin --> la oprcion de si es admin o no.
 
 Cuando hago un log in mi nombre aparece en el header y si soy un admin se me habilita la opción de vender en el header y puedo ver en produc detail la opción de eitar y eliminar
 

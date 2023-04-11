@@ -93,8 +93,9 @@ const postRegister = (req, res) => {
                 avatar: newImege
             })
 
-            db.Usuarios.findAll	()
+            db.Usuarios.findOne	({ where: { email: email } })
             .then((registedUser) => {
+                console.log(registedUser)
                 req.session.userLogged = registedUser;
                 res.locals.user = registedUser;
                 res.redirect(`/`)

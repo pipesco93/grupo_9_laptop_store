@@ -129,9 +129,7 @@ const prodDelete = (req, res) => {
 
 //prueba de base de datos
 const pruebaDb  =  (req,res) => {
-    db.Usuarios.findOne({ where: { email: 'test5@gmail.com' } },{
-        include: ['isAd']
-    })
+    db.Productos.findAll()
         .then((datito) => {
             res.json(datito);
         })
