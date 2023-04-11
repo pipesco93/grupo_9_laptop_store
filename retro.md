@@ -1,7 +1,11 @@
 Sprint 6
 -------------------
 
+Al comenzar a interiorizarnos en los temas que íbamos a estar desarrollando y trabajando durante este Sprint, creíamos que nos iba a resultar más complicado de lo que terminó sucediendo. Si bien no nos fue fácil, trabajando en equipo a través de reuniones y consultando tanto a profesores como buscando posibles soluciones a nuestras dudas en diferentes fuentes, pudimos ir avanzando.
 
+Por momentos los conceptos que teníamos que aplicar e inconvenientes que nos surgían, parecían no poder tener de parte nuestra una solución posible por nuestro conocimiento o entendimiento hasta el momento. Pero analizando nuevamente y con la ayuda mencionada, logramos entender lo necesario para completar el Sprint de forma satisfactoria.
+
+Por otro lado, reconocemos que todavía no pudimos encontrar del todo la forma para aprovechar de mejor manera la plataforma Trello. De igual modo no significa que no nos sea posible llevar un orden o interacción fluida, dado que utilizamos WhatsApp como canal principal de comunicación entre nosotros para coordinar las reuniones en las que realizamos trabajo en equipo o planteamos las dudas para poder seguir con los objetivos del Sprint.
 
 Retrospectiva
 --------------------
