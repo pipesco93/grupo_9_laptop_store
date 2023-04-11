@@ -112,7 +112,8 @@ const confirmCreate = (req, res) => {
         almacenamiento: parseInt(memoria)
     };
     db.Productos.create(objdb)
-    res.redirect('/products');
+    .then(() => res.redirect('/products'))
+    .catch((error) => res.send(error))
 };
 
 

@@ -91,18 +91,16 @@ const postRegister = (req, res) => {
                 pais: req.body.pais,
                 is_admin: parseInt(req.body.isAdmin),
                 avatar: newImege
-            })
-
-            db.Usuarios.findOne	({ where: { email: email } })
-            .then((registedUser) => {
-                console.log(registedUser)
-                req.session.userLogged = registedUser;
-                res.locals.user = registedUser;
+            }).then((usuario) => {
+                console.log(usuario.id)
+                req.session.userLogged = usuario;
+                res.locals.user = usuario;
                 res.redirect(`/`)
             })
+
         })
         .catch((error) => {
-            console.log(error)
+            res.send(error)
         })
 };
 
