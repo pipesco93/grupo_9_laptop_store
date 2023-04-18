@@ -54,32 +54,32 @@
                                 <li>
                                     <div class="title">Processor</div>
                                     <p>
-                                        <%= product.procesador %>
+                                        <%= product.proces.procesador %>
                                     </p>
                                 </li>
                                 <li>
                                     <div class="title">Pantalla</div>
                                     <p>
-                                        <%= product.pantalla %>
+                                        <%= product.pant.pantalla %>
                                     </p>
                                 </li>
                                 <li>
                                     <div class="title">Memoria</div>
                                     <p>
-                                        <%= product.memoria %>
+                                        <%= product.mem.memoria %>
                                     </p>
                                 </li>
                                 <li>
                                     <div class="title">Almacenamiento</div>
                                     <p>
-                                        <%= product.almacenamiento %>
+                                        <%= product.almacen.almacenamiento %>
                                     </p>
                                 </li>
                             </ul>
                         </div>
 
                         <% if (locals.user) {%>
-                            <% if (locals.user.isAdmin == "true") {%>
+                            <% if (locals.user.is_admin == 1) {%>
                                 <div class="delete-edit">
                                     <button type="submit" class="edit-button"><a
                                             href="/product-edit/<%= product.id %>">Edit</a></button>
