@@ -1,5 +1,21 @@
-# grupo_9_laptop_store
+# Sprint 6
+Para este sprint se crean todas las bases de datos:
+. Productos --> tiene toda la información relacionada con el producto y se relaciona con las siguientes tablas:
+    . Memoria --> tien las oprciones de memoria para el computador.
+    . Procesador --> tien las oprciones de procesador para el computador.
+    . Almacenamiento --> tien las oprciones de almacenamiento para el computador.
+    . Pantalla --> tien las oprciones de pantalla para el computador.
+
+. Usuarios --> Toda la información relacionada con los usuarios registrados, se relaciona con la
+    base de datos is_admin. en el archivo data.sql ya hay productos y usuarios cargados, la contraseña para todos los usuarios es 1234
+    . is_admin --> la oprcion de si es admin o no
+
+Cuando hago un log in mi nombre aparece en el header y si soy un admin se me habilita la opción de vender en el header y puedo ver en produc detail la opción de eitar y eliminar
+
+
 Proyecto grupal DH grupo 9
+
+
 
 **Resumen Temática del Sitio**
 -----------------------------
@@ -43,7 +59,7 @@ _ Crear una app
 
 **Integrantes del equipo:**
 --------------------------
-**Rosario María Becca:** No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
+**Rosario María Beccar:** No he visto nada relacionado a la programación antes de este curso, por eso mi nivel es bajo pero le pongo ganas para mejorar. Me dicen Aio
 
 **Matías Muñoz Gader:** Soy Licenciado en Marketing, no tengo experiencia previa en programación, pero mi interesa mucho aprender constantemente cosas nuevas.
 
@@ -81,9 +97,10 @@ __________
 
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
+
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
-Chau
+
 Es un referente por la gran variedad de productos que ofrece y la forma en la que lo hace. Indicando características, muchas imágenes del producto, la posibilidad de personalizar los componentes en algunos casos y, en caso de no haber stock, diferentes opciones similares dentro de la misma línea de producto.
 
 

@@ -2,29 +2,35 @@
 <html lang="en">
 
 <%- include('partials/head.ejs') %>
-    
+
 </head>
 
 <body class="body-register">
     <%- include('partials/header.ejs') %>
-    <form>
+    <form method="POST" action="/confirm-register" enctype="multipart/form-data">
+
         <section class="formContainer">
+            <% if(locals.errors){
+                errors.forEach((err) => {%>
+                    <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
+                <%})%>
+            <%}%>
             <h4>Registro</h4>
             <hr>
             <label for="email"><b>Email</b></label>
-            <input class="register-input" type="text" placeholder="Ingrese Email" name="email" required>
-            
+            <input class="register-input" type="text" placeholder="Ingrese Email" name="email" value="<%= locals.prev && prev.email ? prev.email : '' %>">
+
             <label for="password"><b>Contraseña</b></label>
-            <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password" required>
+            <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password">
 
             <label for="nombre"><b>Nombre</b></label>
-            <input  class="register-input" type="text" name="nombre" required>
+            <input  class="register-input" type="text" name="firstName" value="<%= locals.prev && prev.firstName ? prev.firstName : '' %>">
 
             <label for="apellido"><b>Apellido</b></label>
-            <input class="register-input" type="text" name="apellido" required>
+            <input class="register-input" type="text" name="lastName" value="<%= locals.prev && prev.lastName ? prev.lastName : '' %>">
 
             <label for="direccion"><b>Dirección</b></label>
-            <input class="register-input" type="text" placeholder="Ej: Av. Qwerty 1010" name="direccion" required>
+            <input class="register-input" type="text" placeholder="Ej: Av. Qwerty 1010" name="adress" value="<%= locals.prev && prev.adress ? prev.adress : '' %>">
 
             <label for="pais"></label>
             <select name="pais" id="pais">
@@ -37,6 +43,15 @@
                 <input class="register-input" type="file" name="avatar">
             </div>
 
+            <div>
+                <label for="isAdmin">Soy Vendedor</label>
+                <!-- <input type="hidden" name="isAdmin" id="isAdmin" value="false">
+                <input type="checkbox" name="isAdmin" id="isAdmin" value="true"> -->
+                <select name="isAdmin" id="isAdmin">
+                    <option value="1">Si</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
                 <button type="button" class="cancel">Cancelar</button>
                 <button type="submit" class="signup">Crear Cuenta</button>
             </div>

@@ -16,35 +16,36 @@
 
             <label for="referencia"><b>Referencia</b></label>
             <input class="register-input" type="text" name="referencia" value="<%= productEdit.referencia%>">
-            
+
             <label for="product"><b>Nombre del producto</b></label>
             <input class="register-input" type="text"  name="product" value="<%= productEdit.marca%>" required >
-            
+
             <label for="description"><b>Descripción</b></label>
             <textarea class="register-input" type="text"  name="description"  required> <%= productEdit.spec%></textarea>
 
             <label for="price"><b>Precio</b></label>
             <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" required>
 
-            <img class="img-edit" src="<%= productEdit.img%>" alt=""><br>
-            <input type="file" name="img" id="">
+            <img class="img-edit" src="/images/products/<%= productEdit.img%>" alt=""><br>
 
             <label for="procesador">Procesador</label>
             <select name="procesador" id="procesador" value="<%= productEdit.procesador%>">
-                <option value="Intel i5">Intel i5</option>
-                <option value="Intel i7">Intel i7</option>
-                <option value="AMD Ryzen">AMD Ryzen</option>
+                <option value="1">Intel i5</option>
+                <option value="2">Intel i7</option>
+                <option value="3">AMD Ryzen</option>
             </select>
 
             <label for="pantalla">Pantalla</label>
             <select name="pantalla" id="pantalla" value="<%= productEdit.pantalla%>">
-                <option value="13''">13"</option>
-                <option value="14''">14"</option>
-                <option value="15.6''">15.6"</option>
+                <option value="1">13"</option>
+                <option value="2">14"</option>
+                <option value="3">15.6"</option>
             </select>
-                <button type="button" class="cancel">Cancelar</button>
+                <button class="cancel" onclick="'/<%= productEdit.id %>'">Cancelar</button>
+                <!-- <button type="button" class="cancel">Cancelar</button> -->
                 <button type="submit" class="signup">Agregar</button>
     </form>
+
 
 </body>
 
