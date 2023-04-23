@@ -8,6 +8,13 @@
 <!---------------------- MAIN ----------------------------------------------->
 <body class="body-productEdit">
     <form method="POST" action="/confirm-create" enctype="multipart/form-data">
+
+        <% if(locals.errors){
+            errors.forEach((err) => {%>
+                <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
+            <%})%>
+        <%}%>
+
         <section class="formContainer">
             <h4>Carga de Producto</h4>
             <hr>

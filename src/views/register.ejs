@@ -7,7 +7,7 @@
 
 <body class="body-register">
     <%- include('partials/header.ejs') %>
-    <form method="POST" action="/confirm-register" enctype="multipart/form-data">
+    <form method="POST" action="/confirm-register" enctype="multipart/form-data" id="form">
 
         <section class="formContainer">
             <% if(locals.errors){

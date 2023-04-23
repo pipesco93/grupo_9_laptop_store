@@ -12,13 +12,19 @@
 
                 <h5>Completá tus datos</h5>
 
-                <form action="/log-in" method="POST">
+                <form action="/log-in" method="POST" id="form">
 
-                    <% if(locals.errors){
+                <div class="col-8 col-lg-10">
+                    <small class="text-danger erName"></small>
+                </div>
+
+                <% if(locals.errors){
                         errors.forEach((err) => {%>
                             <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
                         <%})%>
                     <%}%>
+
+                    <ul id="lista-errores"></ul>
 
                     <p class="form-section">
                         <label for="email"><b>Email</b></label>
@@ -44,6 +50,9 @@
 
                 </form>
             </section>
+
+           <script src="/public/js/loginValidator.js"></script>
+
     </body>
 
 </html>

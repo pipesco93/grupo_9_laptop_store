@@ -2,6 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// Para validaciones 
+const { validationResult } = require('express-validator');
+
 // Se requiere la base de datos de productos 
 const db = require('../database/models');
 
@@ -24,7 +27,7 @@ const products = (req, res) => {
     
 };
 
-//---------------------------------- Vista Detalls de productos ---------------------------------------------
+//---------------------------------- Vista Details de productos ---------------------------------------------
 const prodDetails = (req,res) => {
     const {id} = req.params;
     db.Productos.findByPk(id)
@@ -53,30 +56,19 @@ const productEdit = (req, res) => {
 
 //---------------------------------- Confirmar edit ---------------------------------------------
 const editConfirm =  (req, res) => {
+
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0){
+
+       // logica del controlador
+
+    }else{
+        
+        res.render('productEdit', {errores: resultValidation.errors})
+
+    } 
     
-    productList.forEach(elem => {
-        const {id} = req.params;
-
-        if(elem.id == id){
-            elem.referencia = req.body.referencia;
-            elem.marca = req.body.product;
-            elem.spec = req.body.description;
-            elem.precio = req.body.price;
-            elem.procesador = req.body.procesador;
-            elem.pantalla = req.body.pantalla;
-        };
-
-    })
-
-    const newProdListJson = JSON.stringify(productList,null, ' ', (err)=>{
-        if(err){
-            return false
-        }
-    });
-
-    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdListJson);
-
-    res.redirect('/products');
 };
 
 
@@ -87,42 +79,19 @@ const prodCreate = (req, res) => {
 
 //---------------------------------- Confirmar creacion de productos ---------------------------------------------
 const confirmCreate = (req, res) => {
-    //Se requiere la informacion obtenida en el formulario
-    let {
-        referencia,
-        spec,
-        precio,
-        procesador,
-        pantalla,
-        memoria,
-        almacenamiento,
-        destacado,
-        marca,
-    } = req.body
 
-    // Se lee la informacion del archivo imagen (nombre de la imagen) cargada en el formulario
-    // y se genera el nombre o ruta para guadrar l aimagen
-    const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
-    let newImege;
+    const resultValidation = validationResult(req);
 
-    if (image.length > 0){
-        newImege = image;
+    if (resultValidation.errors.length > 0){
+
+        // logica del controlador
+
+    }else{ 
+
+        res.render('productCreate', {errores: resultValidation.errors})
+    
     }
 
-    const objdb = {
-        marca,
-        referencia,
-        precio: parseInt(precio),
-        spec,
-        img: newImege,
-        destacado,
-        pantalla: parseInt(pantalla),
-        procesador: parseInt(procesador),
-        memoria: parseInt(memoria),
-        almacenamiento: parseInt(memoria)
-    };
-    db.Productos.create(objdb)
-    res.redirect('/products');
 };
 
 
