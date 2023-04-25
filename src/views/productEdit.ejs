@@ -11,22 +11,29 @@
         <section class="formContainer">
             <h4>Carga de Producto</h4>
             <hr>
+
+            <% if(locals.errors){
+                errors.forEach((err) => {%>
+                    <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
+                <%})%>
+            <%}%>
+
             <label for="codigo"><b>Código de producto</b></label>
             <input class="register-input" type="text" name="id" readonly="true" value="<%= productEdit.id%>">
 
             <label for="referencia"><b>Referencia</b></label>
-            <input class="register-input" type="text" name="referencia" value="<%= productEdit.referencia%>">
+            <input class="register-input" type="text" name="referencia" value="<%= locals.prev && prev.referencia ? prev.referencia : '' %>">
 
             <label for="product"><b>Nombre del producto</b></label>
-            <input class="register-input" type="text"  name="product" value="<%= productEdit.marca%>" required >
+            <input class="register-input" type="text"  name="product" value="<%= locals.prev && prev.product ? prev.product : '' %>"  >
 
             <label for="description"><b>Descripción</b></label>
-            <textarea class="register-input" type="text"  name="description"  required> <%= productEdit.spec%></textarea>
+            <textarea class="register-input" type="text"  name="description" value="<%= locals.prev && prev.description ? prev.description : '' %>"> <%= productEdit.spec%></textarea>
 
             <label for="price"><b>Precio</b></label>
-            <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" required>
+            <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" >
 
-            <img class="img-edit" src="/images/products/<%= productEdit.img%>" alt=""><br>
+            <img class="img-edit" name="image" src="/images/products/<%= productEdit.img%>" alt="" value="<%= locals.prev && prev.image ? prev.image : '' %>"><br>
 
             <label for="procesador">Procesador</label>
             <select name="procesador" id="procesador" value="<%= productEdit.procesador%>">
