@@ -8,7 +8,7 @@ Para este sprint se crean todas las bases de datos:
 
 . Usuarios --> Toda la información relacionada con los usuarios registrados, se relaciona con la
     base de datos is_admin. en el archivo data.sql ya hay productos y usuarios cargados, la contraseña para todos los usuarios es 1234
-    . is_admin --> la oprcion de si es admin o no.
+    . is_admin --> la oprcion de si es admin o no
 
 Cuando hago un log in mi nombre aparece en el header y si soy un admin se me habilita la opción de vender en el header y puedo ver en produc detail la opción de eitar y eliminar
 

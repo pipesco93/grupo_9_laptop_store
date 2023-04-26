@@ -4,6 +4,8 @@ const path = require('path');
 // Se requiere la base de datos de productos
 const db = require('../database/models');
 
+const { validationResult } = require('express-validator');
+
 //---------------------------------- Vista Listado de productos ---------------------------------------------
 const products = (req, res) => {
     db.Productos.findAll()
@@ -52,6 +54,14 @@ const productEdit = (req, res) => {
 
 //---------------------------------- Confirmar edit ---------------------------------------------
 const editConfirm =  (req, res) => {
+
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.render('productEdit', { 'errors': errors.array(), 'prev': req.body });
+    }
+
+
         const {id} = req.params;
         db.Productos.update(
             {
@@ -77,6 +87,12 @@ const prodCreate = (req, res) => {
 
 //---------------------------------- Confirmar creacion de productos ---------------------------------------------
 const confirmCreate = (req, res) => {
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.render('productCreate', { 'errors': errors.array(), 'prev': req.body });
+    }
+
     //Se requiere la informacion obtenida en el formulario
     let {
         referencia,
