@@ -52,6 +52,8 @@ const productEdit = (req, res) => {
 
 //---------------------------------- Confirmar edit ---------------------------------------------
 const editConfirm =  (req, res) => {
+
+    
         const {id} = req.params;
         db.Productos.update(
             {
