@@ -54,7 +54,7 @@ const productEdit = (req, res) => {
 
 //---------------------------------- Confirmar edit ---------------------------------------------
 const editConfirm =  (req, res) => {
-
+    console.log("ëdit")
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -62,7 +62,7 @@ const editConfirm =  (req, res) => {
     }
 
 
-        const {id} = req.params;
+        const {id} = req.body.id;
         db.Productos.update(
             {
                 referencia: req.body.referencia,

@@ -7,7 +7,7 @@
 
 <!---------------------- MAIN ----------------------------------------------->
 <body class="body-productEdit">
-    <form method="post" action="/product-edit/<%= productEdit.id%>?_method=PUT">
+    <form method="post" action="/product-edit/<%= productEdit.id%>" enctype="multipart/form-data">
         <section class="formContainer">
             <h4>Carga de Producto</h4>
             <hr>
@@ -18,17 +18,19 @@
                 <%})%>
             <%}%>
 
+            <ul id="lista-errores"></ul>
+
             <label for="codigo"><b>Código de producto</b></label>
             <input class="register-input" type="text" name="id" readonly="true" value="<%= productEdit.id%>">
 
             <label for="referencia"><b>Referencia</b></label>
-            <input class="register-input" type="text" name="referencia" value="<%= locals.prev && prev.referencia ? prev.referencia : '' %>">
+            <input class="register-input" type="text" name="referencia" id="productName" value="<%= locals.prev && prev.referencia ? prev.referencia : '' %>">
 
             <label for="product"><b>Nombre del producto</b></label>
             <input class="register-input" type="text"  name="product" value="<%= locals.prev && prev.product ? prev.product : '' %>"  >
 
             <label for="description"><b>Descripción</b></label>
-            <textarea class="register-input" type="text"  name="description" value="<%= locals.prev && prev.description ? prev.description : '' %>"> <%= productEdit.spec%></textarea>
+            <textarea class="register-input" type="text"  name="description" id="productSpecs" value="<%= locals.prev && prev.description ? prev.description : '' %>"> <%= productEdit.spec%></textarea>
 
             <label for="price"><b>Precio</b></label>
             <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" >
@@ -53,6 +55,7 @@
                 <button type="submit" class="signup">Agregar</button>
     </form>
 
+   
 
 </body>
 

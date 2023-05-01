@@ -1,9 +1,10 @@
 window.addEventListener('load' , () => {
 
-    let mail = document.getElementById('email');
+    let mail = document.getElementById('email-reg');
     let password = document.getElementById('password');
     let nombre = document.getElementById('nombre');
     let apellido = document.getElementById('apellido');
+    let fileInput = document.getElementById('avatar');
     let form = document.querySelector('form');
 
     form.addEventListener('submit', (event) => {
@@ -39,6 +40,12 @@ window.addEventListener('load' , () => {
             arrayErrores.push('El mínimo para Apellido es de 2 caracteres');
         }
 
+        let allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+        if (!allowedExtensions.exec(fileInput.value)) {
+            arrayErrores.push('Ingresar foto en formato .jpg .jpeg .png');
+        }
+
+
         let listaErrores = document.getElementById('lista-errores');
 
         if (arrayErrores.length >= 1){
@@ -47,6 +54,7 @@ window.addEventListener('load' , () => {
             arrayErrores.forEach((errores) => {
                 listaErrores.innerHTML += `<li>${errores}</li>`
             })
+            arrayErrores = []
 
         }else{
             form.submit()
