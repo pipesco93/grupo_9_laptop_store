@@ -15,19 +15,23 @@
                     <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
                 <%})%>
             <%}%>
+
+            <ul id="lista-errores"></ul>
+
             <h4>Registro</h4>
+            
             <hr>
             <label for="email"><b>Email</b></label>
-            <input class="register-input" type="text" placeholder="Ingrese Email" name="email" value="<%= locals.prev && prev.email ? prev.email : '' %>">
+            <input class="register-input" type="text" placeholder="Ingrese Email" name="email" id="email" value="<%= locals.prev && prev.email ? prev.email : '' %>">
 
             <label for="password"><b>Contraseña</b></label>
-            <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password">
+            <input class="register-input" type="password" placeholder="Ingrese Contraseña" name="password" id="password">
 
             <label for="nombre"><b>Nombre</b></label>
-            <input  class="register-input" type="text" name="firstName" value="<%= locals.prev && prev.firstName ? prev.firstName : '' %>">
+            <input  class="register-input" type="text" name="firstName" id="nombre" value="<%= locals.prev && prev.firstName ? prev.firstName : '' %>">
 
             <label for="apellido"><b>Apellido</b></label>
-            <input class="register-input" type="text" name="lastName" value="<%= locals.prev && prev.lastName ? prev.lastName : '' %>">
+            <input class="register-input" type="text" name="lastName" id="apellido" value="<%= locals.prev && prev.lastName ? prev.lastName : '' %>">
 
             <label for="direccion"><b>Dirección</b></label>
             <input class="register-input" type="text" placeholder="Ej: Av. Qwerty 1010" name="adress" value="<%= locals.prev && prev.adress ? prev.adress : '' %>">
@@ -40,7 +44,7 @@
             <br>
             <div>
                 <label for="avatar">Imagen personal</label>
-                <input class="register-input" type="file" name="avatar">
+                <input class="register-input" type="file" name="avatar" id="avatar">
             </div>
 
             <div>
@@ -57,6 +61,8 @@
             </div>
         </div>
     </form>
+
+    <script src="/js/registerValidator.js"></script>
 
 </body>
 
