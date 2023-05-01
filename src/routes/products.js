@@ -31,7 +31,7 @@ routerProducts.get('/cart',loadUser, productsController.cart);
 routerProducts.get('/product-create',loadUser, isAdmin ,productsController.prodCreate);
 routerProducts.post('/confirm-create',loadUser, upload.single('image'), validateCreate, productsController.confirmCreate);
 routerProducts.get('/product-edit/:id',loadUser, productsController.productEdit);
-routerProducts.put('/product-edit/:id',loadUser, upload.single('image'),  validateEdit, productsController.editConfirm);
+routerProducts.post('/product-edit/:id',loadUser, upload.single('image'),  validateEdit, productsController.editConfirm);
 routerProducts.delete('/product-delete/:id',loadUser , productsController.prodDelete);
 
 routerProducts.get('/db',productsController.pruebaDb);

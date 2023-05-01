@@ -10,7 +10,7 @@ const { validationResult } = require('express-validator');
 const products = (req, res) => {
     db.Productos.findAll()
         .then((allProducts) => {
-            res.render(path.join(__dirname, '../views/productList'),{'allProducts':allProducts});
+            res.render(path.join(__dirname, '../views/productList'), { 'allProducts': allProducts });
             //res.json(datito);
         })
         .catch((error) => {
@@ -20,15 +20,15 @@ const products = (req, res) => {
 };
 
 //---------------------------------- Vista Detalls de productos ---------------------------------------------
-const prodDetails = (req,res) => {
-    const {id} = req.params;
-    db.Productos.findByPk(id, {include: ['proces', 'pant', 'mem', 'almacen']})
-    .then((product) => {
-        res.render(path.join(__dirname, '../views/productDetail'),{product});
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+const prodDetails = (req, res) => {
+    const { id } = req.params;
+    db.Productos.findByPk(id, { include: ['proces', 'pant', 'mem', 'almacen'] })
+        .then((product) => {
+            res.render(path.join(__dirname, '../views/productDetail'), { product });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 }
 
 //---------------------------------- Vista carrito ---------------------------------------------
@@ -39,44 +39,59 @@ const cart = (req, res) => {
 //---------------------------------- Vista Editar productos ---------------------------------------------
 const productEdit = (req, res) => {
     const { id } = req.params;
-
-    db.Productos.findByPk(id, {include: ['proces', 'pant', 'mem', 'almacen']})
-    .then((productEdit) => {
-        //console.log(productEdit.dataValues)
-        //res.json(productEdit)
-        
-        res.render(path.join(__dirname, '../views/productEdit'), {productEdit});
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+    console.log(id)
+    db.Productos.findByPk(id, { include: ['proces', 'pant', 'mem', 'almacen'] })
+        .then((productEdit) => {
+            //console.log(productEdit.dataValues)
+            //res.json(productEdit)
+            res.render(path.join(__dirname, '../views/productEdit'), { productEdit });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 };
 
 //---------------------------------- Confirmar edit ---------------------------------------------
-const editConfirm =  (req, res) => {
-    console.log("ëdit")
-
+const editConfirm = (req, res) => {
     const errors = validationResult(req);
+    console.log(errors)
     if (!errors.isEmpty()) {
-        return res.render('productEdit', { 'errors': errors.array(), 'prev': req.body });
+        const { id } = req.params;
+        console.log(1)
+        db.Productos.findByPk(id, { include: ['proces', 'pant', 'mem', 'almacen'] })
+            .then((productEdit) => {
+                console.log(2)
+                return res.render(path.join(__dirname, '../views/productEdit'), { 'errors': errors.array(), 'productEdit': productEdit });
+            })
+    }else{
+
+    
+
+    const id = parseInt(req.params.id);
+
+    const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
+    let newImege;
+
+    if (image.length > 0) {
+        newImege = image;
     }
 
-
-        const {id} = req.body.id;
-        db.Productos.update(
-            {
-                referencia: req.body.referencia,
-                marca: req.body.product,
-                spec: req.body.description,
-                precio: parseInt(req.body.price),
-                procesador: parseInt(req.body.procesador),
-                pantalla: parseInt(req.body.pantalla),
-            },
-            {
-                where: {id: id}
-            }
-        )
+    db.Productos.update(
+        {
+            referencia: req.body.referencia,
+            marca: req.body.product,
+            spec: req.body.description,
+            precio: parseInt(req.body.price),
+            procesador: parseInt(req.body.procesador),
+            img: newImege,
+            pantalla: parseInt(req.body.pantalla),
+        },
+        {
+            where: { id: id }
+        }
+    )
     res.redirect('/products');
+}
 };
 
 
@@ -111,7 +126,7 @@ const confirmCreate = (req, res) => {
     const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
     let newImege;
 
-    if (image.length > 0){
+    if (image.length > 0) {
         newImege = image;
     }
 
@@ -128,8 +143,8 @@ const confirmCreate = (req, res) => {
         almacenamiento: parseInt(memoria)
     };
     db.Productos.create(objdb)
-    .then(() => res.redirect('/products'))
-    .catch((error) => res.send(error))
+        .then(() => res.redirect('/products'))
+        .catch((error) => res.send(error))
 };
 
 
@@ -137,7 +152,7 @@ const confirmCreate = (req, res) => {
 const prodDelete = (req, res) => {
     const idDelete = req.body.id;
     db.Productos.destroy({
-        where: {id: idDelete}
+        where: { id: idDelete }
     })
     res.redirect('/');
 };
@@ -145,7 +160,7 @@ const prodDelete = (req, res) => {
 
 
 //prueba de base de datos
-const pruebaDb  =  (req,res) => {
+const pruebaDb = (req, res) => {
     db.Productos.findAll()
         .then((datito) => {
             res.json(datito);

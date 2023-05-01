@@ -24,10 +24,10 @@
             <input class="register-input" type="text" name="id" readonly="true" value="<%= productEdit.id%>">
 
             <label for="referencia"><b>Referencia</b></label>
-            <input class="register-input" type="text" name="referencia" id="productName" value="<%= locals.prev && prev.referencia ? prev.referencia : '' %>">
+            <input class="register-input" type="text" name="referencia" id="productName" value="<%= productEdit.referencia%>">
 
             <label for="product"><b>Nombre del producto</b></label>
-            <input class="register-input" type="text"  name="product" value="<%= locals.prev && prev.product ? prev.product : '' %>"  >
+            <input class="register-input" type="text"  name="product" value="<%= productEdit.marca %>"  >
 
             <label for="description"><b>Descripción</b></label>
             <textarea class="register-input" type="text"  name="description" id="productSpecs" value="<%= locals.prev && prev.description ? prev.description : '' %>"> <%= productEdit.spec%></textarea>
@@ -35,7 +35,11 @@
             <label for="price"><b>Precio</b></label>
             <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" >
 
-            <img class="img-edit" name="image" src="/images/products/<%= productEdit.img%>" alt="" value="<%= locals.prev && prev.image ? prev.image : '' %>"><br>
+            <!-- <img class="img-edit" name="image" src="/images/products/<%= productEdit.img%>" alt="" value="<%= locals.prev && prev.image ? prev.image : '' %>"><br> -->
+            <div>
+                <label for="image"><b>Imágen</b></label>
+                <input class="register-input" type="file" id="image" name="image" value="<%= productEdit.image %>">
+            </div>
 
             <label for="procesador">Procesador</label>
             <select name="procesador" id="procesador" value="<%= productEdit.procesador%>">
@@ -55,7 +59,6 @@
                 <button type="submit" class="signup">Agregar</button>
     </form>
 
-   
 
 </body>
 
