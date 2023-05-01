@@ -1,17 +1,18 @@
 window.addEventListener('load' , () => {
 
-    let mail = document.getElementById('email')
-    let password = document.getElementById('password')
-    let nombre = document.getElementById('nombre')
-    let apellido = document.getElementById('apellido')
+    let mail = document.getElementById('email');
+    let password = document.getElementById('password');
+    let nombre = document.getElementById('nombre');
+    let apellido = document.getElementById('apellido');
+    let form = document.querySelector('form');
 
     form.addEventListener('submit', (event) => {
 
         event.preventDefault()
-        
+
 
         let arrayErrores = []
-        
+
         if(mail.value.length == 0){
             arrayErrores.push('Se debe ingresar un email');
         }
@@ -19,15 +20,15 @@ window.addEventListener('load' , () => {
         const isEmail = String(mail.value)
         .toLowerCase()
         .match(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
 
         if(! isEmail){
         arrayErrores.push('Email invalido');
         }
 
-        if(password.value.length == 0){
-            arrayErrores.push('Se debe ingresar una contraseña');
+        if(password.value.length < 8){
+            arrayErrores.push('Se debe ingresar una contraseña de almenos 8 caracteres');
         }
 
         if(nombre.value.length <= 2){
@@ -39,11 +40,10 @@ window.addEventListener('load' , () => {
         }
 
         let listaErrores = document.getElementById('lista-errores');
-        
+
         if (arrayErrores.length >= 1){
-           
+
            // event.preventDefault()
-            
             arrayErrores.forEach((errores) => {
                 listaErrores.innerHTML += `<li>${errores}</li>`
             })
