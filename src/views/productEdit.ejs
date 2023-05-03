@@ -7,26 +7,39 @@
 
 <!---------------------- MAIN ----------------------------------------------->
 <body class="body-productEdit">
-    <form method="post" action="/product-edit/<%= productEdit.id%>?_method=PUT">
+    <form method="post" action="/product-edit/<%= productEdit.id%>" enctype="multipart/form-data">
         <section class="formContainer">
             <h4>Carga de Producto</h4>
             <hr>
+
+            <% if(locals.errors){
+                errors.forEach((err) => {%>
+                    <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
+                <%})%>
+            <%}%>
+
+            <ul id="lista-errores"></ul>
+
             <label for="codigo"><b>Código de producto</b></label>
             <input class="register-input" type="text" name="id" readonly="true" value="<%= productEdit.id%>">
 
             <label for="referencia"><b>Referencia</b></label>
-            <input class="register-input" type="text" name="referencia" value="<%= productEdit.referencia%>">
+            <input class="register-input" type="text" name="referencia" id="productName" value="<%= productEdit.referencia%>">
 
             <label for="product"><b>Nombre del producto</b></label>
-            <input class="register-input" type="text"  name="product" value="<%= productEdit.marca%>" required >
+            <input class="register-input" type="text"  name="product" value="<%= productEdit.marca %>"  >
 
             <label for="description"><b>Descripción</b></label>
-            <textarea class="register-input" type="text"  name="description"  required> <%= productEdit.spec%></textarea>
+            <textarea class="register-input" type="text"  name="description" id="productSpecs" value="<%= locals.prev && prev.description ? prev.description : '' %>"> <%= productEdit.spec%></textarea>
 
             <label for="price"><b>Precio</b></label>
-            <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" required>
+            <input  class="register-input" type="number" name="price" value="<%= productEdit.precio%>" >
 
-            <img class="img-edit" src="/images/products/<%= productEdit.img%>" alt=""><br>
+            <!-- <img class="img-edit" name="image" src="/images/products/<%= productEdit.img%>" alt="" value="<%= locals.prev && prev.image ? prev.image : '' %>"><br> -->
+            <div>
+                <label for="image"><b>Imágen</b></label>
+                <input class="register-input" type="file" id="image" name="image" value="<%= productEdit.image %>">
+            </div>
 
             <label for="procesador">Procesador</label>
             <select name="procesador" id="procesador" value="<%= productEdit.procesador%>">
@@ -41,12 +54,12 @@
                 <option value="2">14"</option>
                 <option value="3">15.6"</option>
             </select>
-                <button class="cancel" onclick="'/<%= productEdit.id %>'">Cancelar</button>
+                <button class="cancel" onclick="'/products'">Cancelar</button>
                 <!-- <button type="button" class="cancel">Cancelar</button> -->
                 <button type="submit" class="signup">Agregar</button>
     </form>
 
-
+    <script src="/js/productValidator.js"></script>
 </body>
 
 </html>
