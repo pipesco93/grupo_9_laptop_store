@@ -1,33 +1,26 @@
-window.addEventListener('load', () => {
+window.addEventListener('load', function () {
+    let nombreDeProducto = document.querySelector("#productName")
+    let descripcion = document.querySelector("#productSpecs")
+    let imagen = document.querySelector("#image")
 
-    let productName = document.getElementById('productName')
-    let specs = document.getElementById('productSpecs')
-    let image = document.getElementById('image')
-    let form = document.querySelector('form')
-
-
-    form.addEventListener('submit', (event) => {
-
-        event.preventDefault()
+    let formulario = document.querySelector("form")
 
 
+
+    formulario.addEventListener("submit", function (e) {
+        e.preventDefault();
         let arrayErrores = []
 
-        if (productName.value.length == 0) {
-            arrayErrores.push('Se debe ingresar una referencia del  producto');
+        if (nombreDeProducto.value == "") {
+            arrayErrores.push("Deberá tener al menos 5 caracteres")
+        } else if (nombreDeProducto.value.length < 3) {
+            arrayErrores.push("El campo de nombre debe tener al menos 5 caracteres");
         }
 
-        if (productName.value.length < 5) {
-            arrayErrores.push('La referencia debe tener al menos 5 caracteres ');
-        }
-
-
-        if (specs.value.length == 0) {
-            arrayErrores.push('Se debe ingresar una descripción');
-        }
-
-        if (specs.value.length < 20) {
-            arrayErrores.push('La descripcion debe tener al menos 20 caracteres');
+        if (descripcion.value == "") {
+            arrayErrores.push("Deberá tener al menos 20 caracteres")
+        } else if (descripcion.value.length < 8) {
+            arrayErrores.push("El campo de descripcion debe tener al menos 20 caracteres");
         }
 
         if (image) {
@@ -37,21 +30,19 @@ window.addEventListener('load', () => {
             }
         }
 
-
         let listaErrores = document.getElementById('lista-errores');
-
+        listaErrores.innerHTML = ""
+        console.log(arrayErrores)
         if (arrayErrores.length >= 1) {
 
-            // event.preventDefault()
+            arrayErrores.forEach((arrayErrores) => {
 
-            arrayErrores.forEach((errores) => {
-                listaErrores.innerHTML += `<li>${errores}</li>`
+                listaErrores.innerHTML += `<li>${arrayErrores}</li>`
             })
 
         } else {
-            form.submit()
+            formulario.submit()
         }
 
     })
-
 })

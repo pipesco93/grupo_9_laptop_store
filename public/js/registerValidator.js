@@ -47,7 +47,7 @@ window.addEventListener('load' , () => {
 
 
         let listaErrores = document.getElementById('lista-errores');
-
+        listaErrores.innerHTML = ""
         if (arrayErrores.length >= 1){
 
            // event.preventDefault()
