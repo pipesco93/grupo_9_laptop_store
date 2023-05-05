@@ -1,10 +1,5 @@
-# Sprint 5
-Para este sprint se crean todas las vistas de usuarios:
-. login --> tienen las validaciones y verifica que el correo si exista
-. register --> tiene las validaciones y verifica que el email no exista en la base de datos, tambien se usa multer para guardar la imagen y se encripta la contraseña
-. userDetail --> despues de hacer el register soy redireccionado a esta pagina, tambien puedo acceder cuando doy click en mi nombe en el header
-
-Cuando hago un log in mi nombre aparece en el header y si soy un admin se me habilita la opción de vender en el header y puedo ver en produc detail la opción de eitar y eliminar
+# Sprint 7
+Se agregan las validaciones de back y fron end tanto para productos como para usuarios
 
 
 Proyecto grupal DH grupo 9

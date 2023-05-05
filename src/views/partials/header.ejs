@@ -14,7 +14,7 @@
             </a>
         </div>
         <% if (locals.user) {%>
-            <% if (locals.user.isAdmin == "true") {%>
+            <% if (locals.user.is_admin == 1) {%>
                 <div class="menu-productos">
                     <a href="/product-create">
                         <h2>Vender</h2>
@@ -35,7 +35,7 @@
             <div class="crear-cuenta">
                 <% if (locals.user) {%>
                     <a href="/users/<%= locals.user.id%>"> <i class="fa-regular fa-user"></i>
-                        <%= locals.user.firstName%>!
+                        <%= locals.user.first_name%>!
                     </a>
                     <%}else{%>
                         <a href="/register">

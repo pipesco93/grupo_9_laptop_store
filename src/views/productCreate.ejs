@@ -19,24 +19,31 @@
             <h4>Carga de Producto</h4>
             <hr>
 
+            <% if(locals.errors){
+                errors.forEach((err) => {%>
+                    <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
+                <%})%>
+            <%}%>
+            <ul id="lista-errores"></ul>
+
             <label for="product"><b>Nombre del producto</b></label>
-            <input class="register-input" type="text" placeholder="Referencia" name="referencia" required>
+            <input class="register-input" type="text" placeholder="Referencia" name="referencia" id="productName" value="<%= locals.prev && prev.referencia ? prev.referencia: '' %>">
 
             <label for="description"><b>Descripción</b></label>
-            <textarea class="register-input" type="text" placeholder="Breve Descripción del producto" name="spec" required></textarea>
+            <textarea class="register-input" type="text" placeholder="Breve Descripción del producto" name="spec" id="productSpecs" value="<%= locals.prev && prev.spec ? prev.spec : '' %>" ></textarea>
 
             <label for="price"><b>Precio</b></label>
-            <input  class="register-input" type="number" placeholder="$" name="precio" required>
+            <input  class="register-input" type="number" placeholder="$" name="precio" >
             <br>
             <br>
             <div>
                 <label for="image"><b>Imágen</b></label>
-                <input class="register-input" type="file" name="image" required>
+                <input class="register-input" type="file" id="image" name="image" value="<%= locals.prev && prev.image ? prev.image : '' %>">
             </div>
             <br>
             <div>
                 <label for="dimentions"><b>Marca</b></label>
-                <input class="register-input" type="text" placeholder="Marca" name="marca" required>
+                <input class="register-input" type="text" placeholder="Marca" name="marca" >
             </div>
 
             <div>
@@ -92,7 +99,7 @@
             </div>
         </div>
     </form>
-
+    <script src="/js/productValidator.js"></script>
 </body>
 
 </html>

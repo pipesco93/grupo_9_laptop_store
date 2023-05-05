@@ -5,7 +5,7 @@ module.exports = (sequelize, dataTypes) => {
         id : {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            auntoIncrement: true
+            autoIncrement: true
         },
         email : {
             type: dataTypes.STRING,
@@ -42,7 +42,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Usuarios.associate = function(models){
         Usuarios.belongsTo(models.IsAdmin,{
-            as: 'isAdmin',
+            as: 'isAd',
             foreignKey: 'is_admin'
         })
     }

@@ -1,5 +1,4 @@
 // const productList = require('../database/stock.js');
-const fs = require('fs');
 const path = require('path');
 
 // Para validaciones 
@@ -8,23 +7,19 @@ const { validationResult } = require('express-validator');
 // Se requiere la base de datos de productos 
 const db = require('../database/models');
 
-
-const productsFilePath = path.join(__dirname, '../dbJson/productos.json');
-const productList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const { validationResult } = require('express-validator');
 
 //---------------------------------- Vista Listado de productos ---------------------------------------------
 const products = (req, res) => {
     db.Productos.findAll()
         .then((allProducts) => {
-            res.render(path.join(__dirname, '../views/productList'),{'allProducts':allProducts});
+            res.render(path.join(__dirname, '../views/productList'), { 'allProducts': allProducts });
             //res.json(datito);
         })
         .catch((error) => {
             //res.send(error)
             console.log(error);
         });
-    
 };
 
 //---------------------------------- Vista Details de productos ---------------------------------------------
@@ -47,11 +42,16 @@ const cart = (req, res) => {
 //---------------------------------- Vista Editar productos ---------------------------------------------
 const productEdit = (req, res) => {
     const { id } = req.params;
-
-    const productEdit = productList.find(elem => elem.id == id);
-
-    res.render(path.join(__dirname, '../views/productEdit'), {productEdit})
-
+    console.log(id)
+    db.Productos.findByPk(id, { include: ['proces', 'pant', 'mem', 'almacen'] })
+        .then((productEdit) => {
+            //console.log(productEdit.dataValues)
+            //res.json(productEdit)
+            res.render(path.join(__dirname, '../views/productEdit'), { productEdit });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 };
 
 //---------------------------------- Confirmar edit ---------------------------------------------
@@ -98,28 +98,17 @@ const confirmCreate = (req, res) => {
 //---------------------------------- Eliminar productos ---------------------------------------------
 const prodDelete = (req, res) => {
     const idDelete = req.body.id;
-    const prodDeletedList = productList.filter(e => e.id != idDelete)
-
-    const newProdList = JSON.stringify(prodDeletedList,null, ' ', (err)=>{
-        if(err){
-            return false
-        }
-    });
-
-
-    fs.writeFileSync(path.join(__dirname,"../databaseJson/productos.json"), newProdList)
-
+    db.Productos.destroy({
+        where: { id: idDelete }
+    })
     res.redirect('/');
 };
 
 
-const pruebaDb  =  (req,res) => {
-    db.Productos.findAll({
-        include: ['proces', 'pant', 'mem', 'almacen'],
-        attributes: []
-        
-    })
-    
+
+//prueba de base de datos
+const pruebaDb = (req, res) => {
+    db.Productos.findAll()
         .then((datito) => {
             res.json(datito);
         })
