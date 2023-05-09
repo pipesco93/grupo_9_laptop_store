@@ -60,12 +60,13 @@ const editConfirm = (req, res) => {
         console.log(1)
         db.Productos.findByPk(id, { include: ['proces', 'pant', 'mem', 'almacen'] })
             .then((productEdit) => {
+
+    
                 console.log(2)
                 return res.render(path.join(__dirname, '../views/productEdit'), { 'errors': errors.array(), 'productEdit': productEdit });
             })
     }else{
 
-    
 
     const id = parseInt(req.params.id);
 
