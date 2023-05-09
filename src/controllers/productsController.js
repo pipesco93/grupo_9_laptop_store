@@ -1,10 +1,7 @@
 // const productList = require('../database/stock.js');
 const path = require('path');
 
-// Para validaciones 
-const { validationResult } = require('express-validator');
-
-// Se requiere la base de datos de productos 
+// Se requiere la base de datos de productos
 const db = require('../database/models');
 
 const { validationResult } = require('express-validator');
@@ -22,16 +19,16 @@ const products = (req, res) => {
         });
 };
 
-//---------------------------------- Vista Details de productos ---------------------------------------------
-const prodDetails = (req,res) => {
-    const {id} = req.params;
-    db.Productos.findByPk(id)
-    .then((product) => {
-        res.render(path.join(__dirname, '../views/productDetail'),{product});
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+//---------------------------------- Vista Detalls de productos ---------------------------------------------
+const prodDetails = (req, res) => {
+    const { id } = req.params;
+    db.Productos.findByPk(id, { include: ['proces', 'pant', 'mem', 'almacen'] })
+        .then((product) => {
+            res.render(path.join(__dirname, '../views/productDetail'), { product });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 }
 
 //---------------------------------- Vista carrito ---------------------------------------------
@@ -55,20 +52,47 @@ const productEdit = (req, res) => {
 };
 
 //---------------------------------- Confirmar edit ---------------------------------------------
-const editConfirm =  (req, res) => {
+const editConfirm = (req, res) => {
+    const errors = validationResult(req);
+    console.log(errors)
+    if (!errors.isEmpty()) {
+        const { id } = req.params;
+        console.log(1)
+        db.Productos.findByPk(id, { include: ['proces', 'pant', 'mem', 'almacen'] })
+            .then((productEdit) => {
 
-    const resultValidation = validationResult(req);
-
-    if (resultValidation.errors.length > 0){
-
-       // logica del controlador
-
-    }else{
-        
-        res.render('productEdit', {errores: resultValidation.errors})
-
-    } 
     
+                console.log(2)
+                return res.render(path.join(__dirname, '../views/productEdit'), { 'errors': errors.array(), 'productEdit': productEdit });
+            })
+    }else{
+
+
+    const id = parseInt(req.params.id);
+
+    const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
+    let newImege;
+
+    if (image.length > 0) {
+        newImege = image;
+    }
+
+    db.Productos.update(
+        {
+            referencia: req.body.referencia,
+            marca: req.body.product,
+            spec: req.body.description,
+            precio: parseInt(req.body.price),
+            procesador: parseInt(req.body.procesador),
+            img: newImege,
+            pantalla: parseInt(req.body.pantalla),
+        },
+        {
+            where: { id: id }
+        }
+    )
+    res.redirect('/products');
+}
 };
 
 
@@ -80,18 +104,48 @@ const prodCreate = (req, res) => {
 //---------------------------------- Confirmar creacion de productos ---------------------------------------------
 const confirmCreate = (req, res) => {
 
-    const resultValidation = validationResult(req);
-
-    if (resultValidation.errors.length > 0){
-
-        // logica del controlador
-
-    }else{ 
-
-        res.render('productCreate', {errores: resultValidation.errors})
-    
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.render('productCreate', { 'errors': errors.array(), 'prev': req.body });
     }
 
+    //Se requiere la informacion obtenida en el formulario
+    let {
+        referencia,
+        spec,
+        precio,
+        procesador,
+        pantalla,
+        memoria,
+        almacenamiento,
+        destacado,
+        marca,
+    } = req.body
+
+    // Se lee la informacion del archivo imagen (nombre de la imagen) cargada en el formulario
+    // y se genera el nombre o ruta para guadrar l aimagen
+    const image = req.file ? req.file.filename : ''; //si file no es vacio ponle el nombre creado con filename sino vacio
+    let newImege;
+
+    if (image.length > 0) {
+        newImege = image;
+    }
+
+    const objdb = {
+        marca,
+        referencia,
+        precio: parseInt(precio),
+        spec,
+        img: newImege,
+        destacado,
+        pantalla: parseInt(pantalla),
+        procesador: parseInt(procesador),
+        memoria: parseInt(memoria),
+        almacenamiento: parseInt(memoria)
+    };
+    db.Productos.create(objdb)
+        .then(() => res.redirect('/products'))
+        .catch((error) => res.send(error))
 };
 
 

@@ -3,15 +3,10 @@ const routerProducts = express.Router();
 const productsController = require('../controllers/productsController')
 const path = require('path');
 const multer = require('multer');
-const { body } = require('express-validator');
 const isAdmin = require('../middlewares/isAdmin')
 const loadUser = require('../middlewares/loadUser')
 
-<<<<<<< HEAD
-// Requeris las validaciones de usuario
-=======
 // Requeris las validaciones de productos
->>>>>>> a3f1dbbb20dce51e01531e594ca173011634fa8e
 const { validateCreate, validateEdit } = require('../middlewares/productValidations')
 
 // Configuraciones de multer
@@ -36,11 +31,7 @@ routerProducts.get('/cart',loadUser, productsController.cart);
 routerProducts.get('/product-create',loadUser, isAdmin ,productsController.prodCreate);
 routerProducts.post('/confirm-create',loadUser, upload.single('image'), validateCreate, productsController.confirmCreate);
 routerProducts.get('/product-edit/:id',loadUser, productsController.productEdit);
-<<<<<<< HEAD
-routerProducts.put('/product-edit/:id',loadUser, upload.single('image'),  validateEdit, productsController.editConfirm);
-=======
 routerProducts.post('/product-edit/:id',loadUser, upload.single('image'),  validateEdit, productsController.editConfirm);
->>>>>>> a3f1dbbb20dce51e01531e594ca173011634fa8e
 routerProducts.delete('/product-delete/:id',loadUser , productsController.prodDelete);
 
 routerProducts.get('/db',productsController.pruebaDb);

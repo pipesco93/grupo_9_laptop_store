@@ -2,17 +2,44 @@
 const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-<<<<<<< HEAD
-const modelUser = require('../model/User');
-
-
-// Se requiere la base de datos de usuarios y se convienrte en un objeto js
-const usersFilePath = path.join(__dirname, '../dbJson/usuariosdb.json');
-const userList = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-=======
 const db = require('../database/models');
->>>>>>> a3f1dbbb20dce51e01531e594ca173011634fa8e
+
+//---------------------------------API usuarios----------------------------------------------------------
+const Users = db.Usuarios;
+
+const listAll = (req, res) => {
+    Users.findAll({
+        include: [
+            'id',
+            'fist_name',
+            'last_name',
+            'email',
+            // falta detail
+        ]
+    }). then((users) => res.json({
+        total: users.length,
+        data: users
+    }))
+}
+
+const findUserById =  (req, res) => {
+    Users.findByPk(
+         id,
+        {
+        include: [
+            'id',
+            'fist_name',
+            'last_name',
+            'email',
+            // falta detail
+        ]
+    })
+    .then((users) => res.json({
+        total: users.length,
+        data: user
+    }))
+
+}
 
 //---------------------------------Vista formulario register---------------------------------------------
 const register = (req, res) => {
@@ -140,7 +167,9 @@ const controlador = {
     postLogin,
     postRegister,
     logOut,
-    userDetail
+    userDetail,
+    listAll,
+    findUserById
 
 }
 
