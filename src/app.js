@@ -41,6 +41,10 @@ app.use(routerUsers);
 const routerProducts = require('./routes/products.js')
 app.use(routerProducts);
 
+// Se crea ruta para API
+const apiRoutes = require('./routes/api/apiProductsRoutes');
+app.use('/api', apiRoutes);
+
 
 // Listen en el puerto 3001 localhost:3001
 app.listen(port, () => {
