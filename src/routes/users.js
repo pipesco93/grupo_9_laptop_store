@@ -4,6 +4,8 @@ const userController = require('../controllers/usersController.js');
 const { body } = require('express-validator');
 const loadUser = require('../middlewares/loadUser')
 
+const { listAll, findUserById } = require('../controllers/usersController.js')
+
 // Requeris las validaciones de usuario
 const { validateLogin, validateRegister } = require('../middlewares/userValidations')
 
