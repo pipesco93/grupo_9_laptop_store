@@ -22,10 +22,6 @@ const apiProductDetail = (req, res) => {
     db.Productos.findByPk(req.params.id, { include: ['proces', 'pant', 'mem', 'almacen'] })
         .then((datito) => {
             res.status(200).json({
-                meta: {
-                    status: 200,
-                    url: 'api/products/' + req.params.id
-                },
                 data: {
                     nombre: datito.referencia,
                     marca: datito.marca,
