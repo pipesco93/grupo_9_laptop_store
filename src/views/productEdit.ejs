@@ -7,18 +7,7 @@
 
 <!---------------------- MAIN ----------------------------------------------->
 <body class="body-productEdit">
-<<<<<<< HEAD
-    <form method="post" action="/product-edit/<%= productEdit.id%>?_method=PUT" enctype="multipart/form-data" >
-
-        <% if(locals.errors){
-            errors.forEach((err) => {%>
-                <p class="register-alert"><i class="fa-solid fa-circle-radiation"></i> <%= err.msg %></p>
-            <%})%>
-        <%}%>
-
-=======
     <form method="post" action="/product-edit/<%= productEdit.id%>" enctype="multipart/form-data">
->>>>>>> a3f1dbbb20dce51e01531e594ca173011634fa8e
         <section class="formContainer">
             <h4>Carga de Producto</h4>
             <hr>
