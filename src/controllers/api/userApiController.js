@@ -24,6 +24,7 @@ const apiUsers = async (req, res) => {
     };
 
     const apiUserDetail = (req, res) => {
+        
         db.Usuarios.findByPk(req.params.id, { include: ['isAd'] })
             .then((datito) => {
                 res.status(200).json({
