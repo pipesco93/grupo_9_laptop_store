@@ -4,43 +4,6 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 
-//---------------------------------API usuarios----------------------------------------------------------
-const Users = db.Usuarios;
-
-const listAll = (req, res) => {
-    Users.findAll({
-        include: [
-            'id',
-            'fist_name',
-            'last_name',
-            'email',
-            // falta detail
-        ]
-    }). then((users) => res.json({
-        total: users.length,
-        data: users
-    }))
-}
-
-const findUserById =  (req, res) => {
-    Users.findByPk(
-         id,
-        {
-        include: [
-            'id',
-            'fist_name',
-            'last_name',
-            'email',
-            // falta detail
-        ]
-    })
-    .then((users) => res.json({
-        total: users.length,
-        data: user
-    }))
-
-}
-
 //---------------------------------Vista formulario register---------------------------------------------
 const register = (req, res) => {
     res.render(path.join('register'));
@@ -168,8 +131,6 @@ const controlador = {
     postRegister,
     logOut,
     userDetail,
-    listAll,
-    findUserById
 
 }
 
