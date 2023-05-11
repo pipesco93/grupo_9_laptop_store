@@ -130,7 +130,7 @@ const controlador = {
     postLogin,
     postRegister,
     logOut,
-    userDetail
+    userDetail,
 
 }
 
