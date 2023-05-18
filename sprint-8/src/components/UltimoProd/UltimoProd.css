@@ -1,0 +1,36 @@
+.ultimo-prod-titulo {
+    color: #241948cb;
+    margin: 15px;
+}
+
+.ultimo-prod-caja {
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(116, 158, 158);
+    box-shadow: 5px 5px #bdbdbd88;
+    display: flex;
+    background-color: rgb(231, 235, 235);
+}
+
+.img-ultimo-prod {
+    width: 500px;
+}
+
+.ultimo-prod-marca {
+    margin: 25px;
+}
+
+.ultimo-prod-details {
+    border-radius: 5px;
+    background-color: rgba(209, 211, 211, 0.359);
+    padding: 13px 20px;
+    margin-top: 23px;
+}
+
+.ultimo-prod-details li {
+    margin: 20px;
+}
+
+.ultimo-prod-specs{
+    margin: 20px;
+}

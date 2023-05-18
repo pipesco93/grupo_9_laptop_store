@@ -3,11 +3,15 @@ const db = require('../../database/models');
 
 const apiProducts = async (req, res) => {
 
+    const count = await db.Productos.count({col: 'id'})
+    const destacado = await db.Productos.count({where: { destacado: "si" }})
+    const noDestacado = await db.Productos.count({where: { destacado: "no" }})
+    
     const data = {
-        count : await db.Productos.count({col: 'id'}),
+        count : count,
         countByCategory: {
-            destacado: await db.Productos.count({where: { destacado: "si" }}),
-            noDestacado: await db.Productos.count({where: { destacado: "no" }})
+            destacado: destacado,
+            noDestacado: noDestacado
         },
         products: await db.Productos.findAll(
             { attributes: ['id', 'Referencia', 'spec'] },
