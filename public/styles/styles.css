@@ -908,3 +908,12 @@ footer section i {
     color: red;
     font-size: 11px;
 }
+
+.cancel-button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.cancel-button {
+    background-color: red;
+}

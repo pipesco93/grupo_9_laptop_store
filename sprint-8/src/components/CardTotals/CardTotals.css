@@ -1,0 +1,43 @@
+.contentRow {
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.row-movies {
+    border: solid;
+    border-radius: 35px;
+    border-color: rgb(116, 158, 158);
+    box-shadow: 5px 5px #bdbdbd88;
+    width: 400px;
+    background-color: rgb(231, 235, 235);
+}
+
+.row-movies {
+    margin: 20px;
+    list-style-type: none;
+    float: left;
+    padding: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.row-movies p {
+    margin: 10px;
+    font-size: 35px;
+}
+
+.row-movies h2 {
+    margin: 10px;
+}
+
+.logo {
+    height: 35px;
+    width: 35px;
+    margin: 0px 10px 0px 40px;
+    display: inline;
+}

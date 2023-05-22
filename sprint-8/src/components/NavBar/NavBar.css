@@ -1,0 +1,12 @@
+.navBar {
+    margin: 5px;
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(116, 158, 158);
+    box-shadow: 5px 5px #bdbdbd88;
+}
+
+.navBar-titulo{
+    margin: 15px;
+    color: rgb(196, 104, 242);
+}
