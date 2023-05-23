@@ -82,3 +82,16 @@ podríamos considerarlo como More Of y ver de que forma podemos mejorar más est
 Sprint 8
 -------------------
 
+Fue un Sprint que nos planteó el desafío como grupo de como poder comenzar a crear las API de usuario y de producto.
+Nos surgieron algunos inconvenientes que pudimos resolver gracias a la ayuda de los profesores y de investigación y consultas entre nosotros.
+
+El Dashboard lo fuimos realizando en conjunto durante las últimas clases prácticas que tuvimos. En las mismas, Felipe y Rosario se fueron
+encargando más en lo referente a las tarjetas de totales, Matias en lo que comprendía al último producto creado y Rocío a desarrollar la
+visualización del listado de productos.
+
+Al ser el último Sprint del proyecto, pudimos concluir que como grupo nos sirvieron mucho las reuniones y encuentros que nos programábamos
+para poder ir trabajando de forma dinámica y nos ayudó a poder cumplir con los objetivos requeridos y tiempos de entrega.
+
+Desde el comienzo hasta este momento de concluir el proyecto, hubo momentos que nos fueron más complicados y nos llevaron más tiempo
+para poder continuar avanzando con el proyecto. Pero luego de resolverlos nos fue gratificante adquirir el conocimiento de como se
+pueden resolver diferentes temas de diversas formas.
