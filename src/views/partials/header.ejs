@@ -14,53 +14,53 @@
             </a>
         </div>
         <% if (locals.user) {%>
-            <% if (locals.user.is_admin == 1) {%>
+            <% if (locals.user.is_admin==1) {%>
                 <div class="menu-productos">
                     <a href="/product-create">
                         <h2>Vender</h2>
                     </a>
                 </div>
-            <%}%>
-        <%}%>
-        <div class="dropdown-productos">
-            <a href="#"><i class="fa-solid fa-bars"></i> Menu</a>
-        </div>
-
-        <div class="search-bar">
-            <input type="text" name="busca" placeholder="Buscar">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-
-        <div class="user-menu">
-            <div class="crear-cuenta">
-                <% if (locals.user) {%>
-                    <a href="/users/<%= locals.user.id%>"> <i class="fa-regular fa-user"></i>
-                        <%= locals.user.first_name%>!
-                    </a>
-                    <%}else{%>
-                        <a href="/register">
-                            <h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4>
-                        </a>
+                <%}%>
                     <%}%>
-            </div>
-            <% if (locals.user) {%>
-                <div class="log-in">
-                    <a href="/logout">
-                        <h4><i class="fa-solid fa-right-from-bracket"></i>Log out</h4>
-                    </a>
-                </div>
-                <%}else{%>
-                    <div class="log-in">
-                        <a href="/login">
-                            <h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4>
-                        </a>
-                    </div>
-                    <%}%>
-
-                        <div class="cart-logo">
-                            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <div class="dropdown-productos">
+                            <a href="#"><i class="fa-solid fa-bars"></i> Menu</a>
                         </div>
 
-        </div>
+                        <div class="search-bar">
+                            <input type="text" name="busca" placeholder="Buscar">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+
+                        <div class="user-menu">
+                            <div class="crear-cuenta">
+                                <% if (locals.user) {%>
+                                    <a href="/users/<%= locals.user.id%>"> <i class="fa-regular fa-user"></i>
+                                        <%= locals.user.first_name%>!
+                                    </a>
+                                    <%}else{%>
+                                        <a href="/register">
+                                            <h4><i class="fa-solid fa-user-plus"></i>Crear cuenta</h4>
+                                        </a>
+                                        <%}%>
+                            </div>
+                            <% if (locals.user) {%>
+                                <div class="log-in">
+                                    <a href="/logout">
+                                        <h4><i class="fa-solid fa-right-from-bracket"></i>Log out</h4>
+                                    </a>
+                                </div>
+                                <%}else{%>
+                                    <div class="log-in">
+                                        <a href="/login">
+                                            <h4><i class="fa-solid fa-right-to-bracket"></i>Log in</h4>
+                                        </a>
+                                    </div>
+                                    <%}%>
+
+                                        <div class="cart-logo">
+                                            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        </div>
+
+                        </div>
     </nav>
 </header>
