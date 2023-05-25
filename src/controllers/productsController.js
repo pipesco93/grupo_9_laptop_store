@@ -151,7 +151,7 @@ const confirmCreate = (req, res) => {
 
 //---------------------------------- Eliminar productos ---------------------------------------------
 const prodDelete = (req, res) => {
-    const idDelete = req.body.id;
+    const idDelete = parseInt(req.body.id);
     db.Productos.destroy({
         where: { id: idDelete }
     })
